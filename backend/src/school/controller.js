@@ -36,24 +36,27 @@ const getStudentById = (req, res) => {
 }
 
 const createNewStudent = (req, res) => {
-    const { name, form, email, phone, department, image, dob } = req.body;
+    // const { name, form, email, phone, department, image, dob } = req.body;
+    
+    console.log("llallllall" + " " + formData);
+    console.log("bababblala" + " " + formData);
 
-    pool.query(queries.checkStudentEmail, [email], (error, results) => {
-        if(results.rows.length) {
-            res.send("This email has been used by another student.");
-            console.log("This email has been used by another student.");
-        }else {
-            pool.query(queries.createNewStudent, [ name, form, email, phone, department, image, dob ], (error, results) => {
-                if(error) {
-                    res.send("student couldn't be created.");
-                    console.log("student couldn't be created.")
-                }else {
-                    res.send("new student created successfully.");
-                    console.log("new student created successfully.");
-                }
-            })
-        }
-    })
+    // pool.query(queries.checkStudentEmail, [email], (error, results) => {
+    //     if(results.rows.length) {
+    //         res.send("This email has been used by another student.");
+    //         console.log("This email has been used by another student.");
+    //     }else {
+    //         pool.query(queries.createNewStudent, [ name, form, email, phone, department, image, dob ], (error, results) => {
+    //             if(error) {
+    //                 res.send("student couldn't be created.");
+    //                 console.log("student couldn't be created.")
+    //             }else {
+    //                 res.send("new student created successfully.");
+    //                 console.log("new student created successfully.");
+    //             }
+    //         })
+    //     }
+    // })
 }
 
 const removeStudent = (req, res) => {
