@@ -38,7 +38,7 @@ const getStudentById = (req, res) => {
 const createNewStudent = (req, res) => {
     // const { name, form, email, phone, department, image, dob } = req.body;
     
-    console.log("llallllall" + " " + req.body);
+    console.log("llallllall" + " " + req.body.name);
     console.log("bababblala" + " " + req.files.picture.name);
 
     // pool.query(queries.checkStudentEmail, [email], (error, results) => {

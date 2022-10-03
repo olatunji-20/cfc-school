@@ -3,7 +3,8 @@
         <div>
             <form @submit.prevent="test" enctype="multipart/form-data">
 
-                <input type="file" ref="picture" v-on:change="fileSelected">
+                <input type="text" placeholder="name" v-model="name" />
+                <input type="file" ref="picture" v-on:change="fileSelected" />
                 <button>SUBMIT</button>
             </form>
         </div>
@@ -17,6 +18,7 @@ export default {
     name: 'Register',
     data() {
         return {
+            name: "",
             selectedImage: "",
         };
     },
@@ -28,6 +30,7 @@ export default {
         async test() {
             const formData = new FormData();
             formData.append('picture', this.selectedImage, this.selectedImage.name);
+            formData.append('name', this.name)
 
             try {
                 await axios.post("http://localhost:3000/api/v1/students", formData);
