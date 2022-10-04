@@ -9,9 +9,16 @@
                 </ul>
             </div>
         </header>
-        <h1> CFC schools</h1>
-
-        <h3><router-link to="/signup">Add a new student.</router-link></h3>
+        <div class="container">
+            <div class="left">
+                <h1> CFC schools</h1>
+                <h3><router-link to="/signup">Add a new student.</router-link></h3>
+                <h3><router-link to="/allstudents">view all students.</router-link></h3>
+            </div>
+            <div class="right">
+                <h1> STUDENT IMAGE</h1>
+            </div>
+        </div>
 
     </section>
 </template>
@@ -20,7 +27,9 @@
     export default {
         name: 'Homepage',
         data() {
-
+            return {
+                
+            }
         },
     }
 </script>
@@ -29,7 +38,7 @@
     section {
         border: 2px solid red;
         width: 100%;
-        height: 900px;
+        height: auto;
     }
 
     header {
@@ -68,6 +77,26 @@
 
     h1  {
         text-align: center;
+    }
+    
+    .container {
+        width: 100%;
+        height: 85vh;
+        background-color: cornsilk;
+        border: 2px solid green;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    .left {
+        width: 400px;
+        height: 500px;
+        border: 3px solid brown;
+    }
+    .right {
+        width: 300px;
+        height: 400px;
+        border: 4px solid lawngreen;
     }
 
 </style>
