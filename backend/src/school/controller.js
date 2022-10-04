@@ -1,4 +1,4 @@
-const { query } = require("express");
+// const { query } = require("express");
 const pool = require("../../db");
 const queries = require("./queries");
 
@@ -36,28 +36,51 @@ const getStudentById = (req, res) => {
 }
 
 const createNewStudent = (req, res) => {
-    // const { name, form, email, phone, department, image, dob } = req.body;
-    
-    console.log("llallllall" + " " + req.body.name);
+    console.log("bababblala" + " " + req.files.picture);
     console.log("bababblala" + " " + req.files.picture.name);
+    console.log("bababblala" + " " + req.body.email);
 
-    // pool.query(queries.checkStudentEmail, [email], (error, results) => {
-    //     if(results.rows.length) {
-    //         res.send("This email has been used by another student.");
-    //         console.log("This email has been used by another student.");
-    //     }else {
-    //         pool.query(queries.createNewStudent, [ name, form, email, phone, department, image, dob ], (error, results) => {
-    //             if(error) {
-    //                 res.send("student couldn't be created.");
-    //                 console.log("student couldn't be created.")
-    //             }else {
-    //                 res.send("new student created successfully.");
-    //                 console.log("new student created successfully.");
-    //             }
-    //         })
-    //     }
-    // })
+    const submittedFile = req.files.picture;
+
+    const name = req.body.name;
+    const form = req.body.form;
+    const email = req.body.email;
+    const phone = req.body.phone;
+    const department = req.body.department;
+    const image = submittedFile.name;
+    const dob = req.body.dob;
+    
+    // console.log("llallllall" + " " + name + " " + form + " " + email + " " + phone + " " + department + " " + dob + " " + image);
+
+    pool.query(queries.checkStudentEmail, [email], (error, results) => {
+        if(results.rows.length) {
+            res.send("This email has been used by another student.");
+            console.log("This email has been usessd by another student.");
+        }else {
+            pool.query(queries.createNewStudent, [ name, form, email, phone, department, image, dob ], (error, results) => {
+                if(error) {
+                    res.send("student couldn't be created.");
+                    console.log("student couldn't be created.")
+                }else {
+                    res.send("new student created successfully.");
+                    console.log("new student created successfully.");
+                }
+            })
+        }
+    })
+
+    submittedFile.mv("./src/school/student-images/" + email + image, (err) => {
+        if(err) {
+            console.log(err);
+        }else {
+            console.log("file uploaded successfully.");
+        }
+    })
+
+
+
 }
+
 
 const removeStudent = (req, res) => {
     const id = req.params.id;

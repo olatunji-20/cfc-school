@@ -2,9 +2,13 @@
     <section>
         <div>
             <form @submit.prevent="test" enctype="multipart/form-data">
-
                 <input type="text" placeholder="name" v-model="name" />
-                <input type="file" ref="picture" v-on:change="fileSelected" />
+                <input type="text" placeholder="class" v-model="form" />
+                <input type="email" placeholder="E-mail" v-model="email" />
+                <input type="tel" placeholder="phone" v-model="phone" />
+                <input type="text" placeholder="department" v-model="department" />
+                <input type="file" name="img" ref="picture" v-on:change="fileSelected" />
+                <input type="date" placeholder="date of birth" v-model="dob" />
                 <button>SUBMIT</button>
             </form>
         </div>
@@ -19,7 +23,12 @@ export default {
     data() {
         return {
             name: "",
+            form: "",
+            email: "",
+            phone: "",
+            department: "",
             selectedImage: "",
+            dob: ""
         };
     },
     methods: {
@@ -29,8 +38,13 @@ export default {
         },
         async test() {
             const formData = new FormData();
+            formData.append('name', this.name);
+            formData.append('form', this.form);
+            formData.append('email', this.email);
+            formData.append('phone', this.phone);
+            formData.append('department', this.department);
             formData.append('picture', this.selectedImage, this.selectedImage.name);
-            formData.append('name', this.name)
+            formData.append('dob', this.dob);
 
             try {
                 await axios.post("http://localhost:3000/api/v1/students", formData);
