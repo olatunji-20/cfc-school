@@ -32,7 +32,7 @@ import Board from '../components/Board.vue';
 <style scoped>
 section {
     border: 3px solid red;
-    width: 70%;
+    width: 90%;
     height: auto;
     margin: 50px auto;
 }

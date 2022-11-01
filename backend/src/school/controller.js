@@ -55,7 +55,7 @@ const createNewStudent = (req, res) => {
     pool.query(queries.checkStudentEmail, [email], (error, results) => {
         if(results.rows.length) {
             res.send("This email has been used by another student.");
-            console.log("This email has been usessd by another student.");
+            console.log("This email has been used by another student.");
         }else {
             pool.query(queries.createNewStudent, [ name, form, email, phone, department, image, dob ], (error, results) => {
                 if(error) {
@@ -87,7 +87,7 @@ const removeStudent = (req, res) => {
 
     pool.query(queries.checkForStudent, [ id ], (error, results) => {
         if(!results.rows.length) {
-            console.log("student does not exist.");
+            console.log("student does not existttttttttt.");
             res.send("student does not exist");
         }else {
             pool.query(queries.removeStudent, [ id ], (error, results) => {
