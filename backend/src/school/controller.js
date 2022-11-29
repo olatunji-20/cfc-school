@@ -60,7 +60,7 @@ const createNewStudent = (req, res) => {
             pool.query(queries.createNewStudent, [ name, form, email, phone, department, image, dob ], (error, results) => {
                 if(error) {
                     res.send("student couldn't be created.");
-                    console.log("student couldn't be created.")
+                    console.log(error)
                 }else {
                     res.send("new student created successfully.");
                     console.log("new student created successfully.");

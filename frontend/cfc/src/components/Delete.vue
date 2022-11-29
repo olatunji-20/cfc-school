@@ -22,7 +22,7 @@ export default {
     methods: {
         async deleteStudent({id}) {
             await axios.delete(`http://localhost:3000/api/v1/students/${id}`)
-            console.log("cc", id)
+            console.log("deleted", id)
             try {
                 console.log("student successfully deleted")
                 this.$router.go("/allstudents")
@@ -40,6 +40,7 @@ export default {
     width: 45px;
     height: 45px;
     border: 3px solid lawngreen;
+    cursor: pointer;
 }
 h3 {
     color: green;
