@@ -103,6 +103,28 @@ const removeStudent = (req, res) => {
     })
 }
 
+const updateStudentInfo = (req, res) => {
+    const id = req.params.id;
+
+    const changed = req.body.changed;
+    const newValue = req.body.value;
+
+    pool.query(queries.checkForStudent, [ id ], (error, results) => {
+        if(!results.rows.length) {
+            console.log("student cannot be found.")
+        } else {
+            pool.query(queries.updateStudent, [ id, changed, newValue ], (error, results) => {
+                if(error) {
+                    console.log("student info could not be updated.")
+                } else {
+                    console.log("student info successfully updated.")
+                }
+            })
+
+        }
+    })
+}
+
 
 
 
@@ -110,5 +132,6 @@ module.exports = {
     getStudents,
     getStudentById,
     createNewStudent,
-    removeStudent
+    removeStudent,
+    updateStudentInfo
 }

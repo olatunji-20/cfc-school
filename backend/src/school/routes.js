@@ -24,7 +24,9 @@ router.post("/", controller.createNewStudent);
 
 router.get("/:id", controller.getStudentById);
 
-router.delete("/:id", controller.removeStudent)
+router.delete("/:id", controller.removeStudent);
+
+router.patch("/:id", controller.updateStudentInfo);
 
 
 
