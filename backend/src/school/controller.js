@@ -117,7 +117,7 @@ const updateStudentInfo = (req, res) => {
             console.log("STUDENT NOT FOUND!!!!!.")
         } else {
             console.log("SSSEEEEEEEEEEEEEEENNNNNNN")
-            pool.query(queries.updateStudent, [ usedId, changed, newValue ], (error, results) => {
+            pool.query(queries.updateStudent, [ usedId, newValue ], (error, results) => {
                 if(error) {
                     console.log(error);
                     console.log("student info could not be updated.")

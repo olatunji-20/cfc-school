@@ -14,6 +14,7 @@
                 <h1> CFC schools</h1>
                 <h3><router-link to="/signup">Add a new student.</router-link></h3>
                 <h3><router-link to="/allstudents">view all students.</router-link></h3>
+                <h3><router-link to="/update-student">Update student info.</router-link></h3>
             </div>
             <div class="right">
                 <h1> STUDENT IMAGE</h1>

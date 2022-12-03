@@ -48,7 +48,8 @@ export default {
 
             try {
                 await axios.post("http://localhost:3000/api/v1/students", formData);
-                console.log("sent")
+                console.log("sent");
+                this.$router.go("/sign-up")
                 
             } catch (error) {
                 console.log(error);
