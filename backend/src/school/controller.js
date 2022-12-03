@@ -106,15 +106,20 @@ const removeStudent = (req, res) => {
 const updateStudentInfo = (req, res) => {
     const id = req.params.id;
 
+    const usedId = req.body.id;
     const changed = req.body.changed;
     const newValue = req.body.value;
 
-    pool.query(queries.checkForStudent, [ id ], (error, results) => {
+    console.log("changed: " + changed + " & " + "new-value: " + newValue + " & " + "user-id " + usedId);
+
+    pool.query(queries.checkForStudent, [ usedId ], (error, results) => {
         if(!results.rows.length) {
-            console.log("student cannot be found.")
+            console.log("STUDENT NOT FOUND!!!!!.")
         } else {
-            pool.query(queries.updateStudent, [ id, changed, newValue ], (error, results) => {
+            console.log("SSSEEEEEEEEEEEEEEENNNNNNN")
+            pool.query(queries.updateStudent, [ usedId, changed, newValue ], (error, results) => {
                 if(error) {
+                    console.log(error);
                     console.log("student info could not be updated.")
                 } else {
                     console.log("student info successfully updated.")

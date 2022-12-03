@@ -26,7 +26,7 @@ router.get("/:id", controller.getStudentById);
 
 router.delete("/:id", controller.removeStudent);
 
-router.patch("/:id", controller.updateStudentInfo);
+router.put("/:id", controller.updateStudentInfo);
 
 
 
