@@ -2,6 +2,7 @@
     <section>
         <h1>for student board</h1>
         <div  v-for="student in students" :key="student.id" class="student">
+            <Full v-show="full" :student="student"/>
             <div class="picture">
                 <img :src="'http://localhost:3000/src/school/student-images/' + student.email + student.image" :alt="student.name" class="student-image"/>
             </div>
@@ -14,6 +15,7 @@
             <div class="del">
                 <Delete :id="student.id" />
             </div>
+            <div class="more" v-on:click="laslas(student.id)"></div>
         </div>
     </section>
 </template>
@@ -21,13 +23,21 @@
 <script>
 import axios from 'axios';
 import Delete from './Delete.vue';
+import Full from './Full.vue'
 
     export default {
     name: "Board",
     data() {
         return {
             students: [],
+            full: false
         };
+    },
+    methods: {
+        laslas(studentId) {
+            this.full == true;
+            console.log(studentId)
+        }
     },
     async created() {
         try {
@@ -38,7 +48,7 @@ import Delete from './Delete.vue';
             console.log(error);
         }
     },
-    components: { Delete }
+    components: { Delete, Full }
 }
 </script>
 
@@ -87,5 +97,11 @@ section {
     width: 50px;
     position: relative;
     top: 35%;
+}
+
+.more {
+    width: 70px;
+    height: 70px;
+    background: red;
 }
 </style>
