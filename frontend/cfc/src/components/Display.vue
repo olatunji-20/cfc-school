@@ -20,7 +20,7 @@
     <div class="del">
       <Delete :id="student.id" />
     </div>
-    <h1 v-on:click="notice(student.id)">view</h1>
+    <h1><router-link :to="('/full/' + student.id)">view</router-link></h1>
   </section>
 </template>
 
@@ -35,12 +35,7 @@ export default {
   props: {
     student: Object,
   },
-  methods: {
-    notice(id) {
-        alert("laba");
-        this.$emit("view", id)
-    }
-  },
+  methods: {},
   components: {
     Delete
   },

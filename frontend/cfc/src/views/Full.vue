@@ -1,19 +1,27 @@
 <template>
   <section class="show">
     <h1>HHSHSHSHHSHSHSHSHHS</h1>
+    <h2>SSJJJSJJJS</h2>
     <h2>{{ student.name }}</h2>
-    <h2>{{ student.email }}</h2>
   </section>
 </template>
 
 <script>
+import axios from 'axios';
 export default {
   name: "Full",
   data() {
-    return {};
+    return {
+      student: {},
+      studentId: this.$route.params.studentId
+    }
   },
-  props: {
-    student: Object
+  mounted() {
+    async function getStudent(studentId) {
+      const res = await axios.get(`http://localhost:3000/api/v1/students/${studentId}`);
+      this.student = await res;
+      console.log(this.student)
+    }
   }
 };
 </script>

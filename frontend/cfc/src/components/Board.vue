@@ -1,7 +1,6 @@
 <template>
     <section>
         <h1>for student board</h1>
-        <Full v-show="displayFull" :student="fullStudent" />
         <div  v-for="student in students" :key="student.id">
             <Display v-on:view="viewAll(student.id)" :student="student"/>
         </div>
@@ -11,25 +10,23 @@
 <script>
 import axios from 'axios';
 import Display from './Display.vue';
-import Full from './Full.vue'
 
     export default {
     name: "Board",
     data() {
         return {
             students: [],
-            displayFull: false,
-            fullStudent: {}
+            displayFull: false
         };
     },
     methods: {
-        async viewAll(id) {
-            alert("view all working" + id);
-            this.displayFull = !this.displayFull;
-            const res = await axios.get(`http://localhost:3000/api/v1/students/${id}`);
-            this.fullStudent = await res.data
-            console.log(this.fullStudent)
-        }
+        // async viewAll(id) {
+        //     alert("view all working" + id);
+        //     const res = await axios.get(`http://localhost:3000/api/v1/students/${id}`);
+        //     this.fullStudent = await res.data
+        //     this.displayFull = !this.displayFull;
+        //     console.log(this.fullStudent)
+        // }
     },
     async created() {
         try {
@@ -41,8 +38,7 @@ import Full from './Full.vue'
         }
     },
     components: {
-        Display,
-        Full
+        Display
     }
 }
 </script>
