@@ -2,43 +2,33 @@
     <section>
         <h1>for student board</h1>
         <div  v-for="student in students" :key="student.id">
-            <Display v-on:view="viewAll(student.id)" :student="student"/>
+            <Display :student="student"/>
         </div>
     </section>
 </template>
 
 <script>
-import axios from 'axios';
 import Display from './Display.vue';
+import { mapGetters, mapActions } from 'vuex';
 
     export default {
     name: "Board",
     data() {
         return {
-            students: [],
             displayFull: false
-        };
-    },
-    methods: {
-        // async viewAll(id) {
-        //     alert("view all working" + id);
-        //     const res = await axios.get(`http://localhost:3000/api/v1/students/${id}`);
-        //     this.fullStudent = await res.data
-        //     this.displayFull = !this.displayFull;
-        //     console.log(this.fullStudent)
-        // }
-    },
-    async created() {
-        try {
-            const response = await axios.get("http://localhost:3000/api/v1/students");
-            this.students = await response.data;
         }
-        catch (error) {
-            console.log(error);
-        }
+    },
+    computed: {
+        ...mapGetters("student", ["students"])
     },
     components: {
         Display
+    },
+    methods: {
+        ...mapActions("student", ["getStudents"])     
+    },
+    async created() {
+        this.students = await this.getStudents();
     }
 }
 </script>

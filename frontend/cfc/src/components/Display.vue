@@ -20,7 +20,7 @@
     <div class="del">
       <Delete :id="student.id" />
     </div>
-    <h1><router-link :to="('/full/' + student.id)">view</router-link></h1>
+    <h1><router-link :to="'/full/' + student.id">view</router-link></h1>
   </section>
 </template>
 
@@ -46,6 +46,14 @@ export default {
 * {
   box-sizing: border-box;
 }
+
+h1 {
+  border: 3px solid salmon;
+}
+
+
+
+
 .student {
   border: 4px solid purple;
   width: 90%;
