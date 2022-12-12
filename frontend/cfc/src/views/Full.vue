@@ -1,5 +1,10 @@
 <template>
-  <h1>{{ student.name }}</h1>
+  <section class="main">
+    <h3>YOU ARE HIGHLY WELCOME</h3>
+    <div class="submain">
+      <h1>{{ singleStudent.email }}</h1>
+    </div>
+  </section>
 </template>
 
 <script>
@@ -8,30 +13,22 @@ import { mapState, mapActions } from "vuex";
 export default {
   name: "Full",
   data() {
-    return {
-      // student: {},
-    }
+    return {}
   },
   computed: {
-    ...mapState("student", ["student"])
+    ...mapState("student", ["singleStudent"])
   },
   methods: {
     ...mapActions("student", ["getStudent"])
   },
   mounted() {
-    console.log(this.$route.params.studentId);
-    console.log("MOUNTED!!!!!!!!!!!!!!!!!!!!")
-    this.getStudent(this.$route.params.studentId);
-    console.log(student)
-    // try {
-    //   async function getStudent(studentId) {
-    //     const res = await axios.get(`http://localhost:3000/api/v1/students/${studentId}`);
-    //     this.student = await res.json();
-    //     console.log(this.student)
-    //   }
-    // } catch(error) {
-    //   console.log(error)
-    // }
+    try {
+      console.log("MOUNTED!!!!!!!!!!!")
+      this.getStudent(this.$route.params.studentId);
+      alert(student)
+    } catch (error) {
+      console.log(error)
+    }
   }
 };
 </script>
@@ -44,5 +41,16 @@ export default {
 h1 {
   font-size: 50px;
   color: hotpink;
+}
+
+.main {
+  border: 5px solid green;
+  padding: 40px;
+  margin: 60px auto;
+}
+.submain {
+  border: 3px solid hotpink;
+  margin: 90px auto;
+  width: 80%;
 }
 </style>

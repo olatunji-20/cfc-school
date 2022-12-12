@@ -3,5 +3,5 @@ export function students(state) {
 }
 
 export function student(state) {
-       return state.student
+       return state.singleStudent
 }
