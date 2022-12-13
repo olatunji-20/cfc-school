@@ -3,6 +3,10 @@
     <h3>YOU ARE HIGHLY WELCOME</h3>
     <div class="submain">
       <h1>{{ singleStudent.email }}</h1>
+      <h1>{{ singleStudent.name }}</h1>
+      <h1>{{ singleStudent.phone }}</h1>
+      <h1>{{ singleStudent.department }}</h1>
+      <h1>{{ singleStudent.dob }}</h1>
     </div>
   </section>
 </template>
@@ -25,7 +29,7 @@ export default {
     try {
       console.log("MOUNTED!!!!!!!!!!!")
       this.getStudent(this.$route.params.studentId);
-      alert(student)
+      console.log(this.singleStudent)
     } catch (error) {
       console.log(error)
     }

@@ -1,0 +1,44 @@
+{
+    "students": [
+        {
+            "id": 7,
+            "name": "zainab",
+            "form": "ss3",
+            "email": "zainab@gmail.com",
+            "phone": {},
+            "department": "shim",
+            "image": "IMG_0999.JPG",
+            "dob": "2022-12-06T23:00:00.000Z"
+        },
+        {
+            "id": 8,
+            "name": "hammed",
+            "form": "ss4",
+            "email": "hammed@gmail.com",
+            "phone": {},
+            "department": "pab",
+            "image": "IMG_2635.JPG",
+            "dob": "2022-12-14T23:00:00.000Z"
+        },
+        {
+            "id": 5,
+            "name": "olatunji",
+            "form": "ss3",
+            "email": "sheriff@yahoo.com",
+            "phone": {},
+            "department": "mts",
+            "image": "IMG_0042.JPG",
+            "dob": "2022-12-08T23:00:00.000Z"
+        },
+        {
+            "id": 9,
+            "name": "kaosar",
+            "form": "jss2",
+            "email": "kao22@gmail.com",
+            "phone": {},
+            "department": "bch",
+            "image": "IMG_6286.jpg",
+            "dob": "2022-12-20T23:00:00.000Z"
+        }
+    ]
+}
