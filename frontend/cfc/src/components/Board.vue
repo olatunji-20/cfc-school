@@ -1,6 +1,7 @@
 <template>
     <section>
         <h1>for student board</h1>
+        <div class="showboard"></div>
         <div  v-for="student in students" :key="student.id">
             <Display :student="student"/>
         </div>
@@ -41,5 +42,15 @@ section {
     border: 4px solid lightcoral;
     height: 70vh;
     width: 500px;
+}
+
+.showboard {
+    width: 800px;
+    height: 500px;
+    border: 4px solid red;
+    border-radius: 10px;
+    background-color: aquamarine;
+    position: absolute;
+    opacity: 0.7;
 }
 </style>

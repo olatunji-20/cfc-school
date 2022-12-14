@@ -20,7 +20,8 @@
     <div class="del">
       <Delete :id="student.id" />
     </div>
-    <h1><router-link :to="'/full/' + student.id">view</router-link></h1>
+    <!-- <h1><router-link :to="'/full/' + student.id">view</router-link></h1> -->
+    <h1>click</h1>
   </section>
 </template>
 
@@ -95,4 +96,5 @@ h1 {
   height: 70px;
   background: red;
 }
+
 </style>
