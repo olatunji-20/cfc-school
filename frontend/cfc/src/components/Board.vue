@@ -1,32 +1,38 @@
 <template>
     <section>
         <h1>for student board</h1>
-        <div class="showboard"></div>
+        <Full v-show="showClick" :popStudent="student"/>
         <div  v-for="student in students" :key="student.id">
-            <Display :student="student"/>
+            <Display v-on:show-click="clickShow(student.id)" :student="student"/>
         </div>
     </section>
 </template>
 
 <script>
 import Display from './Display.vue';
+import Full from './Full.vue'
 import { mapGetters, mapActions } from 'vuex';
 
     export default {
     name: "Board",
     data() {
         return {
-            displayFull: false
+            showClick: false
         }
     },
     computed: {
-        ...mapGetters("student", ["students"])
+        ...mapGetters("student", ["students", "student"])
     },
     components: {
-        Display
+        Display,
+        Full
     },
     methods: {
-        ...mapActions("student", ["getStudents"])     
+        ...mapActions("student", ["getStudents", "getStudent"]),
+        clickShow(id) {
+            this.showClick = true;
+            this.getStudent(id)
+        }
     },
     async created() {
         this.students = await this.getStudents();

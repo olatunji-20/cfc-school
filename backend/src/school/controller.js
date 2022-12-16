@@ -8,7 +8,7 @@ const getStudents = (req, res) => {
             console.log("error in query..");
         }else {
             res.status(200).json(results.rows);
-            console.log(results.rows);
+            console.log("all students");
         }
     })
 }

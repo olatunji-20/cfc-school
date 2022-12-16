@@ -21,7 +21,7 @@
       <Delete :id="student.id" />
     </div>
     <!-- <h1><router-link :to="'/full/' + student.id">view</router-link></h1> -->
-    <h1>click</h1>
+    <h1 v-on:click="showclickEmit(student.id)">click</h1>
   </section>
 </template>
 
@@ -36,10 +36,15 @@ export default {
   props: {
     student: Object,
   },
-  methods: {},
+  methods: {
+    showclickEmit(id) {
+      this.$emit("show-click", id)
+    }
+  },
   components: {
     Delete
   },
+  emits: ["show-click"]
 };
 </script>
 
