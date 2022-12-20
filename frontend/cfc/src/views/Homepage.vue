@@ -1,6 +1,7 @@
 <template>
     <section>
-        <header>
+        <Navbar />
+        <!-- <header>
             <div class="logo-container"></div>
             <div class="signs">
                 <ul>
@@ -8,23 +9,26 @@
                     <li>Sign Up</li>
                 </ul>
             </div>
-        </header>
+        </header> -->
         <div class="container">
             <div class="left">
-                <h1> CFC schools</h1>
-                <h3><router-link to="/signup">Add a new student.</router-link></h3>
-                <h3><router-link to="/allstudents">view all students.</router-link></h3>
-                <h3><router-link to="/update-student">Update student info.</router-link></h3>
+                
             </div>
             <div class="right">
                 <h1> STUDENT IMAGE</h1>
             </div>
         </div>
-
+        <div class="temp-links">
+            <h1> CFC schools</h1>
+                <h3><router-link to="/signup">Add a new student.</router-link></h3>
+                <h3><router-link to="/allstudents">view all students.</router-link></h3>
+                <h3><router-link to="/update-student">Update student info.</router-link></h3>
+        </div>
     </section>
 </template>
 
 <script>
+import Navbar from '../components/Navbar.vue'
     export default {
         name: 'Homepage',
         data() {
@@ -32,6 +36,9 @@
                 
             }
         },
+        components: {
+            Navbar
+        }
     }
 </script>
 
@@ -42,7 +49,7 @@
         height: auto;
     }
 
-    header {
+    /* header {
         width: 100%;
         height: 15vh;
         border: 1px solid green;
@@ -57,9 +64,9 @@
         position: relative;
         float: left;
         margin: 20px 50px;
-    }
+    } */
 
-    .signs {
+    /* .signs {
         width: 250px;
         height: 60px;
         position: relative;
@@ -74,7 +81,7 @@
         padding: 5px 15px;
         border: 1px solid red;
         margin: 0px 10px;
-    }
+    } */
 
     h1  {
         text-align: center;
@@ -82,7 +89,7 @@
     
     .container {
         width: 100%;
-        height: 85vh;
+        height: 90vh;
         background-color: cornsilk;
         border: 2px solid green;
         display: flex;
@@ -98,6 +105,12 @@
         width: 300px;
         height: 400px;
         border: 4px solid lawngreen;
+    }
+
+    .temp-links {
+        width: 500px;
+        height: 300px;
+        border: 9px solid goldenrod;
     }
 
 </style>
