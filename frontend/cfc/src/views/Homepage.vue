@@ -11,14 +11,34 @@
                 </div>
                 <div class="focussed">
                     <p>"I have never been so focused and productive when studying by myself before. I usually study with  group of friends to stay on track and motivate each other."</p>
-                    <div class="kas1"></div>
-                    <div class="kas2"></div>
+                    <div class="kas-wrap">
+                        <div class="kas1">
+                            <img src="../assets/sheriff.png" class="kas-image" />
+                        </div>
+                        <div class="kas2">
+                            <h4>Kassandra</h4>
+                            <p>Student from University of Waterloo.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="right">
-                <h1> STUDENT IMAGE</h1>
+                <div class="blur"></div>
+                <div class="student-image"></div>
+                <div class="time"></div>
             </div>
         </div>
+        <div class="thousands">
+            <p>Thousands of Students and People have made their decisions.</p>
+            <p>Study Together is the best platform for studying.</p>
+            <div class="media">
+                <div class="med"></div>
+                <div class="med"></div>
+                <div class="med"></div>
+                <div class="med"></div>
+            </div>
+        </div>
+        <Work />
         <div class="temp-links">
             <h1> CFC schools</h1>
                 <h3><router-link to="/signup">Add a new student.</router-link></h3>
@@ -32,6 +52,7 @@
 <script>
 import Navbar from '../components/Navbar.vue'
 import Footbar from '../components/Footbar.vue'
+import Work from '../components/Work.vue'
     export default {
         name: 'Homepage',
         data() {
@@ -41,6 +62,7 @@ import Footbar from '../components/Footbar.vue'
         },
         components: {
             Navbar,
+            Work,
             Footbar
         }
     }
@@ -93,13 +115,13 @@ import Footbar from '../components/Footbar.vue'
         height: 80px;
         border: 2px solid chartreuse;
         border-radius: 40px;
-        padding: 5 px;
+        padding: 5px;
         text-align: center;
         font-size: 18px;
     }
     .focussed {
         width: 85%;
-        height: 220px;
+        height: auto;
         border: 2px solid saddlebrown;
         padding: 5px;
         margin-top: 60px;
@@ -107,21 +129,99 @@ import Footbar from '../components/Footbar.vue'
     .focussed p {
         font-size: 17px;
     }
+    .kas-wrap {
+        width: 100%;
+        height: 85px;
+        border: 2px solid green;
+        display: flex;
+        flex-direction: row;
+    }
     .kas1 {
-        width: 100px;
-        height: 100px;
-        border: 1px solid hotpink;
+        width: 80px;
+        height: 80px;
+        /* display: inline-block; */
+        border: 2px solid hotpink;
+        padding: 1px;
+        border-radius: 50%;
+    }
+    .kas-image {
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
     }
     .kas2 {
-        width: 400px;
-        height: 100px;
+        width: 350px;
+        height: 80px;
         border: 2px solid hotpink;
+        padding: 5px;
+        line-height: 5px;
+        margin-left: 30px;
+        /* display: inline-block; */
     }
     .right {
         width: 38%;
         height: 100%;
         border: 4px solid lawngreen;
+        padding-top: 50px;
     }
+    .blur {
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+        border: 2px solid pink;
+        float: right;
+        position: relative;
+        right: 80px;
+        
+    }
+    .student-image {
+        width: 450px;
+        height: 650px;
+        border: 1px solid blue;
+        margin: 50px auto;
+        border-radius: 20px;
+    }
+    .time {
+        width: 250px;
+        height: 100px;
+        border: 1px solid darkblue;
+        float: right;
+        position: relative;
+        bottom: 100px;
+        right: 50px;
+        border-radius: 15px;
+    }
+    .thousands {
+        width: 100%;
+        height: 500px;
+        border: 5px solid greenyellow;
+        background: whitesmoke;
+        margin-top: 60px;
+        padding: 70px;
+        font-size: 20px;
+        line-height: 13px;
+    }
+    .media {
+        width: 1200px;
+        height: 100px;
+        margin: 100px auto;
+        border: 2px solid red;
+        padding: 10px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    .med {
+        width: 250px;
+        height: 80px;
+        border: 1px solid black;
+    }
+
+
+
+
+
+
 
     .temp-links {
         width: 500px;
