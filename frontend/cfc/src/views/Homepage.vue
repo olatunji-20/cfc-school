@@ -1,18 +1,19 @@
 <template>
     <section>
         <Navbar />
-        <!-- <header>
-            <div class="logo-container"></div>
-            <div class="signs">
-                <ul>
-                    <li>Login</li>
-                    <li>Sign Up</li>
-                </ul>
-            </div>
-        </header> -->
         <div class="container">
             <div class="left">
-                
+                <h2>A Better Way <br/> To Keep Productive</h2>
+                <p>Join the largest global student community online and say goodbye to lack of motivation. We are here to help you keep focus when studying.</p>
+                <div class="join">
+                    <div class="join1"><p>Join a Study Room</p></div>
+                    <div class="join2"><p>Discord Server</p></div>
+                </div>
+                <div class="focussed">
+                    <p>"I have never been so focused and productive when studying by myself before. I usually study with  group of friends to stay on track and motivate each other."</p>
+                    <div class="kas1"></div>
+                    <div class="kas2"></div>
+                </div>
             </div>
             <div class="right">
                 <h1> STUDENT IMAGE</h1>
@@ -52,40 +53,6 @@ import Footbar from '../components/Footbar.vue'
         height: auto;
     }
 
-    /* header {
-        width: 100%;
-        height: 15vh;
-        border: 1px solid green;
-        background-color: aquamarine;
-    }
-
-    .logo-container {
-        width: 250px;
-        height: 60px;
-        border: 1px solid black;
-        background-color: floralwhite;
-        position: relative;
-        float: left;
-        margin: 20px 50px;
-    } */
-
-    /* .signs {
-        width: 250px;
-        height: 60px;
-        position: relative;
-        float: right;
-        border: 2px solid blue;
-        margin: 25px 100px 0px;
-    }
-
-    .signs ul li {
-        width: auto;
-        display: inline-block;
-        padding: 5px 15px;
-        border: 1px solid red;
-        margin: 0px 10px;
-    } */
-
     h1  {
         text-align: center;
     }
@@ -100,13 +67,59 @@ import Footbar from '../components/Footbar.vue'
         justify-content: space-around;
     }
     .left {
-        width: 400px;
-        height: 500px;
+        width: 50%;
+        height: 100%;
         border: 3px solid brown;
+        text-align: left;
+        padding: 70px 100px 0px;
+    }
+    .left h2 {
+        font-size: 75px;
+    }
+    .left p {
+        font-size: 22px;
+    }
+    .join {
+        width: 85%;
+        height: 90px;
+        border: 2px solid navajowhite;
+        margin-top: 70px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .join1, .join2 {
+        width: 250px;
+        height: 80px;
+        border: 2px solid chartreuse;
+        border-radius: 40px;
+        padding: 5 px;
+        text-align: center;
+        font-size: 18px;
+    }
+    .focussed {
+        width: 85%;
+        height: 220px;
+        border: 2px solid saddlebrown;
+        padding: 5px;
+        margin-top: 60px;
+    }
+    .focussed p {
+        font-size: 17px;
+    }
+    .kas1 {
+        width: 100px;
+        height: 100px;
+        border: 1px solid hotpink;
+    }
+    .kas2 {
+        width: 400px;
+        height: 100px;
+        border: 2px solid hotpink;
     }
     .right {
-        width: 300px;
-        height: 400px;
+        width: 38%;
+        height: 100%;
         border: 4px solid lawngreen;
     }
 

@@ -5,7 +5,7 @@
             <p>Help you study more often than before.</p>
         </div>
         <div class="two">
-            <p>Support</p>
+            <h4>Support</h4>
             <ul>
                 <li>Help center</li>
                 <li>Account information</li>
@@ -14,7 +14,7 @@
             </ul>
         </div>
         <div class="three">
-            <p>Product</p>
+            <h4>Product</h4>
             <ul>
                 <li>Study Room</li>
                 <li>Discord Server</li>
@@ -22,14 +22,16 @@
             </ul>
         </div>
         <div class="four">
-            <p>Help and Solution</p>
+            <h4>Help and Solution</h4>
             <ul>
                 <li>Talk to support</li>
                 <li>Support docs</li>
                 <li>System status</li>
                 <li>Cookies</li>
             </ul></div>
-        <div class="five"></div>
+        <div class="five">
+            <h4>FALANA SHERIFF OLATUNJI</h4>
+        </div>
     </section>
 </template>
 
@@ -66,14 +68,21 @@ export default {
     height: 400px;
     text-align: left;
     padding: 30px 0px;
+    font-size: 20px;
+}
+.two h4, .three h4, .four h4 {
+    font-weight: bolder;
+    text-indent: 35px;
 }
 .two ul li, .three ul li, .four ul li {
     list-style-type: none;
-    line-height: 30px;
+    line-height: 35px;
 }
 .five {
     width: 100%;
     height: 100px;
     border: 2px solid black;
+    padding: 5px;
+    font-size: 25px;
 }
 </style>
