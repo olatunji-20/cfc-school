@@ -24,11 +24,13 @@
                 <h3><router-link to="/allstudents">view all students.</router-link></h3>
                 <h3><router-link to="/update-student">Update student info.</router-link></h3>
         </div>
+        <Footbar />
     </section>
 </template>
 
 <script>
 import Navbar from '../components/Navbar.vue'
+import Footbar from '../components/Footbar.vue'
     export default {
         name: 'Homepage',
         data() {
@@ -37,7 +39,8 @@ import Navbar from '../components/Navbar.vue'
             }
         },
         components: {
-            Navbar
+            Navbar,
+            Footbar
         }
     }
 </script>
