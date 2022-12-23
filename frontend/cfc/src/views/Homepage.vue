@@ -45,6 +45,17 @@
                 <h3><router-link to="/allstudents">view all students.</router-link></h3>
                 <h3><router-link to="/update-student">Update student info.</router-link></h3>
         </div>
+        <section class="motivate">
+            <div class="mot1">
+                <h2>It is motivating and scientifically Proven</h2>
+                <p>As crazy as it seems, your neurons mirror other people's behaviour:</p>
+                <p>Seeing others studying boosts your productivity!</p>
+                <div class="keep1"><h5>keep you motivated</h5></div>
+                <div class="keep2"><h5>Boosts your productivity</h5></div>
+                <button class="about">Learn About It </button>
+            </div>
+            <div class="mot2"></div>
+        </section>
         <Footbar />
     </section>
 </template>
@@ -227,6 +238,59 @@ import Work from '../components/Work.vue'
         width: 500px;
         height: 300px;
         border: 9px solid goldenrod;
+    }
+
+
+    .motivate {
+        width: 100%;
+        height: 800px;
+        border: 5px solid red;
+        background: wheat;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        padding: 20px;
+        flex-wrap: wrap;
+    }
+
+    .mot1 {
+        border: 2px solid green;
+        width: 40%;
+        height: 700px;
+        padding: 30px;
+        text-align: left;
+    }
+    .mot1 h2 {
+        font-size: 60px;
+    }
+    .mot1 p {
+        font-size: 20px;
+        line-height: 15px;
+    }
+    .keep1 {
+        border: 1px solid red;
+        height: 50px;
+        width: 300px;
+        margin-top: 80px;
+    }
+    .keep2 {
+        border: 1px solid red;
+        height: 50px;
+        width: 300px;
+        margin-top: 30px;
+    }
+    .about {
+        width: 220px;
+        height: 70px;
+        border: 1px solid red;
+        border-radius: 35px;
+        font-size: 18px;
+        margin-top: 30px;
+    }
+    .mot2 {
+        border: 2px solid blue;
+        width: 45%;
+        height: 600px;
     }
 
 </style>
