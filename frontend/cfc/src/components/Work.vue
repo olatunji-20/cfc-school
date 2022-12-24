@@ -4,11 +4,13 @@
         <p>It's time to choose wisely your lerning platform. Bimble has professional <br /> mentors and instructors that always helps you to grow up your career.</p>
         <div class="main">
             <div class="focus">
-                <div class="purpose">
-                    <div class="purp"></div>
-                </div>
-                    <h3>Set Some Goals</h3>
-                    <p>We always stay organised for what we want to teach people. It is always good to be well organized.</p>
+                <router-link class="link" to="/signup">
+                    <div class="purpose">
+                        <div class="purp"></div>
+                    </div>
+                        <h3>Add a new student</h3>
+                        <p>We always stay organised for what we want to teach people. It is always good to be well organized.</p>
+                </router-link>
             </div>
             <div class="focus">
                 <div class="purpose">
@@ -67,6 +69,11 @@ section p {
     height: 500px;
     background: cornsilk;
     padding: 30px;
+}
+.link {
+    text-decoration: none;
+    color: red;
+
 }
 .purpose {
     width: 150px;

@@ -62,6 +62,33 @@
         <section class="last">
             <h1>Study Together:<br /> Frequently Asked Questions</h1>
             <p>You will find here the answers to the frequently asked questions and community <br /> quidelines, that allow us to study in a motivating and secure environment.</p>
+            <div class="study">
+                <div class="join">
+                    <p class="topic">How can I join a study call?</p>
+                    <p v-on:click="showDetailA" class="icon">A</p>
+                    <div v-show="detailA" class="details"><p>hfhfhfhf fhfhhf fffhf ffhfh hfhfhfhf fhfhhf fffhf ffhfhhfhfhfhf fhfhhf fffhf ffhfh</p></div>
+                </div>
+                <div class="join">
+                    <p class="topic">Can you unmute me so I can speak to other people?</p>
+                    <p v-on:click="showDetailB" class="icon">A</p>
+                    <div v-show="detailB" class="details"><p>hfhfhfhf fhfhhf fffhf ffhfh</p></div>
+                </div>
+                <div class="join">
+                    <p class="topic">Where can I see all commands for the server?</p>
+                    <p v-on:click="showDetailC" class="icon">A</p>
+                    <div v-show="detailC" class="details"><p>hfhfhfhf fhfhhf fffhf ffhfh</p></div>
+                </div>
+                <div class="join">
+                    <p class="topic">Can I join 25m - 50m session call even when it's on break?</p>
+                    <p v-on:click="showDetailD" class="icon">A</p>
+                    <div v-show="detailD" class="details"><p>hfhfhfhf fhfhhf fffhf ffhfh</p></div>
+                </div>
+            </div>
+            <h1>Join Thousands of Students Around <br /> <span style="color: blue"> The World and Start Studying Together</span></h1>
+            <div class="but">
+                <button class="server">Join a Study Room</button>
+                <button class="server">Discord Server</button>
+            </div>
         </section>
         <Footbar />
     </section>
@@ -75,13 +102,42 @@ import Work from '../components/Work.vue'
         name: 'Homepage',
         data() {
             return {
-                
+                detailA: false,
+                detailB: false,
+                detailC: false,
+                detailD: false
             }
         },
         components: {
             Navbar,
             Work,
             Footbar
+        },
+        methods: {
+            showDetailA() {
+                    this.detailA = !this.detailA;
+                    this.detailB = false;
+                    this.detailC = false;
+                    this.detailD = false;
+            },
+            showDetailB() {
+                    this.detailB = !this.detailB;
+                    this.detailA = false;
+                    this.detailC = false;
+                    this.detailD = false;
+            },
+            showDetailC() {
+                    this.detailC = !this.detailC;
+                    this.detailB = false;
+                    this.detailA = false;
+                    this.detailD = false;
+            },
+            showDetailD() {
+                    this.detailD = !this.detailD;
+                    this.detailB = false;
+                    this.detailC = false;
+                    this.detailA = false;
+            }
         }
     }
 </script>
@@ -318,7 +374,8 @@ import Work from '../components/Work.vue'
     .last {
         border: 3px solid hotpink;
         width: 100%;
-        height: 900px;
+        height: auto;
+        margin-bottom: 120px;
         background: whitesmoke;
         padding: 80px;
     }
@@ -328,5 +385,79 @@ import Work from '../components/Work.vue'
     .last p {
         font-size: 20px;
     }
+    .study {
+        border: 4px solid blue;
+        width: 60%;
+        height: auto;
+        margin: 80px auto 250px;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: space-around;
+    }
+    .join {
+        border: 1px solid black;
+        width: 90%;
+        height: auto;
+        margin: 20px auto;
+        padding: 10px 20px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        text-align: left;
+    }
+    .join .topic {
+        font-weight: bolder;
+        border: 1px solid teal;
+        width: 90%;
+    }
+    .join .icon {
+        border: 1px solid green;
+        width: auto;
+        cursor: pointer;
+    }
+    @keyframes detail {
+        0% {
+            height: 10px;
+        }
+        100% {
+            height: 100px;
+        }
+    }
+    .details {
+        border: 3px solid red;
+        width: 100%;
+        height: 100px;
+        display: block;
+        overflow: hidden;
+        padding: 3px 10px;
+        animation-name: detail;
+        animation-duration: .5s;
+    }
+    .but {
+        border: 1px solid red;
+        width: 35%;
+        height: 80px;
+        margin: 0px auto;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .server {
+        width: 230px;
+        height: 70px;
+        border: 1px solid firebrick;
+        font-size: 20px;
+        border-radius: 35px;
+    }
+
+    @media screen and (max-width: 450px) {
+        section{
+            width: 100%;
+            border: 1px dashed red;
+        }
+    } 
 
 </style>

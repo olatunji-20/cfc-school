@@ -45,7 +45,7 @@ export default {
 <style scoped>
 .main {
     width: 85%;
-    height: 500px;
+    height: auto;
     border-top: 2px solid red;
     background: powderblue;
     margin: 0px auto;
@@ -85,4 +85,25 @@ export default {
     padding: 5px;
     font-size: 25px;
 }
+
+@media screen and (max-width: 450px) {
+    .main {
+        width: 100%;
+        flex-direction: column;
+    }
+    .one {
+        width: 100%;
+    }
+    .two, .three, .four {
+        width: 100%;
+        height: auto;
+        padding: 20px 0px;
+    }
+    .five {
+        height: 80px;
+        padding: 0px;
+        font-size: 20px;
+    }
+}
+
 </style>
