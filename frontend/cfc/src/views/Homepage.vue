@@ -54,7 +54,14 @@
                 <div class="keep2"><h5>Boosts your productivity</h5></div>
                 <button class="about">Learn About It </button>
             </div>
-            <div class="mot2"></div>
+            <div class="mot2">
+                <div class="comp"></div>
+                <div class="top"></div>
+            </div>
+        </section>
+        <section class="last">
+            <h1>Study Together:<br /> Frequently Asked Questions</h1>
+            <p>You will find here the answers to the frequently asked questions and community <br /> quidelines, that allow us to study in a motivating and secure environment.</p>
         </section>
         <Footbar />
     </section>
@@ -81,7 +88,7 @@ import Work from '../components/Work.vue'
 
 <style scoped>
     section {
-        border: 2px solid red;
+        border: 7px solid red;
         width: 100%;
         height: auto;
     }
@@ -289,8 +296,37 @@ import Work from '../components/Work.vue'
     }
     .mot2 {
         border: 2px solid blue;
-        width: 45%;
-        height: 600px;
+        width: 50%;
+        height: 700px;
+    }
+    .comp {
+        width: 550px;
+        height: 450px;
+        border: 2px solid red;
+        margin: 20px auto 0px;
+        border-radius: 20px;
+    }
+    .top {
+        width: 400px;
+        height: 150px;
+        border: 1px solid green;
+        float: right;
+        position: relative;
+        bottom: 75px;
+        border-radius: 20px;
+    }
+    .last {
+        border: 3px solid hotpink;
+        width: 100%;
+        height: 900px;
+        background: whitesmoke;
+        padding: 80px;
+    }
+    .last h1 {
+        font-size: 60px;
+    }
+    .last p {
+        font-size: 20px;
     }
 
 </style>
