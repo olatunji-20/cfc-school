@@ -55,7 +55,7 @@ section p {
 .main {
     border: 5px solid teal;
     width: 85%;
-    height: 600px;
+    height: auto;
     margin: 50px auto;
     padding: 20px;
     display: flex;

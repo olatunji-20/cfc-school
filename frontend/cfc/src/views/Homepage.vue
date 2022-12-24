@@ -5,7 +5,7 @@
             <div class="left">
                 <h2>A Better Way <br/> To Keep Productive</h2>
                 <p>Join the largest global student community online and say goodbye to lack of motivation. We are here to help you keep focus when studying.</p>
-                <div class="join">
+                <div class="joind">
                     <div class="join1"><p>Join a Study Room</p></div>
                     <div class="join2"><p>Discord Server</p></div>
                 </div>
@@ -65,22 +65,22 @@
             <div class="study">
                 <div class="join">
                     <p class="topic">How can I join a study call?</p>
-                    <p v-on:click="showDetailA" class="icon">A</p>
+                    <p v-text="detailA ? first : second " v-on:click="showDetailA" class="icon"></p>
                     <div v-show="detailA" class="details"><p>hfhfhfhf fhfhhf fffhf ffhfh hfhfhfhf fhfhhf fffhf ffhfhhfhfhfhf fhfhhf fffhf ffhfh</p></div>
                 </div>
                 <div class="join">
                     <p class="topic">Can you unmute me so I can speak to other people?</p>
-                    <p v-on:click="showDetailB" class="icon">A</p>
+                    <p v-text="detailB ? first : second " v-on:click="showDetailB" class="icon"></p>
                     <div v-show="detailB" class="details"><p>hfhfhfhf fhfhhf fffhf ffhfh</p></div>
                 </div>
                 <div class="join">
                     <p class="topic">Where can I see all commands for the server?</p>
-                    <p v-on:click="showDetailC" class="icon">A</p>
+                    <p v-text="detailC ? first : second " v-on:click="showDetailC" class="icon"></p>
                     <div v-show="detailC" class="details"><p>hfhfhfhf fhfhhf fffhf ffhfh</p></div>
                 </div>
                 <div class="join">
                     <p class="topic">Can I join 25m - 50m session call even when it's on break?</p>
-                    <p v-on:click="showDetailD" class="icon">A</p>
+                    <p v-text="detailD ? first : second " v-on:click="showDetailD" class="icon"></p>
                     <div v-show="detailD" class="details"><p>hfhfhfhf fhfhhf fffhf ffhfh</p></div>
                 </div>
             </div>
@@ -102,6 +102,8 @@ import Work from '../components/Work.vue'
         name: 'Homepage',
         data() {
             return {
+                first: "-",
+                second: "+",
                 detailA: false,
                 detailB: false,
                 detailC: false,
@@ -175,10 +177,10 @@ import Work from '../components/Work.vue'
     .left p {
         font-size: 22px;
     }
-    .join {
+    .joind {
         width: 85%;
         height: 90px;
-        border: 2px solid navajowhite;
+        border: 2px solid peru;
         margin-top: 70px;
         display: flex;
         flex-direction: row;
@@ -306,8 +308,8 @@ import Work from '../components/Work.vue'
 
     .motivate {
         width: 100%;
-        height: 800px;
-        border: 5px solid red;
+        height: auto;
+        border: 10px solid red;
         background: wheat;
         display: flex;
         flex-direction: row;
@@ -319,7 +321,7 @@ import Work from '../components/Work.vue'
     .mot1 {
         border: 2px solid green;
         width: 40%;
-        height: 700px;
+        height: auto;
         padding: 30px;
         text-align: left;
     }
@@ -353,7 +355,7 @@ import Work from '../components/Work.vue'
     .mot2 {
         border: 2px solid blue;
         width: 50%;
-        height: 700px;
+        height: auto;
     }
     .comp {
         width: 550px;
@@ -372,7 +374,7 @@ import Work from '../components/Work.vue'
         border-radius: 20px;
     }
     .last {
-        border: 3px solid hotpink;
+        border: 8px solid green;
         width: 100%;
         height: auto;
         margin-bottom: 120px;
@@ -417,6 +419,8 @@ import Work from '../components/Work.vue'
         border: 1px solid green;
         width: auto;
         cursor: pointer;
+        font-size: 20px;
+        font-weight: bolder;
     }
     @keyframes detail {
         0% {
@@ -453,10 +457,72 @@ import Work from '../components/Work.vue'
         border-radius: 35px;
     }
 
+
+
+
+
+
     @media screen and (max-width: 450px) {
         section{
             width: 100%;
             border: 1px dashed red;
+        }
+
+
+
+
+
+        .motivate {
+            flex-direction: column;
+            padding: 10px;
+        }
+        .mot1 {
+            width: 100%;
+            padding: 10px;
+        }
+        .mot1 h2 {
+            font-size: 40px;
+        }
+        .mot2 {
+            width: 100%;
+        }
+        .keep1, .keep2 {
+            margin-top: 20px;
+        }
+        .about {
+            width: 150px;
+            height: 60px;
+        }
+
+
+
+
+        .last {
+            padding: 10px;
+        }
+        .last h1 {
+            font-size: 35px;
+        }
+        .last p {
+            font-size: 16px;
+        }
+        .study {
+            width: 95%;
+            padding: 0px;
+            margin-bottom: 140px;
+        }
+        .join {
+            margin: 10px auto;
+            padding: 5px 10px;
+        }
+        .but {
+            width: 80%;
+            height: 60px;
+        }
+        .server {
+            width: 150px;
+            height: 50px;
+            font-size: 16px;
         }
     } 
 

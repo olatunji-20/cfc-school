@@ -21,7 +21,7 @@
 <style scoped>
 .main {
     width: 100%;
-    height: 250px;
+    height: 23vh;
     border: 3px solid red;
     background: pink;
     padding: 70px 50px 0px 10px;
@@ -57,5 +57,21 @@
     border: 1px solid red;
     font-size: 24px;
     border-radius: 35px;
+}
+
+
+
+
+@media screen and (max-width: 450px) {
+    .main {
+        height: auto;
+        flex-direction: column;
+        padding: 50px 5px;
+        overflow: hidden;
+    }
+    .options {
+        width: 90%;
+        height: auto;
+    }
 }
 </style>
