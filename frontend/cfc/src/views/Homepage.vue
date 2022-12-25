@@ -7,7 +7,7 @@
                 <p>Join the largest global student community online and say goodbye to lack of motivation. We are here to help you keep focus when studying.</p>
                 <div class="joind">
                     <div class="join1"><p>Join a Study Room</p></div>
-                    <div class="join2"><p>Discord Server</p></div>
+                    <div class="join1"><p>Discord Server</p></div>
                 </div>
                 <div class="focussed">
                     <p>"I have never been so focused and productive when studying by myself before. I usually study with  group of friends to stay on track and motivate each other."</p>
@@ -186,7 +186,7 @@ import Work from '../components/Work.vue'
         flex-direction: row;
         justify-content: space-between;
     }
-    .join1, .join2 {
+    .join1 {
         width: 250px;
         height: 80px;
         border: 2px solid chartreuse;
@@ -269,7 +269,7 @@ import Work from '../components/Work.vue'
     }
     .thousands {
         width: 100%;
-        height: 500px;
+        height: auto;
         border: 5px solid greenyellow;
         background: whitesmoke;
         margin-top: 60px;
@@ -300,7 +300,7 @@ import Work from '../components/Work.vue'
 
 
     .temp-links {
-        width: 500px;
+        width: 300px;
         height: 300px;
         border: 9px solid goldenrod;
     }
@@ -467,6 +467,76 @@ import Work from '../components/Work.vue'
             width: 100%;
             border: 1px dashed red;
         }
+        .container {
+            height: auto;
+        }
+
+        .left {
+            width: 100%;
+            padding: 20px 30px;
+        }
+        .left h2 {
+            font-size: 45px;
+        }
+        .left p {
+            font-size: 18px;
+        }
+        .joind {
+            width: 100%;
+            margin-top: 40px;
+            height: 65px;
+        }
+        .join1 {
+            width: 200px;
+            height: 60px;
+            padding: 2px;
+        }
+        .focussed {
+            width: 100%;
+            padding: 2px;
+        }
+        .focussed p {
+            font-size: 14px;
+        }
+
+
+
+
+
+
+
+        .right {
+            display: none;
+        }
+
+
+
+        .thousands {
+            padding: 20px;
+            font-size: 16px;
+            line-height: 15px;
+        }
+        .media {
+            width: 70%;
+            height: auto;
+            flex-direction: column;
+            margin: 40px auto;
+            padding: 5px;
+        }
+        .med {
+            width: 200px;
+            margin: 10px auto;
+        }
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -483,15 +553,24 @@ import Work from '../components/Work.vue'
         .mot1 h2 {
             font-size: 40px;
         }
-        .mot2 {
-            width: 100%;
-        }
         .keep1, .keep2 {
             margin-top: 20px;
         }
         .about {
             width: 150px;
             height: 60px;
+        }
+        .mot2 {
+            width: 100%;
+        }
+        .comp {
+            width: 350px;
+            height: 250px;
+        }
+        .top {
+            width: 170px;
+            height: 100px;
+            bottom: 60px;
         }
 
 

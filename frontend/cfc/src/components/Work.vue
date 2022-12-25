@@ -39,9 +39,9 @@ export default {
 
 <style scoped>
 section {
-    border: 7px solid green;
+    border: 10px solid green;
     width: 100%;
-    height: 900px;
+    height: auto;
     padding: 100px;
 }
 section h1 {
@@ -90,4 +90,40 @@ section p {
     background: blue;
     margin: 30px auto;
 }
+
+
+
+
+@media screen  and (max-width: 450px) {
+    section {
+        padding: 10px;
+    }
+    section h1 {
+        font-size: 40px;
+        line-height: 20px;
+    }
+    section p {
+        font-size: 16px;
+        line-height: 25px;
+    }
+    .main {
+        width: 90%;
+        flex-direction: column;
+        padding: 10px;
+    }
+    .focus {
+        width: 95%;
+        margin: 10px auto;
+        height: 450px;
+    }
+
+
+
+
+
+
+}
+
+
+
 </style>
