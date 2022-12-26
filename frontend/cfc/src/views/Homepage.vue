@@ -462,6 +462,50 @@ import Work from '../components/Work.vue'
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     @media screen and (max-width: 450px) {
         section{
             width: 100%;
