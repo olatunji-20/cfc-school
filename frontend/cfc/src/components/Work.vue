@@ -1,7 +1,7 @@
 <template>
     <section>
         <h1>How It Work</h1>
-        <p>It's time to choose wisely your lerning platform. Bimble has professional <br /> mentors and instructors that always helps you to grow up your career.</p>
+        <p>It's time to choose wisely your learning platform. Bimble has professional <br /> mentors and instructors that always helps you to grow up your career.</p>
         <div class="main">
             <div class="focus">
                 <router-link class="link" to="/signup">
@@ -39,25 +39,25 @@ export default {
 
 <style scoped>
 section {
-    border: 10px solid green;
+    border: 2px solid blue;
     width: 100%;
     height: auto;
-    padding: 100px;
+    padding: 50px;
 }
 section h1 {
-    font-size: 60px;
-    line-height: 40px;
+    font-size: 50px;
+    line-height: 20px;
 }
 section p {
-    font-size: 20px;
-    line-height: 30px;
+    font-size: 17px;
+    line-height: 21px;
 }
 .main {
     border: 5px solid teal;
-    width: 85%;
+    width: 90%;
     height: auto;
     margin: 50px auto;
-    padding: 20px;
+    padding: 15px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -65,10 +65,13 @@ section p {
 }
 .focus {
     border: 2px solid black;
-    width: 350px;
-    height: 500px;
+    width: 280px;
+    height: 420px;
     background: cornsilk;
-    padding: 30px;
+    padding: 10px;
+}
+.focus p {
+    font-size: 17px;
 }
 .link {
     text-decoration: none;

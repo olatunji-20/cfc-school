@@ -44,7 +44,7 @@ export default {
 
 <style scoped>
 .main {
-    width: 85%;
+    width: 90%;
     height: auto;
     border-top: 2px solid red;
     background: powderblue;
@@ -56,34 +56,39 @@ export default {
 }
 .one {
     border: 2px solid green;
-    width: 450px;
-    height: 400px;
+    width: 400px;
+    height: 300px;
     text-align: left;
-    padding: 30px;
+    padding: 20px;
+}
+.one h1 {
     font-size: 25px;
+}
+.one p {
+    font-size: 17px;
 }
 .two, .three, .four {
     border: 2px solid blue;
-    width: 250px;
-    height: 400px;
+    width: 220px;
+    height: 300px;
     text-align: left;
-    padding: 30px 0px;
-    font-size: 20px;
+    padding: 20px 0px;
 }
 .two h4, .three h4, .four h4 {
     font-weight: bolder;
-    text-indent: 35px;
+    text-indent: 30px;
+    font-size: 20px;
 }
 .two ul li, .three ul li, .four ul li {
     list-style-type: none;
-    line-height: 35px;
+    line-height: 30px;
 }
 .five {
     width: 100%;
-    height: 100px;
+    height: 80px;
     border: 2px solid black;
-    padding: 5px;
-    font-size: 25px;
+    padding: 3px;
+    font-size: 20px;
 }
 
 @media screen and (max-width: 450px) {
@@ -100,9 +105,9 @@ export default {
         padding: 20px 0px;
     }
     .five {
-        height: 80px;
+        height: 70px;
         padding: 0px;
-        font-size: 20px;
+        font-size: 18px;
     }
 }
 

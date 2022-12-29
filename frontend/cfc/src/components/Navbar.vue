@@ -22,7 +22,14 @@
             </div>  
         </div>
 
-        <div v-show="drop" class="drop-down"></div>
+        <div v-show="drop" class="drop-down">
+            <ul> 
+                <li>Study Room</li>
+                <li>Discord Server</li>
+                <li>Study Statistics</li>
+                <li>Login</li>
+            </ul>
+        </div>
 
     </section>
 </template>
@@ -47,49 +54,50 @@ export default {
 <style scoped>
 .main {
     width: 100%;
-    height: 23vh;
-    border: 3px solid red;
+    height: 150px;
+    border: 3px solid black;
     background: pink;
-    padding: 70px 30px 0px 10px;
+    padding: 30px;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
     flex-wrap: nowrap;
 }
 .logo {
-    width: 400px;
-    height: 80px;
+    width: 250px;
+    height: 70px;
     border: 2px solid green;
 }
 
 .cont {
-    width: 1100px;
-    height: 90px;
-    border: 4px solid khaki;
+    width: auto;
+    height: 70px;
+    border: 2px solid khaki;
+    /* padding: 5px; */
     display: flex;
     flex-direction: row;
     justify-content: space-between;
 }
 .options {
-    width: 900px;
-    height: 80px;
+    width: 40rem;
+    height: 70px;
     border: 2px solid black;
     padding: 10px;
 }
 .options ul li {
     display: inline-block;
-    margin: 0px 45px;
-    font-size: 22px;
+    margin: 0px 25px;
+    font-size: 17px;
 }
 .login {
-    width: 180px;
-    height: 80px;
+    width: 160px;
+    height: 70px;
     border: 2px solid blue;
     margin-left: 80px;
 }
 .login button {
     width: 150px;
-    height: 70px;
+    height: 60px;
     border: 1px solid red;
     font-size: 24px;
     border-radius: 35px;
@@ -101,9 +109,9 @@ export default {
 @media screen and (max-width: 450px) {
     .main {
         height: auto;
-        padding: 40px 5px;
+        padding: 40px 1px;
         overflow: hidden;
-        justify-content: space-between  ;
+        justify-content: space-between;
     }
     .logo {
         width: 300px;
@@ -140,10 +148,17 @@ export default {
 
     .drop-down {
         width: 300px;
-        height: 500px;
+        height: 250px;
         border: 3px solid blue;
         background: powderblue;
         position: absolute;
+        text-align: left;
+    }
+
+    .drop-down ul li {
+        list-style-type: none;
+        font-size: 18px;
+        line-height: 40px;
     }
 
 

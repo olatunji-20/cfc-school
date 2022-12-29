@@ -146,18 +146,18 @@ import Work from '../components/Work.vue'
 
 <style scoped>
     section {
-        border: 7px solid red;
+        border: 1px dashed red;
         width: 100%;
         height: auto;
     }
 
-    h1  {
+    /* h1  {
         text-align: center;
-    }
+    } */
     
     .container {
         width: 100%;
-        height: 90vh;
+        height: auto;
         background-color: cornsilk;
         border: 2px solid green;
         display: flex;
@@ -169,52 +169,52 @@ import Work from '../components/Work.vue'
         height: 100%;
         border: 3px solid brown;
         text-align: left;
-        padding: 70px 100px 0px;
+        padding: 40px 55px 0px;
     }
     .left h2 {
-        font-size: 75px;
+        font-size: 48px;
     }
     .left p {
-        font-size: 22px;
+        font-size: 16px;
     }
     .joind {
         width: 85%;
-        height: 90px;
+        height: 75px;
         border: 2px solid peru;
-        margin-top: 70px;
+        margin-top: 60px;
         display: flex;
         flex-direction: row;
         justify-content: space-between;
     }
     .join1 {
-        width: 250px;
-        height: 80px;
+        width: 200px;
+        height: 70px;
         border: 2px solid chartreuse;
-        border-radius: 40px;
-        padding: 5px;
+        border-radius: 2.5rem;
+        padding: 7px;
         text-align: center;
-        font-size: 18px;
+        font-size: 1.125rem;
     }
     .focussed {
-        width: 85%;
+        width: 100%;
         height: auto;
         border: 2px solid saddlebrown;
-        padding: 5px;
-        margin-top: 60px;
+        padding: 1px;
+        margin-top: 50px;
     }
     .focussed p {
-        font-size: 17px;
+        font-size: 15px;
     }
     .kas-wrap {
         width: 100%;
-        height: 85px;
+        height: 5.3125rem;
         border: 2px solid green;
         display: flex;
         flex-direction: row;
     }
     .kas1 {
-        width: 80px;
-        height: 80px;
+        width: 5rem;
+        height: 5rem;
         /* display: inline-block; */
         border: 2px solid hotpink;
         padding: 1px;
@@ -226,70 +226,70 @@ import Work from '../components/Work.vue'
         border-radius: 50%;
     }
     .kas2 {
-        width: 350px;
-        height: 80px;
+        width: 21.875rem;
+        height: 5rem;
         border: 2px solid hotpink;
-        padding: 5px;
-        line-height: 5px;
-        margin-left: 30px;
+        padding: 0.3125rem;
+        line-height: 0.3125rem;
+        margin-left: 1.875rem;
         /* display: inline-block; */
     }
     .right {
-        width: 38%;
-        height: 100%;
+        width: 41%;
+        height: 630px;
         border: 4px solid lawngreen;
-        padding-top: 50px;
+        padding-top: 3.125rem;
     }
     .blur {
-        width: 120px;
-        height: 120px;
+        width: 6.25rem;
+        height: 6.25rem;
         border-radius: 50%;
         border: 2px solid pink;
         float: right;
         position: relative;
-        right: 80px;
+        right: 1.5rem;
         
     }
     .student-image {
-        width: 450px;
-        height: 650px;
+        width: 360px;
+        height: 420px;
         border: 1px solid blue;
-        margin: 50px auto;
-        border-radius: 20px;
+        margin: 3.125rem auto;
+        border-radius: 1.25rem;
     }
     .time {
-        width: 250px;
-        height: 100px;
+        width: 15.625rem;
+        height: 6.25rem;
         border: 1px solid darkblue;
         float: right;
         position: relative;
-        bottom: 100px;
-        right: 50px;
-        border-radius: 15px;
+        bottom: 6.25rem;
+        right: 1.7rem;
+        border-radius: 0.9375rem;
     }
     .thousands {
         width: 100%;
         height: auto;
         border: 5px solid greenyellow;
         background: whitesmoke;
-        margin-top: 60px;
-        padding: 70px;
-        font-size: 20px;
-        line-height: 13px;
+        margin-top: 4.75rem;
+        padding: 4.375rem;
+        font-size: 18px;
+        line-height: 0.8125rem;
     }
     .media {
-        width: 1200px;
-        height: 100px;
-        margin: 100px auto;
+        width: 70%;
+        height: 6.25rem;
+        margin: 5.55rem auto 3rem;
         border: 2px solid red;
-        padding: 10px;
+        padding: 0.625rem;
         display: flex;
         flex-direction: row;
         justify-content: space-around;
     }
     .med {
-        width: 250px;
-        height: 80px;
+        width: 10.625rem;
+        height: 5rem;
         border: 1px solid black;
     }
 
@@ -314,7 +314,7 @@ import Work from '../components/Work.vue'
         display: flex;
         flex-direction: row;
         justify-content: center;
-        padding: 20px;
+        padding: 1.25rem;
         flex-wrap: wrap;
     }
 
@@ -322,35 +322,35 @@ import Work from '../components/Work.vue'
         border: 2px solid green;
         width: 40%;
         height: auto;
-        padding: 30px;
+        padding: 1.875rem;
         text-align: left;
     }
     .mot1 h2 {
-        font-size: 60px;
+        font-size: 3.75rem;
     }
     .mot1 p {
-        font-size: 20px;
-        line-height: 15px;
+        font-size: 1.25rem;
+        line-height: 0.9rem;
     }
     .keep1 {
         border: 1px solid red;
-        height: 50px;
-        width: 300px;
-        margin-top: 80px;
+        height: 3.125rem;
+        width: 18.75rem;
+        margin-top: 5rem;
     }
     .keep2 {
         border: 1px solid red;
-        height: 50px;
-        width: 300px;
-        margin-top: 30px;
+        height: 3.125rem;
+        width: 18.75rem;
+        margin-top: 1.875rem;
     }
     .about {
-        width: 220px;
-        height: 70px;
+        width: 13.75rem;
+        height: 4.375rem;
         border: 1px solid red;
-        border-radius: 35px;
-        font-size: 18px;
-        margin-top: 30px;
+        border-radius: 2.1875rem;
+        font-size: 1.125rem;
+        margin-top: 1.875rem;
     }
     .mot2 {
         border: 2px solid blue;
@@ -358,15 +358,15 @@ import Work from '../components/Work.vue'
         height: auto;
     }
     .comp {
-        width: 550px;
-        height: 450px;
+        width: 34.375rem;
+        height: 28.125rem;
         border: 2px solid red;
-        margin: 20px auto 0px;
+        margin: 1.25rem auto 0px;
         border-radius: 20px;
     }
     .top {
-        width: 400px;
-        height: 150px;
+        width: 25rem;
+        height: 9.375rem;
         border: 1px solid green;
         float: right;
         position: relative;
@@ -377,22 +377,22 @@ import Work from '../components/Work.vue'
         border: 8px solid green;
         width: 100%;
         height: auto;
-        margin-bottom: 120px;
+        margin-bottom: 7.5rem;
         background: whitesmoke;
-        padding: 80px;
+        padding: 5rem;
     }
     .last h1 {
-        font-size: 60px;
+        font-size: 3.75rem;
     }
     .last p {
-        font-size: 20px;
+        font-size: 1.25rem;
     }
     .study {
         border: 4px solid blue;
         width: 60%;
         height: auto;
-        margin: 80px auto 250px;
-        padding: 20px;
+        margin: 5rem auto 15.625rem;
+        padding: 1.25rem;
         display: flex;
         flex-direction: column;
         flex-wrap: nowrap;
@@ -402,8 +402,8 @@ import Work from '../components/Work.vue'
         border: 1px solid black;
         width: 90%;
         height: auto;
-        margin: 20px auto;
-        padding: 10px 20px;
+        margin: 1.25rem auto;
+        padding: 0.625rem 1.25rem;
         display: flex;
         flex-direction: row;
         justify-content: space-between;
@@ -419,7 +419,7 @@ import Work from '../components/Work.vue'
         border: 1px solid green;
         width: auto;
         cursor: pointer;
-        font-size: 20px;
+        font-size: 1.25rem;
         font-weight: bolder;
     }
     @keyframes detail {
