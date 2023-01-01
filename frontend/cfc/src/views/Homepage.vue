@@ -50,8 +50,8 @@
                 <h2>It is motivating and scientifically Proven</h2>
                 <p>As crazy as it seems, your neurons mirror other people's behaviour:</p>
                 <p>Seeing others studying boosts your productivity!</p>
-                <div class="keep1"><h5>keep you motivated</h5></div>
-                <div class="keep2"><h5>Boosts your productivity</h5></div>
+                <div class="keep1"><div class="check"></div><h5>keep you motivated</h5></div>
+                <div class="keep2"><div class="check"></div><h5>Boosts your productivity</h5></div>
                 <button class="about">Learn About It </button>
             </div>
             <div class="mot2">
@@ -309,63 +309,78 @@ import Work from '../components/Work.vue'
     .motivate {
         width: 100%;
         height: auto;
-        border: 10px solid red;
+        border: 4px solid blue;
         background: wheat;
         display: flex;
         flex-direction: row;
-        justify-content: center;
+        justify-content: space-evenly;
         padding: 1.25rem;
         flex-wrap: wrap;
     }
 
     .mot1 {
         border: 2px solid green;
-        width: 40%;
+        width: 45%;
         height: auto;
-        padding: 1.875rem;
+        padding: 30px 30px;
         text-align: left;
     }
     .mot1 h2 {
-        font-size: 3.75rem;
+        font-size: 45px;
     }
     .mot1 p {
-        font-size: 1.25rem;
-        line-height: 0.9rem;
+        font-size: 16px;
+        line-height: 0.7rem;
     }
     .keep1 {
         border: 1px solid red;
-        height: 3.125rem;
+        height: 45px;
         width: 18.75rem;
-        margin-top: 5rem;
+        margin-top: 3rem;
+        padding: 1px;
+    }
+    .keep1 .check, .keep2 .check {
+        width: 40px;
+        height: 40px;
+        border: 1px solid hotpink;
+        display: inline-block;
+    }
+    .keep1 h5, .keep2 h5 {
+        display: inline-block;
+        line-height: 0px;
+        position: relative;
+        bottom: 12px;
+        left: 15px;
     }
     .keep2 {
         border: 1px solid red;
-        height: 3.125rem;
+        height: 45px;
         width: 18.75rem;
-        margin-top: 1.875rem;
+        margin-top: 1.25rem;
+        padding: 1px;
     }
     .about {
-        width: 13.75rem;
-        height: 4.375rem;
+        width: 200px;
+        height: 60px;
         border: 1px solid red;
-        border-radius: 2.1875rem;
+        border-radius: 35px;
         font-size: 1.125rem;
         margin-top: 1.875rem;
     }
     .mot2 {
         border: 2px solid blue;
-        width: 50%;
+        width: 45%;
         height: auto;
     }
     .comp {
-        width: 34.375rem;
-        height: 28.125rem;
+        width: 450px;
+        height: 350px;
         border: 2px solid red;
         margin: 1.25rem auto 0px;
         border-radius: 20px;
     }
     .top {
-        width: 25rem;
+        width: 300px;
         height: 9.375rem;
         border: 1px solid green;
         float: right;
@@ -374,24 +389,24 @@ import Work from '../components/Work.vue'
         border-radius: 20px;
     }
     .last {
-        border: 8px solid green;
+        border: 4px solid green;
         width: 100%;
         height: auto;
         margin-bottom: 7.5rem;
         background: whitesmoke;
-        padding: 5rem;
+        padding: 3.5rem;
     }
     .last h1 {
-        font-size: 3.75rem;
+        font-size: 3rem;
     }
     .last p {
-        font-size: 1.25rem;
+        font-size: 1.025rem;
     }
     .study {
-        border: 4px solid blue;
+        border: 1px solid blue;
         width: 60%;
         height: auto;
-        margin: 5rem auto 15.625rem;
+        margin: 5rem auto 10.625rem;
         padding: 1.25rem;
         display: flex;
         flex-direction: column;
@@ -402,8 +417,8 @@ import Work from '../components/Work.vue'
         border: 1px solid black;
         width: 90%;
         height: auto;
-        margin: 1.25rem auto;
-        padding: 0.625rem 1.25rem;
+        margin: 1rem auto;
+        padding: 0.125rem 1.25rem;
         display: flex;
         flex-direction: row;
         justify-content: space-between;
@@ -443,7 +458,7 @@ import Work from '../components/Work.vue'
     .but {
         border: 1px solid red;
         width: 35%;
-        height: 80px;
+        height: 70px;
         margin: 0px auto;
         display: flex;
         flex-direction: row;
