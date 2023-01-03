@@ -1,9 +1,9 @@
 <template>
-    <section>
-        <h1>for student board</h1>
-        <Full v-show="showClick" :popStudent="student"/>
+    <section class="main">
+        <!-- <h1>Our students in no particular order.</h1> -->
+        <!-- <Full v-show="showClick" :popStudent="student" /> -->
         <div  v-for="student in students" :key="student.id">
-            <Display v-on:show-click="clickShow(student.id)" :student="student"/>
+            <Display v-on:show-click="clickShow(student.id)" :student="student" />
         </div>
     </section>
 </template>
@@ -31,9 +31,12 @@ import { mapGetters, mapActions } from 'vuex';
         ...mapActions("student", ["getStudents", "getStudent"]),
         clickShow(id) {
             this.showClick = true;
-            this.getStudent(id)
+            this.$emit("show-pop", id)
+            console.log("pepepepe" + " " + id)
+            // this.getStudent(id)
         }
     },
+    emits: ["show-pop"],
     async created() {
         this.students = await this.getStudents();
     }
@@ -44,19 +47,20 @@ import { mapGetters, mapActions } from 'vuex';
 * {
     box-sizing: border-box;
 }
-section {
-    border: 4px solid lightcoral;
-    height: 70vh;
-    width: 500px;
+.main {
+    border: 2px solid green;
+    height: auto;
+    width: 85%;
+    margin: 80px auto 150px;
 }
 
-.showboard {
-    width: 800px;
-    height: 500px;
-    border: 4px solid red;
-    border-radius: 10px;
-    background-color: aquamarine;
-    position: absolute;
-    opacity: 0.7;
+
+@media screen and (max-width: 500px) {
+    .main {
+        width: 95%;
+        margin: 60px auto 100px;
+    }
 }
+
+
 </style>

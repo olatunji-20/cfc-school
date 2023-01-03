@@ -106,7 +106,7 @@ export default {
 
 
 
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 500px) {
     .main {
         height: auto;
         padding: 40px 1px;

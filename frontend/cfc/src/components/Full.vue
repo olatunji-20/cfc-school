@@ -7,16 +7,22 @@
       <h3>{{ popStudent.name }}</h3>
       <h3>{{ popStudent.department }}</h3>
       <h3>{{ popStudent.dob }}</h3>
+      <div class="del">
+        <Delete :id="popStudent.id" />
+      </div>
     </div>
   </section>
 </template>
 
 <script>
-
+import Delete from '../components/Delete.vue'
 export default {
   name: "Full",
   data() {
     return {}
+  },
+  components: {
+    Delete
   },
   props: {
     popStudent: Object
@@ -37,11 +43,10 @@ h3 {
   border: 8px solid green;
   padding: 40px;
   margin: 60px auto;
-  position: absolute;
+  position: relative;
   width: 900px;
   height: 600px;
-  background: wheat;
-  opacity: 0.8;
+  background: pink;
   z-index: 9;
 }
 .submain {

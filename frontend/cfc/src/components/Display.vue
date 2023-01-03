@@ -12,16 +12,17 @@
       />
     </div>
     <div class="about">
-      <h4>id: {{ student.id }}</h4>
+      <!-- <h4>id: {{ student.id }}</h4> -->
       <h4>Name: {{ student.name }}</h4>
-      <h4>E-mail: {{ student.email + student.image }}</h4>
-      <h4>department: {{ student.department }}</h4>
+      <h4>E-mail: {{ student.email }}</h4>
+      <h4>Department: {{ student.department }}</h4>
+      <h4>Class: {{ student.form }}</h4>
     </div>
-    <div class="del">
+    <!-- <div class="del">
       <Delete :id="student.id" />
-    </div>
+    </div> -->
     <!-- <h1><router-link :to="'/full/' + student.id">view</router-link></h1> -->
-    <h1 v-on:click="showclickEmit(student.id)">click</h1>
+    <p v-on:click="showclickEmit(student.id)" class="more">view more</p>
   </section>
 </template>
 
@@ -52,25 +53,18 @@ export default {
 * {
   box-sizing: border-box;
 }
-
-h1 {
-  border: 3px solid salmon;
-}
-
-
-
-
 .student {
-  border: 4px solid purple;
+  border: 1px solid black;
   width: 90%;
-  height: 250px;
+  height: 180px;
   margin: 50px auto;
+  padding: 5px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
 }
 .picture {
-  width: 35%;
+  width: 200px;
   height: 100%;
   border: 2px solid black;
 }
@@ -82,24 +76,69 @@ h1 {
 
 .about {
   border: 2px solid brown;
-  width: 40%;
+  width: 320px;
   height: 100%;
   text-align: left;
-  padding-left: 20px;
+  padding: 0px 20px;
 }
-
-.del {
+.about h4 {
+  line-height: 14px;
+}
+/* .del {
   border: 1px solid red;
   height: 50px;
   width: 50px;
   position: relative;
   top: 35%;
-}
+} */
 
 .more {
-  width: 70px;
-  height: 70px;
+  width: auto;
+  height: 40px;
+  padding: 10px;
   background: red;
+  position: relative;
+  top: 100px;
+}
+.more:hover {
+  text-decoration: underline;
+  cursor: pointer;
 }
 
+
+
+@media screen and (max-width: 500px) {
+  .student {
+    width: 100%;
+    height: auto;
+  }
+  .picture {
+    width: 150px;
+    height: 150px;
+  }
+  .about {
+    margin-top: 15px;
+    padding: 0px 5px;
+  }
+  .about h4 {
+    line-height: 8px;
+  }
+  /* .more {
+    display: none;
+  } */
+
+
+
+
+
+
+  .more {
+    top: 0px;
+  }
+
+
+
+
+
+}
 </style>

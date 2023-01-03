@@ -83,6 +83,12 @@ export default {
     list-style-type: none;
     line-height: 30px;
 }
+.two ul li:hover, .three ul li:hover, .four ul li:hover {
+    position: relative;
+    left: 10px;
+    transition: .9s;
+    cursor: pointer;
+}
 .five {
     width: 100%;
     height: 80px;
@@ -91,7 +97,7 @@ export default {
     font-size: 20px;
 }
 
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 500px) {
     .main {
         width: 100%;
         flex-direction: column;
