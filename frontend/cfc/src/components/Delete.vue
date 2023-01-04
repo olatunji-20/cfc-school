@@ -1,6 +1,6 @@
 <template>
     <div class="rem">
-        <h3 v-on:click="deleteStudent({id})">del</h3>
+        <p v-on:click="deleteStudent({id})">delete student</p>
     </div>
 </template>
 
@@ -37,12 +37,11 @@ export default {
 
 <style scoped>
 .rem {
-    width: 45px;
-    height: 45px;
+    width: 200px;
+    height: 50px;
+    margin-top: 150px;
+    float: right;
     border: 3px solid lawngreen;
     cursor: pointer;
-}
-h3 {
-    color: green;
 }
 </style>
