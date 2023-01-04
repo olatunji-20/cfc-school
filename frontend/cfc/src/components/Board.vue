@@ -17,7 +17,7 @@ import { mapGetters, mapActions } from 'vuex';
     name: "Board",
     data() {
         return {
-            showClick: false
+            // showClick: false
         }
     },
     computed: {
@@ -30,10 +30,10 @@ import { mapGetters, mapActions } from 'vuex';
     methods: {
         ...mapActions("student", ["getStudents", "getStudent"]),
         clickShow(id) {
-            this.showClick = true;
+            // this.showClick = true;
             this.$emit("show-pop", id)
             console.log("pepepepe" + " " + id)
-            // this.getStudent(id)
+            this.getStudent(id)
         }
     },
     emits: ["show-pop"],

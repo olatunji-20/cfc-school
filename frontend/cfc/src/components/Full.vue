@@ -2,6 +2,7 @@
   <section class="main">
     <h3>YOU ARE HIGHLY WELCOME</h3>
     <div class="submain">
+      <div v-on:click="close" class="close"><p>close</p></div>
       <h3>{{ popStudent.name }}</h3>
       <h3>{{ popStudent.email }}</h3>
       <h3>{{ popStudent.name }}</h3>
@@ -26,7 +27,13 @@ export default {
   },
   props: {
     popStudent: Object
-  }
+  },
+  methods: {
+    close() {
+      this.$emit("close-pop")
+    }
+  },
+  emits: ["close-pop"]
 };
 </script>
 
@@ -40,10 +47,11 @@ h3 {
   color: hotpink;
 }
 .main {
-  border: 8px solid green;
+  border: 5px solid orangered;
+  border-radius: 40px;
   padding: 40px;
-  margin: 60px auto;
-  position: relative;
+  margin: 60px 200px;
+  position: fixed;
   width: 900px;
   height: 600px;
   background: pink;
@@ -53,5 +61,10 @@ h3 {
   border: 3px solid hotpink;
   margin: 90px auto;
   width: 80%;
+}
+.close {
+  width: 100px;
+  height: 80px;
+  background: aquamarine;
 }
 </style>
