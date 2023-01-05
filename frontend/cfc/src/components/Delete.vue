@@ -38,10 +38,10 @@ export default {
 <style scoped>
 .rem {
     width: 200px;
-    height: 50px;
-    margin-top: 150px;
+    height: 55px;
+    margin-top: 80px;
     float: right;
-    border: 3px solid lawngreen;
+    border: 3px solid red;
     cursor: pointer;
 }
 </style>

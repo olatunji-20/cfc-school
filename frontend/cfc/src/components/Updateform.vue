@@ -2,7 +2,7 @@
   <div class="main">
     <h1>UPDATE FORM</h1>
     <form @submit.prevent="update(updateInfo)" enctype="multipart/form-data">
-      <label>Student ID.</label>
+      <label>Student ID.:</label>
       <input v-model="updateInfo.id" type="number" />
       <br />
       <label>what would you like to change?</label>
@@ -13,10 +13,10 @@
         <option>d</option> -->
       </select>
       <br />
-      <label>The new value</label>
+      <label>The new value:</label>
       <input type="text" placeholder="new value" v-model="updateInfo.value" />
       <br />
-        <button>Submit</button>
+        <button>SUBMIT</button>
     </form>
   </div>
 </template>
@@ -59,5 +59,22 @@ export default {
 }
 h1 {
   font-size: 30px;
+}
+input {
+  margin: 20px auto 10px 10px;
+  border: 0px;
+  border-radius: 5px;
+  text-indent: 10px;  
+}
+select {
+  margin-left: 10px;
+}
+button {
+  margin: 50px auto 20px;
+  border: 0px;
+  border-radius: 5px;
+  width: 180px;
+  height: 40px;
+  background: grey  ;
 }
 </style>

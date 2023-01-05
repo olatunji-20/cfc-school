@@ -1,5 +1,6 @@
 <template>
     <section>
+        <Navbar />
         <div>
             <form @submit.prevent="test" enctype="multipart/form-data">
                 <input type="text" placeholder="name" v-model="name" />
@@ -12,11 +13,14 @@
                 <button>SUBMIT</button>
             </form>
         </div>
+        <Footbar />
     </section>
 </template>
 
 <script>
 import axios from 'axios';
+import Navbar from '../components/Navbar.vue'
+import Footbar from '../components/Footbar.vue'
 
 export default {
     name: 'Register',
@@ -30,6 +34,10 @@ export default {
             selectedImage: "",
             dob: ""
         };
+    },
+    components: {
+        Navbar,
+        Footbar
     },
     methods: {
         fileSelected() {
@@ -65,25 +73,35 @@ export default {
 
 <style scoped>
 div {
-    border: 2px solid darkblue;
+    border: 4px solid darkblue;
     background-color: aqua;
-    width: 400px;
+    width: 600px;
     height: auto;
-    margin: 20px auto;
+    margin: 100px auto;
     padding: 30px 20px;
 }
 
 input {
-    width: 300px;
-    height: 25px;
+    width: 85%;
+    height: 45px;
     text-indent: 20px;
-    margin-top: 30px;
+    margin-top: 35px;
+    border: 0px;
+    border-radius: 8px;
+}
+input:focus {
+    border: 5px solid red;
 }
 
 button {
-    margin-top: 40px;
+    margin: 90px auto 30px;
     background-color: tomato;
     border: 0px;
     padding: 10px;
+    display: block;
+    width: 180px;
+    height: 50px;
+    border-radius: 25px;
+    color: white;
 }
 </style>

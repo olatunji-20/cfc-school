@@ -77,6 +77,7 @@ export default {
   background: aquamarine;
   position: fixed;
   left: 84%;
+  cursor: pointer;
 }
 .student-image {
   width: 200px;
