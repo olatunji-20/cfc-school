@@ -6,7 +6,7 @@
             <div class="focus">
                 <router-link class="link" to="/signup">
                     <div class="purpose">
-                        <div class="purp"></div>
+                        <div class="purp"><h3>ffgfg</h3></div>
                     </div>
                         <h3>Add a new student</h3>
                         <p>We always stay organised for what we want to teach people. It is always good to be well organized.</p>
@@ -14,7 +14,7 @@
             </div>
             <div class="focus">
                 <div class="purpose">
-                    <div class="purp"></div>
+                    <div class="purp"><h3>ffgfg</h3></div>
                 </div>
                     <h3>Join the Room</h3>
                     <p>We always stay organised for what we want to teach people. It is always good to be well organized.</p>
@@ -22,7 +22,7 @@
             <div class="focus">
                 
                 <div class="purpose">
-                    <div class="purp"></div>
+                    <div class="purp"><h3>ffgfg</h3></div>
                 </div>
                     <h3>Keep Focus</h3>
                     <p>We always stay organised for what we want to teach people. It is always good to be well organized.</p>
@@ -86,12 +86,26 @@ section p {
     margin: 20px auto 50px;
     padding: 2px;
 }
+
+@keyframes rotor {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
 .purp {
     width: 80px;
     height: 80px;
     border-radius: 50%;
     background: blue;
     margin: 30px auto;
+    color: white;    
+    animation-name: rotor;
+    animation-duration: 3.5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
 }
 
 

@@ -17,7 +17,7 @@
         
                 </div>
                 <div class="login">
-                    <button>Login</button>
+                    <button><router-link to="/login">Login</router-link></button>
                 </div>
             </div>  
         </div>

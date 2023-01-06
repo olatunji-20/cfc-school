@@ -3,6 +3,7 @@ import Homepage from '../views/Homepage.vue'
 import Register from '../views/Register.vue'
 import Allstudent from '../views/Allstudents.vue'
 import Update from '../views/Update.vue'
+import Login from '../views/Login.vue'
 
 const routes = [
   {
@@ -24,6 +25,11 @@ const routes = [
     path: '/update-student',
     name: 'updatestudent',
     component: Update
+  },
+  {
+    path: '/login',
+    name: 'Login',
+    component: Login
   }
 ]
 
