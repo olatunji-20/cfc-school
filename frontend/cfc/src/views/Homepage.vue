@@ -66,22 +66,30 @@
                 <div class="join">
                     <p class="topic">How can I join a study call?</p>
                     <p v-text="detailA ? first : second " v-on:click="showDetailA" class="icon"></p>
-                    <div v-show="detailA" class="details"><p>hfhfhfhf fhfhhf fffhf ffhfh hfhfhfhf fhfhhf fffhf ffhfhhfhfhfhf fhfhhf fffhf ffhfh</p></div>
+                    <transition name="detail">
+                        <div v-show="detailA" class="details"><p>hfhfhfhf fhfhhf fffhf ffhfh hfhfhfhf fhfhhf fffhf ffhfhhfhfhfhf fhfhhf fffhf ffhfh</p></div>
+                    </transition>
                 </div>
                 <div class="join">
                     <p class="topic">Can you unmute me so I can speak to other people?</p>
                     <p v-text="detailB ? first : second " v-on:click="showDetailB" class="icon"></p>
-                    <div v-show="detailB" class="details"><p>hfhfhfhf fhfhhf fffhf ffhfh</p></div>
+                    <transition name="detail">
+                        <div v-show="detailB" class="details"><p>hfhfhfhf fhfhhf fffhf ffhfh</p></div>
+                    </transition>
                 </div>
                 <div class="join">
                     <p class="topic">Where can I see all commands for the server?</p>
                     <p v-text="detailC ? first : second " v-on:click="showDetailC" class="icon"></p>
-                    <div v-show="detailC" class="details"><p>hfhfhfhf fhfhhf fffhf ffhfh</p></div>
+                    <transition name="detail">
+                        <div v-show="detailC" class="details"><p>hfhfhfhf fhfhhf fffhf ffhfh</p></div>
+                    </transition>
                 </div>
                 <div class="join">
                     <p class="topic">Can I join 25m - 50m session call even when it's on break?</p>
                     <p v-text="detailD ? first : second " v-on:click="showDetailD" class="icon"></p>
-                    <div v-show="detailD" class="details"><p>hfhfhfhf fhfhhf fffhf ffhfh</p></div>
+                    <transition name="detail">
+                        <div v-show="detailD" class="details"><p>hfhfhfhf fhfhhf fffhf ffhfh</p></div>
+                    </transition>
                 </div>
             </div>
             <h1>Join Thousands of Students Around <br /> <span style="color: blue"> The World and Start Studying Together</span></h1>
@@ -439,7 +447,7 @@ import Work from '../components/Work.vue'
     }
     @keyframes detail {
         0% {
-            height: 10px;
+            height: 0px;
         }
         100% {
             height: 100px;
@@ -453,8 +461,22 @@ import Work from '../components/Work.vue'
         overflow: hidden;
         padding: 3px 10px;
         animation-name: detail;
-        animation-duration: .5s;
+        animation-duration: .3s;
     }
+
+    .detail-leave-from {
+        height: 100px;
+    }
+    .detail-leave-to {
+        height: 0px;
+    }
+    .detail-leave-active {
+        transition: height .3s ease;
+    }
+
+
+
+    
     .but {
         border: 1px solid red;
         width: 35%;

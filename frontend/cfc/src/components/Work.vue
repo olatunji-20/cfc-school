@@ -1,6 +1,6 @@
 <template>
     <section>
-        <h1>How It Work</h1>
+        <h1>How It Works</h1>
         <p>It's time to choose wisely your learning platform. Bimble has professional <br /> mentors and instructors that always helps you to grow up your career.</p>
         <div class="main">
             <div class="focus">
@@ -8,24 +8,27 @@
                     <div class="purpose">
                         <div class="purp"><h3>ffgfg</h3></div>
                     </div>
-                        <h3>Add a new student</h3>
-                        <p>We always stay organised for what we want to teach people. It is always good to be well organized.</p>
+                    <h3>Add a new student</h3>
+                    <p>We always stay organised for what we want to teach people. It is always good to be well organized.</p>
                 </router-link>
             </div>
             <div class="focus">
-                <div class="purpose">
-                    <div class="purp"><h3>ffgfg</h3></div>
-                </div>
-                    <h3>Join the Room</h3>
+                <router-link class="link" to="/allstudents">
+                    <div class="purpose">
+                        <div class="purp"><h3>ffgfg</h3></div>
+                    </div>
+                    <h3>View all Students</h3>
                     <p>We always stay organised for what we want to teach people. It is always good to be well organized.</p>
+                </router-link>
                 </div>
             <div class="focus">
-                
-                <div class="purpose">
-                    <div class="purp"><h3>ffgfg</h3></div>
-                </div>
-                    <h3>Keep Focus</h3>
+                <router-link class="link" to="/update-student">                
+                    <div class="purpose">
+                        <div class="purp"><h3>ffgfg</h3></div>
+                    </div>
+                    <h3>Update student info</h3>
                     <p>We always stay organised for what we want to teach people. It is always good to be well organized.</p>
+                </router-link>
             </div>
         </div>
     </section>
@@ -69,6 +72,11 @@ section p {
     height: 420px;
     background: cornsilk;
     padding: 10px;
+    position: relative;
+}
+.focus:hover {
+    top: 15px;
+    transition: 0.4s;
 }
 .focus p {
     font-size: 17px;
