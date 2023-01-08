@@ -87,7 +87,13 @@ export default {
 .options ul li {
     display: inline-block;
     margin: 0px 25px;
+    transition: .9s;
     font-size: 17px;
+    text-decoration: none;
+}
+.options ul li:hover {
+    text-decoration: underline;
+    cursor: pointer;
 }
 .login {
     width: 160px;

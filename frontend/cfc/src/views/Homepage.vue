@@ -6,8 +6,10 @@
                 <h2>A Better Way <br/> To Keep Productive</h2>
                 <p>Join the largest global student community online and say goodbye to lack of motivation. We are here to help you keep focus when studying.</p>
                 <div class="joind">
-                    <div class="join1"><p>Join a Study Room</p></div>
-                    <div class="join1"><p>Discord Server</p></div>
+                    <!-- <transition name="joinn"> -->
+                        <div class="join1"><p>Join a Study Room</p></div>
+                    <!-- </transition> -->
+                    <div class="join2"><p>Discord Server</p></div>
                 </div>
                 <div class="focussed">
                     <p>"I have never been so focused and productive when studying by myself before. I usually study with  group of friends to stay on track and motivate each other."</p>
@@ -32,10 +34,16 @@
             <p>Thousands of Students and People have made their decisions.</p>
             <p>Study Together is the best platform for studying.</p>
             <div class="media">
-                <div class="med"></div>
-                <div class="med"></div>
-                <div class="med"></div>
-                <div class="med"></div>
+                <div class="scroller">
+                    <div class="med"><h1>A</h1></div>
+                    <div class="med"><h1>B</h1></div>
+                    <div class="med"><h1>C</h1></div>
+                    <div class="med"><h1>D</h1></div>
+                    <div class="med"><h1>E</h1></div>
+                    <div class="med"><h1>F</h1></div>
+                    <div class="med"><h1>G</h1></div>
+                    <div class="med"><h1>H</h1></div>
+                </div>
             </div>
         </div>
         <Work />
@@ -187,22 +195,75 @@ import Work from '../components/Work.vue'
     }
     .joind {
         width: 85%;
-        height: 75px;
+        height: 95px;
         border: 2px solid peru;
         margin-top: 60px;
         display: flex;
         flex-direction: row;
         justify-content: space-between;
     }
+    @keyframes float {
+        0% {
+            top: 0px;
+        }
+        50% {
+            top: 10px;
+        }
+        100% {
+            top: 0px;
+        }
+    }
     .join1 {
         width: 200px;
         height: 70px;
         border: 2px solid chartreuse;
         border-radius: 2.5rem;
+        position: relative;
         padding: 7px;
         text-align: center;
         font-size: 1.125rem;
+        animation-name: float;
+        animation-duration: 1.2s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
     }
+    @keyframes float2 {
+        0% {
+            top: 10px;
+        }
+        50% {
+            top: 0px
+        }
+        100% {
+            top: 10px;
+        }
+    }
+
+    .join2 {
+        width: 200px;
+        height: 70px;
+        border: 2px solid chartreuse;
+        border-radius: 2.5rem;
+        position: relative;
+        padding: 7px;
+        text-align: center;
+        font-size: 1.125rem;
+        animation-name: float2;
+        animation-duration: 1.2s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+    }
+
+    /* .joinn-enter-from {
+        top: 0px;
+    }
+    .joinn-enter-to {
+        top: 10px;
+    }
+    .joinn-enter-active {
+        transition: top 1s ease;
+    } */
+
     .focussed {
         width: 100%;
         height: auto;
@@ -290,10 +351,54 @@ import Work from '../components/Work.vue'
         height: 6.25rem;
         margin: 5.55rem auto 3rem;
         border: 2px solid red;
-        padding: 0.625rem;
+        padding: 1px;
+        overflow: hidden;
+        /* display: flex;
+        flex-direction: row;
+        justify-content: space-around; */
+    }
+
+    @keyframes scrollee {
+        0% {
+            right: 0px;
+        }
+        13% {
+            right: 0px;
+        }
+        26% {
+            right: 300px;
+        }
+        39% {
+            right: 300px;
+        }
+        52% {
+            right: 600px;
+        }
+        65% {
+            right: 600px;
+        }
+        78% {
+            right: 900px;
+        }
+        90% {
+            right: 900px;
+        }
+        100% {
+            right: 0px;
+        }
+    }
+    .scroller {
+        border: 2px solid green;
+        height: auto;
+        width: 1650px;
+        position: relative;
         display: flex;
         flex-direction: row;
         justify-content: space-around;
+        animation-name: scrollee;
+        animation-duration: 8s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
     }
     .med {
         width: 10.625rem;
@@ -372,8 +477,16 @@ import Work from '../components/Work.vue'
         height: 60px;
         border: 1px solid red;
         border-radius: 35px;
+        position: relative;
         font-size: 1.125rem;
-        margin-top: 1.875rem;
+        top: 20px;
+        /* margin-top: 1.875rem; */
+    }
+    .about:hover {
+        top: 10px;
+        transition: all .3s ease; 
+        /* transition: .3s; */
+        cursor: pointer;
     }
     .mot2 {
         border: 2px solid blue;
@@ -471,7 +584,7 @@ import Work from '../components/Work.vue'
         height: 0px;
     }
     .detail-leave-active {
-        transition: height .3s ease;
+        transition: height .3s linear;
     }
 
 
@@ -567,7 +680,7 @@ import Work from '../components/Work.vue'
             margin-top: 40px;
             height: 65px;
         }
-        .join1 {
+        .join1, .join2 {
             width: 200px;
             height: 60px;
             padding: 2px;

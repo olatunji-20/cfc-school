@@ -82,11 +82,13 @@ export default {
 .two ul li, .three ul li, .four ul li {
     list-style-type: none;
     line-height: 30px;
+    position: relative;
+    left: 0px;
+    /* -webkit-transition: all 3s ease; */
+    transition: all .3s ease;
 }
 .two ul li:hover, .three ul li:hover, .four ul li:hover {
-    position: relative;
     left: 10px;
-    transition: .9s;
     cursor: pointer;
 }
 .five {

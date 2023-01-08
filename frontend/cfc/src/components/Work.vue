@@ -73,10 +73,12 @@ section p {
     background: cornsilk;
     padding: 10px;
     position: relative;
+    top: 1px;
 }
 .focus:hover {
     top: 15px;
-    transition: 0.4s;
+    transition: all .3s ease;
+    /* transition: 0.4s; */
 }
 .focus p {
     font-size: 17px;
