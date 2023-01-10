@@ -17,7 +17,7 @@
         
                 </div>
                 <div class="login">
-                    <button><router-link to="/login">Login</router-link></button>
+                    <button><router-link to="/login" class="button-link">Login</router-link></button>
                 </div>
             </div>  
         </div>
@@ -70,7 +70,7 @@ export default {
 }
 
 .cont {
-    width: auto;
+    width: auto;    
     height: 70px;
     border: 2px solid khaki;
     /* padding: 5px; */
@@ -87,26 +87,37 @@ export default {
 .options ul li {
     display: inline-block;
     margin: 0px 25px;
-    transition: .9s;
+    /* text-decoration: none; */
+    position: relative;
+    left: 0px;
+    transition: .3s;
     font-size: 17px;
-    text-decoration: none;
 }
 .options ul li:hover {
-    text-decoration: underline;
+    /* text-decoration: underline; */
+    left: 4px;
+    color: greenyellow;
     cursor: pointer;
 }
 .login {
     width: 160px;
-    height: 70px;
-    border: 2px solid blue;
+    height: 60px;
     margin-left: 80px;
 }
 .login button {
     width: 150px;
     height: 60px;
     border: 1px solid red;
-    font-size: 24px;
+    font-size: 20px;
     border-radius: 35px;
+    transition: .4s;
+}
+.login button:hover {
+    background: tomato;
+    color: white;
+}
+.button-link {
+    text-decoration: none;
 }
 
 

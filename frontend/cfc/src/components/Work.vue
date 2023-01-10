@@ -4,6 +4,15 @@
         <p>It's time to choose wisely your learning platform. Bimble has professional <br /> mentors and instructors that always helps you to grow up your career.</p>
         <div class="main">
             <div class="focus">
+                <router-link class="link" to="/allstudents">
+                    <div class="purpose">
+                        <div class="purp"><h3>ffgfg</h3></div>
+                    </div>
+                    <h3>View all Students</h3>
+                    <p>Take a good look at all the students that have taken the bold move to sign up with us.<br /> It is always good to be well organized.</p>
+                </router-link>
+            </div>
+            <div class="focus">
                 <router-link class="link" to="/signup">
                     <div class="purpose">
                         <div class="purp"><h3>ffgfg</h3></div>
@@ -12,15 +21,6 @@
                     <p>We always stay organised for what we want to teach people. It is always good to be well organized.</p>
                 </router-link>
             </div>
-            <div class="focus">
-                <router-link class="link" to="/allstudents">
-                    <div class="purpose">
-                        <div class="purp"><h3>ffgfg</h3></div>
-                    </div>
-                    <h3>View all Students</h3>
-                    <p>We always stay organised for what we want to teach people. It is always good to be well organized.</p>
-                </router-link>
-                </div>
             <div class="focus">
                 <router-link class="link" to="/update-student">                
                     <div class="purpose">
@@ -68,6 +68,7 @@ section p {
 }
 .focus {
     border: 2px solid black;
+    border-radius: 5px;
     width: 280px;
     height: 420px;
     background: cornsilk;
@@ -85,7 +86,7 @@ section p {
 }
 .link {
     text-decoration: none;
-    color: red;
+    color: black;
 
 }
 .purpose {
@@ -113,7 +114,7 @@ section p {
     margin: 30px auto;
     color: white;    
     animation-name: rotor;
-    animation-duration: 3.5s;
+    animation-duration: 5s;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
 }

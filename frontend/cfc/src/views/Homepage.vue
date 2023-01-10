@@ -47,12 +47,12 @@
             </div>
         </div>
         <Work />
-        <div class="temp-links">
+        <!-- <div class="temp-links">
             <h1> CFC schools</h1>
                 <h3><router-link to="/signup">Add a new student.</router-link></h3>
                 <h3><router-link to="/allstudents">view all students.</router-link></h3>
                 <h3><router-link to="/update-student">Update student info.</router-link></h3>
-        </div>
+        </div> -->
         <section class="motivate">
             <div class="mot1">
                 <h2>It is motivating and scientifically Proven</h2>
@@ -410,14 +410,14 @@ import Work from '../components/Work.vue'
 
 
 
-
+/* 
 
     .temp-links {
         width: 300px;
         height: 300px;
         border: 9px solid goldenrod;
     }
-
+ */
 
     .motivate {
         width: 100%;
@@ -606,31 +606,6 @@ import Work from '../components/Work.vue'
         font-size: 20px;
         border-radius: 35px;
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

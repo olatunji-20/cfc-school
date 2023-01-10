@@ -3,6 +3,7 @@
         <div class="one">
             <h1>Study Together</h1>
             <p>Help you study more often than before.</p>
+            <div class="socials"><p>SOCIAL MEDIAS</p></div>
         </div>
         <div class="two">
             <h4>Support</h4>
@@ -66,6 +67,12 @@ export default {
 }
 .one p {
     font-size: 17px;
+}
+.socials {
+    width: 90%;
+    height: 80px;
+    margin-top: 40px;
+    border: 2px solid green;
 }
 .two, .three, .four {
     border: 2px solid blue;
