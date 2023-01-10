@@ -110,7 +110,7 @@ export default {
     border: 1px solid red;
     font-size: 20px;
     border-radius: 35px;
-    transition: .4s;
+    transition: .6s;
 }
 .login button:hover {
     background: tomato;
@@ -119,6 +119,54 @@ export default {
 .button-link {
     text-decoration: none;
 }
+
+
+
+
+@media screen and (max-width: 850px) {
+    .main {
+        height: 130px;
+        padding: 25px;
+    }
+    .logo {
+        width: 170px;
+        height: 60px;
+    }
+    .cont {
+        height: 60px;
+    }
+
+    .options {
+        width: auto;
+        padding: 5px;
+        height: 60px;
+    }
+    .options ul li {
+        margin: 0px 5px;
+    }
+    .login {
+        width: 100px;
+        height: 40px;
+        margin-left: 10px;
+        margin-top: 7px;
+    }
+    .login button {
+        width: 90px;
+        height: 40px;
+        border-radius: 20px;
+    }
+
+
+
+}
+
+
+
+
+
+
+
+
 
 
 

@@ -3,7 +3,12 @@
         <div class="one">
             <h1>Study Together</h1>
             <p>Help you study more often than before.</p>
-            <div class="socials"><p>SOCIAL MEDIAS</p></div>
+            <div class="socials">
+                <div class="social"></div>
+                <div class="social"></div>
+                <div class="social"></div>
+                <div class="social"></div>
+            </div>
         </div>
         <div class="two">
             <h4>Support</h4>
@@ -69,10 +74,20 @@ export default {
     font-size: 17px;
 }
 .socials {
-    width: 90%;
-    height: 80px;
-    margin-top: 40px;
+    width: 80%;
+    height: 60px;
+    padding: 3px;
+    margin-top: 60px;
     border: 2px solid green;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+.social {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 1px solid firebrick;
 }
 .two, .three, .four {
     border: 2px solid blue;
@@ -105,6 +120,51 @@ export default {
     padding: 3px;
     font-size: 20px;
 }
+
+
+
+@media screen and (max-width: 850px) {
+    .main {
+        width: 100%;
+    }
+    .one {
+        width: 14rem;
+        padding: 10px;
+    }
+    .one h1 {
+        font-size: 21px;
+    }
+    .one p {
+        font-size: 15px;
+    }
+
+
+    .two, .three, .four {
+        width: 11rem;
+        padding: 10px 0px;
+    }
+    .two h4, .three h4, .four h4 {
+        font-size: 20px;
+    }
+    .two p, .three p, .four p {
+        font-size: 16px;
+    }
+
+
+
+
+
+
+
+
+
+}
+
+
+
+
+
+
 
 @media screen and (max-width: 500px) {
     .main {

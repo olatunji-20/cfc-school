@@ -611,6 +611,29 @@ import Work from '../components/Work.vue'
 
 
 
+    @media screen and (max-width: 850px) {
+        .container {
+            flex-direction: column;
+        }
+        .left {
+            width: 90%;
+            margin: 0px auto;
+        }
+        .right {
+            width: 90%;
+            height: auto;
+            margin: 0px auto;
+        }
+        .blur {
+            right: 5rem;
+        }
+
+        .student-image {
+            width: 450px;
+            height: 500px;
+        }
+    }
+
 
 
 
