@@ -4,10 +4,10 @@
             <h1>Study Together</h1>
             <p>Help you study more often than before.</p>
             <div class="socials">
-                <div class="social"></div>
-                <div class="social"></div>
-                <div class="social"></div>
-                <div class="social"></div>
+                <div class="social"><Facebook /></div>
+                <div class="social"><Twitter /></div>
+                <div class="social"><Youtube /></div>
+                <div class="social"><Instagram /></div>
             </div>
         </div>
         <div class="two">
@@ -42,9 +42,20 @@
 </template>
 
 <script>
+import Facebook from 'vue-material-design-icons/Facebook.vue';
+import Twitter from 'vue-material-design-icons/Twitter.vue';
+import Youtube from 'vue-material-design-icons/Youtube.vue';
+import Instagram from 'vue-material-design-icons/Instagram.vue';
+
 export default {
-    name: 'Footbar'
+    name: 'Footbar',
+    components: {
+        Facebook,
+        Twitter,
+        Youtube,
+        Instagram
     }
+}
 </script>
 
 
@@ -54,7 +65,7 @@ export default {
     height: auto;
     border-top: 1px solid aquamarine;
     /* background: powderblue; */
-    margin: 0px auto;
+    margin: 0rem auto;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -62,65 +73,67 @@ export default {
 }
 .one {
     /* border: 2px solid green; */
-    width: 400px;
-    height: 300px;
+    width: 25rem;
+    height: 18.75rem;
     text-align: left;
-    padding: 20px;
+    padding: 1.25rem;
 }
 .one h1 {
-    font-size: 25px;
+    font-size: 1.5625rem;
 }
 .one p {
-    font-size: 17px;
+    font-size: 1.0625rem;
 }
 .socials {
     width: 80%;
-    height: 60px;
-    padding: 3px;
-    margin-top: 60px;
-    border: 2px solid green;
+    height: 3.75rem;
+    padding: 0.1875rem;
+    margin-top: 3.75rem;
+    /* border: 2px solid green; */
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
 }
 .social {
-    width: 50px;
-    height: 50px;
+    width: 3.125rem;
+    height: 3.25rem;
     border-radius: 50%;
     border: 1px solid firebrick;
+    color: aquamarine;
+    padding: 15px 12px;
 }
 .two, .three, .four {
     /* border: 2px solid blue; */
-    width: 220px;
-    height: 300px;
+    width: 13.75rem;
+    height: 18.75rem;
     text-align: left;
     padding: 20px 0px;
 }
 .two h4, .three h4, .four h4 {
     font-weight: bolder;
-    text-indent: 30px;
-    font-size: 20px;
+    text-indent: 1.875rem;
+    font-size: 1.25rem;
 }
 .two ul li, .three ul li, .four ul li {
     list-style-type: none;
-    line-height: 30px;
+    line-height: 1.875rem;
     position: relative;
-    left: 0px;
+    left: 0rem;
     /* -webkit-transition: all 3s ease; */
     transition: all .3s ease;
 }
 .two ul li:hover, .three ul li:hover, .four ul li:hover {
-    left: 10px;
+    left: 0.625rem;
     cursor: pointer;
 }
 .five {
     width: 100%;
-    height: 80px;
+    height: 5rem;
     border-top: 1px solid aquamarine;
     border-bottom: 1px solid black;
-    margin-bottom: 10px;
-    padding: 3px;
-    font-size: 20px;
+    margin-bottom: 20px;
+    padding: 0.1875rem;
+    font-size: 1.25rem;
 }
 
 
@@ -131,25 +144,25 @@ export default {
     }
     .one {
         width: 14rem;
-        padding: 10px;
+        padding: 0.625rem;
     }
     .one h1 {
-        font-size: 21px;
+        font-size: 1.3125rem;
     }
     .one p {
-        font-size: 15px;
+        font-size: 0.9375rem;
     }
 
 
     .two, .three, .four {
         width: 11rem;
-        padding: 10px 0px;
+        padding: 0.625rem 0rem;
     }
     .two h4, .three h4, .four h4 {
-        font-size: 20px;
+        font-size: 1.25rem;
     }
     .two p, .three p, .four p {
-        font-size: 16px;
+        font-size: 1rem;
     }
 
 

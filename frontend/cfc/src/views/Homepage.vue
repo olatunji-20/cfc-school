@@ -29,7 +29,9 @@
                 <div class="student-image">
                     <img class="student-image-lady" src="../assets/lady.jpeg" />
                 </div>
-                <div class="time"></div>
+                <div class="time">
+                    <img class="time-image" />
+                </div>
             </div>
         </div>
         <div class="thousands">
@@ -60,8 +62,8 @@
                 <h2>It is motivating and scientifically Proven</h2>
                 <p>As crazy as it seems, your neurons mirror other people's behaviour:</p>
                 <p>Seeing others studying boosts your productivity!</p>
-                <div class="keep1"><div class="check"></div><h5>keep you motivated</h5></div>
-                <div class="keep2"><div class="check"></div><h5>Boosts your productivity</h5></div>
+                <div class="keep1"><div class="check"><Check-bold /></div><h5>keep you motivated</h5></div>
+                <div class="keep2"><div class="check"><Check-bold /></div><h5>Boosts your productivity</h5></div>
                 <button class="about">Learn About It </button>
             </div>
             <div class="mot2">
@@ -118,6 +120,7 @@
 import Navbar from '../components/Navbar.vue'
 import Footbar from '../components/Footbar.vue'
 import Work from '../components/Work.vue'
+import CheckBold from 'vue-material-design-icons/CheckBold.vue'
     export default {
         name: 'Homepage',
         data() {
@@ -133,6 +136,7 @@ import Work from '../components/Work.vue'
         components: {
             Navbar,
             Work,
+            CheckBold,
             Footbar
         },
         methods: {
@@ -189,67 +193,75 @@ import Work from '../components/Work.vue'
         height: 100%;
         /* border: 3px solid brown; */
         text-align: left;
-        padding: 40px 55px 0px;
+        padding: 2.5rem 3.4375rem 0rem;
     }
     .left h2 {
-        font-size: 48px;
+        font-size: 3rem;
     }
     .left p {
-        font-size: 16px;
+        font-size: 1rem;
     }
     .joind {
         width: 85%;
-        height: 95px;
+        height: 5.9375rem;
         /* border: 2px solid peru; */
-        margin-top: 60px;
+        margin-top: 3.75rem;
         display: flex;
         flex-direction: row;
         justify-content: space-between;
     }
     @keyframes float {
         0% {
-            top: 0px;
+            top: 0rem;
         }
         50% {
-            top: 10px;
+            top: 0.625rem;
         }
         100% {
-            top: 0px;
+            top: 0rem;
         }
     }
     .join1 {
-        width: 200px;
-        height: 70px;
-        border: 1px solid aquamarine;
+        width: 12.5rem;
+        height: 4.375rem;
+        border: 0.0625rem solid aquamarine;
         border-radius: 2.5rem;
         position: relative;
-        padding: 7px;
+        padding: 0.4375rem;
         text-align: center;
         font-size: 1.125rem;
+        transition: .3s;
         animation-name: float;
         animation-duration: 1.2s;
         animation-iteration-count: infinite;
         animation-timing-function: linear;
     }
+    .join1:hover {
+        background: aquamarine;
+        color: white;
+        cursor: pointer;
+        border: 0.0625rem solid #999999;
+    }
     @keyframes float2 {
         0% {
-            top: 10px;
+            top: 0.625rem;
         }
         50% {
-            top: 0px
+            top: 0rem
         }
         100% {
-            top: 10px;
+            top: 0.625rem;
         }
     }
 
     .join2 {
-        width: 200px;
-        height: 70px;
-        border: 1px solid aquamarine;
+        width: 12.5rem;
+        height: 4.375rem;
+        border: 0.0625rem solid aquamarine;
         border-radius: 2.5rem;
         position: relative;
-        padding: 7px;
+        padding: 0.4375rem;
+        transition: .3s;
         text-align: center;
         font-size: 1.125rem;
         animation-name: float2;
@@ -257,7 +269,12 @@ import Work from '../components/Work.vue'
         animation-iteration-count: infinite;
         animation-timing-function: linear;
     }
-
+    .join2:hover {
+        background: aquamarine;
+        color: white;
+        cursor: pointer;
+        border: 0.0625rem solid #999999;
+    }
     /* .joinn-enter-from {
         top: 0px;
     }
@@ -272,11 +289,11 @@ import Work from '../components/Work.vue'
         width: 100%;
         height: auto;
         /* border: 2px solid saddlebrown; */
-        padding: 1px;
-        margin-top: 50px;
+        padding: 0.0625rem;
+        margin-top: 3.125rem;
     }
     .focussed p {
-        font-size: 15px;
+        font-size: 0.9375rem;
     }
     .kas-wrap {
         width: 100%;
@@ -290,7 +307,7 @@ import Work from '../components/Work.vue'
         height: 5rem;
         /* display: inline-block; */
         /* border: 2px solid hotpink; */
-        padding: 1px;
+        padding: 0.0625rem;
         border-radius: 50%;
     }
     .kas-image {
@@ -309,7 +326,7 @@ import Work from '../components/Work.vue'
     }
     .right {
         width: 41%;
-        height: 630px;
+        height: 39.375rem;
         /* border: 4px solid lawngreen; */
         padding-top: 3.125rem;
     }
@@ -326,8 +343,8 @@ import Work from '../components/Work.vue'
         
     }
     .student-image {
-        width: 360px;
-        height: 420px;
+        width: 22.5rem;
+        height: 26.25rem;
         /* border: 2px solid blue; */
         margin: 3.125rem auto;
         border-radius: 1rem;
@@ -337,7 +354,7 @@ import Work from '../components/Work.vue'
         height: 100%;
         border-radius: 1rem;
         position: relative;
-        bottom: 50px;
+        bottom: 3.125rem;
         object-fit: cover;
     }
     .time {
@@ -351,6 +368,12 @@ import Work from '../components/Work.vue'
         border-radius: 0.9375rem;
         background: red;
     }
+    .time-page {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 10px;
+    }
     .thousands {
         width: 100%;
         height: auto;
@@ -358,7 +381,7 @@ import Work from '../components/Work.vue'
         /* background: whitesmoke; */
         margin-top: 4rem;
         padding: 4.375rem;
-        font-size: 18px;
+        font-size: 1.125rem;
         line-height: 0.8125rem;
     }
     .media {
@@ -366,7 +389,7 @@ import Work from '../components/Work.vue'
         height: 6.25rem;
         margin: 5.55rem auto 3rem;
         /* border: 2px solid red; */
-        padding: 1px;
+        padding: 0.0625rem;
         overflow: hidden;
         /* display: flex;
         flex-direction: row;
@@ -375,37 +398,37 @@ import Work from '../components/Work.vue'
 
     @keyframes scrollee {
         0% {
-            right: 0px;
+            right: 0rem;
         }
         13% {
-            right: 0px;
+            right: 0rem;
         }
         26% {
-            right: 300px;
+            right: 18.75rem;
         }
         39% {
-            right: 300px;
+            right: 18.75rem;
         }
         52% {
-            right: 600px;
+            right: 37.5rem;
         }
         65% {
-            right: 600px;
+            right: 37.5rem;
         }
         78% {
-            right: 900px;
+            right: 56.25rem;
         }
         90% {
-            right: 900px;
+            right: 56.25rem;
         }
         100% {
-            right: 0px;
+            right: 0rem;
         }
     }
     .scroller {
         /* border: 2px solid green; */
         height: auto;
-        width: 1650px;
+        width: 103.125rem;
         position: relative;
         display: flex;
         flex-direction: row;
@@ -418,7 +441,7 @@ import Work from '../components/Work.vue'
     .med {
         width: 10.625rem;
         height: 5rem;
-        border: 1px solid black;
+        border: 0.0625rem solid black;
     }
 
 
@@ -450,58 +473,64 @@ import Work from '../components/Work.vue'
         /* border: 2px solid green; */
         width: 45%;
         height: auto;
-        padding: 30px 30px;
+        padding: 1.875rem 1.875rem;
         text-align: left;
     }
     .mot1 h2 {
-        font-size: 45px;
+        font-size: 2.8125rem;
     }
     .mot1 p {
-        font-size: 16px;
+        font-size: 1rem;
         line-height: 0.7rem;
     }
     .keep1 {
         border: 1px solid red;
-        height: 45px;
+        height: 2.8125rem;
         width: 18.75rem;
         margin-top: 3rem;
-        padding: 1px;
+        padding: 0.0625rem;
     }
     .keep1 .check, .keep2 .check {
-        width: 40px;
-        height: 40px;
-        border: 1px solid hotpink;
+        width: 2.5rem;
+        height: 2.5rem;
+        /* border: 1px solid hotpink; */
+        background: aquamarine;
         border-radius: 50%;
+        padding: 7px;
         display: inline-block;
+        color: white;
     }
     .keep1 h5, .keep2 h5 {
         display: inline-block;
-        line-height: 0px;
+        line-height: 0rem;
         position: relative;
-        bottom: 12px;
-        left: 15px;
+        bottom: 0.5rem;
+        left: 0.9375rem;
     }
     .keep2 {
         border: 1px solid red;
-        height: 45px;
+        height: 2.8125rem;
         width: 18.75rem;
         margin-top: 1.25rem;
-        padding: 1px;
+        padding: 0.0625rem;
     }
     .about {
-        width: 200px;
-        height: 60px;
-        border: 1px solid red;
-        border-radius: 35px;
+        width: 12.5rem;
+        height: 3.75rem;
+        border: 0.0625rem solid aquamarine;
+        border-radius: 2.1875rem;
         position: relative;
         font-size: 1.125rem;
-        top: 20px;
+        top: 1.25rem;
+        background: white;
         /* margin-top: 1.875rem; */
     }
     .about:hover {
-        top: 10px;
-        transition: all .3s ease; 
-        /* transition: .3s; */
+        top: 0.625rem;
+        background: aquamarine;
+        color: white;
+        border: 1px solid #999999;
+        transition: all .3s ease;
         cursor: pointer;
     }
     .mot2 {
@@ -510,8 +539,8 @@ import Work from '../components/Work.vue'
         height: auto;
     }
     .comp {
-        width: 450px;
-        height: 350px;
+        width: 28.125rem;
+        height: 21.875rem;
         /* border: 2px solid red; */
         margin: 1.25rem auto 0px;
         border-radius: 1rem;
@@ -523,13 +552,13 @@ import Work from '../components/Work.vue'
         object-fit: cover;
     }
     .top {
-        width: 300px;
+        width: 18.75rem;
         height: 9.375rem;
         border: 5px solid green;
         float: right;
         position: relative;
-        bottom: 75px;
-        border-radius: 20px;
+        bottom: 4.6875rem;
+        border-radius: 1.25rem;
         background: red;
     }
     .last {
@@ -559,7 +588,7 @@ import Work from '../components/Work.vue'
     }
     .join {
         border: 1px solid black;
-        border-radius: 3px;
+        border-radius: 0.1875rem;
         width: 90%;
         height: auto;
         margin: 1rem auto;
@@ -588,28 +617,28 @@ import Work from '../components/Work.vue'
     }
     @keyframes detail {
         0% {
-            height: 0px;
+            height: 0rem;
         }
         100% {
-            height: 100px;
+            height: 6.25rem;
         }
     }
     .details {
-        border: 3px solid red;
+        border: 2px solid red;
         width: 100%;
-        height: 100px;
+        height: 6.25rem;
         display: block;
         overflow: hidden;
-        padding: 3px 10px;
+        padding: 0.1875rem 0.625rem;
         animation-name: detail;
         animation-duration: .3s;
     }
 
     .detail-leave-from {
-        height: 100px;
+        height: 6.25rem;
     }
     .detail-leave-to {
-        height: 0px;
+        height: 0rem;
     }
     .detail-leave-active {
         transition: height .3s linear;
@@ -621,36 +650,76 @@ import Work from '../components/Work.vue'
     .but {
         /* border: 1px solid red; */
         width: 45%;
-        height: 70px;
-        margin: 0px auto;
+        height: 4.375rem;
+        margin: 0rem auto;
         display: flex;
         flex-direction: row;
         justify-content: space-between;
     }
     .server1 {
-        width: 230px;
-        height: 70px;
+        width: 14.375rem;
+        height: 4.375rem;
         border: 1px solid aquamarine;
-        font-size: 20px;
+        font-size: 1.25rem;
         position: relative;
-        border-radius: 35px;
+        transition: .3s;
+        border-radius: 2.1875rem;
         animation-name: float2;
         animation-duration: 1.2s;
         animation-iteration-count: infinite;
         animation-timing-function: linear;
     }
+    .server1:hover {
+        background: aquamarine;
+        color: white;
+        cursor: pointer;
+        border: 1px solid #999999;
+    }
     .server2 {
-        width: 230px;
-        height: 70px;
+        width: 14.375rem;
+        height: 4.375rem;
         border: 1px solid aquamarine;
-        font-size: 20px;
+        font-size: 1.25rem;
         position: relative;
-        border-radius: 35px;
+        transition: .3s;
+        border-radius: 2.1875rem;
         animation-name: float;
         animation-duration: 1.2s;
         animation-iteration-count: infinite;
         animation-timing-function: linear;
     }
+    .server2:hover {
+        background: aquamarine;
+        color: white;
+        cursor: pointer;
+        border: 1px solid #999999;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -662,20 +731,20 @@ import Work from '../components/Work.vue'
         }
         .left {
             width: 90%;
-            margin: 0px auto;
+            margin: 0rem auto;
         }
         .right {
             width: 90%;
             height: auto;
-            margin: 0px auto;
+            margin: 0rem auto;
         }
         .blur {
             right: 5rem;
         }
 
         .student-image {
-            width: 450px;
-            height: 500px;
+            width: 28.125rem;
+            height: 31.25rem;
         }
         .thousands {
             padding: 2rem;
@@ -699,8 +768,8 @@ import Work from '../components/Work.vue'
         }
         .mot1 {
             width: 90%;
-            margin: 0px auto;
-            padding-bottom: 50px;
+            margin: 0rem auto;
+            padding-bottom: 3.125rem;
         }
 
 
@@ -709,8 +778,8 @@ import Work from '../components/Work.vue'
 
         .mot2 {
             width: 90%;
-            margin: 0px auto;
-            padding-top: 50px;
+            margin: 0rem auto;
+            padding-top: 3.125rem;
         }
 
 
@@ -765,7 +834,7 @@ import Work from '../components/Work.vue'
     @media screen and (max-width: 500px) {
         section{
             width: 100%;
-            border: 1px dashed red;
+            /* border: 1px dashed red; */
         }
         .container {
             height: auto;

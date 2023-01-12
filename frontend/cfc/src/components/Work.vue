@@ -6,7 +6,7 @@
             <div class="focus">
                 <router-link class="link" to="/allstudents">
                     <div class="purpose">
-                        <div class="purp"><h3>ffgfg</h3></div>
+                        <div class="purp"><list-status /></div>
                     </div>
                     <h3>View all Students</h3>
                     <p>Take a good look at all the students that have taken the bold move to sign up with us.<br /> It is always good to be well organized.</p>
@@ -15,7 +15,7 @@
             <div class="focus">
                 <router-link class="link" to="/signup">
                     <div class="purpose">
-                        <div class="purp"><h3>ffgfg</h3></div>
+                        <div class="purp"><account-plus /></div>
                     </div>
                     <h3>Add a new student</h3>
                     <p>We always stay organised for what we want to teach people. It is always good to be well organized.</p>
@@ -24,7 +24,7 @@
             <div class="focus">
                 <router-link class="link" to="/update-student">                
                     <div class="purpose">
-                        <div class="purp"><h3>ffgfg</h3></div>
+                        <div class="purp"><account-details /></div>
                     </div>
                     <h3>Update student info</h3>
                     <p>We always stay organised for what we want to teach people. It is always good to be well organized.</p>
@@ -35,8 +35,17 @@
 </template>
 
 <script>
+import ListStatus from 'vue-material-design-icons/ListStatus.vue';
+import AccountPlus from 'vue-material-design-icons/AccountPlus.vue';
+import AccountDetails from 'vue-material-design-icons/AccountDetails.vue';
+
 export default {
-    name: 'Work'
+    name: 'Work',
+    components: {
+        ListStatus,
+        AccountPlus,
+        AccountDetails
+    }
 }
 </script>
 
@@ -45,22 +54,22 @@ section {
     /* border: 2px solid blue; */
     width: 100%;
     height: auto;
-    padding: 20px 50px;
+    padding: 1.25rem 3.125rem;
 }
 section h1 {
-    font-size: 50px;
-    line-height: 20px;
+    font-size: 3.125rem;
+    line-height: 1.25rem;
 }
 section p {
-    font-size: 17px;
-    line-height: 21px;
+    font-size: 1.0625rem;
+    line-height: 1.3125rem;
 }
 .main {
     /* border: 5px solid teal; */
     width: 90%;
     height: auto;
-    margin: 50px auto;
-    padding: 15px;
+    margin: 3.125rem auto;
+    padding: 0.9375rem;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -68,22 +77,22 @@ section p {
 }
 .focus {
     /* border: 1px solid black; */
-    border-radius: 5px;
-    width: 260px;
-    height: 420px;
-    background: floralwhite;
-    padding: 10px;
+    border-radius: 0.5rem;
+    width: 16.25rem;
+    height: 26.25rem;
+    background: #f9f9f9;
+    padding: 0.625rem;
     position: relative;
-    top: 1px;
+    top: 0.0625rem;
 }
 .focus:hover {
-    top: 10px;
+    top: 0.625rem;
     transition: all .3s ease;
     border: 0px;
     box-shadow: 0.06rem 0.06rem 0.3rem 0.06rem #999999;
 }
 .focus p {
-    font-size: 17px;
+    font-size: 1.0625rem;
 }
 .link {
     text-decoration: none;
@@ -91,12 +100,12 @@ section p {
 
 }
 .purpose {
-    width: 150px;
-    height: 150px;
-    background: plum;
-    border-radius: 20px;
-    margin: 20px auto 50px;
-    padding: 2px;
+    width: 9.375rem;
+    height: 9.375rem;
+    background: #7FFFD4;
+    border-radius: 1.25rem;
+    margin: 1.25rem auto 3.125rem;
+    padding: 0.125rem;
 }
 
 @keyframes rotor {
@@ -108,12 +117,13 @@ section p {
     }
 }
 .purp {
-    width: 80px;
-    height: 80px;
+    width: 5rem;
+    height: 5rem;
     border-radius: 50%;
-    background: blue;
-    margin: 30px auto;
-    color: white;    
+    background: #009965;
+    margin: 1.875rem auto;
+    color: white;
+    padding: 28px 21px;
     animation-name: rotor;
     animation-duration: 5s;
     animation-iteration-count: infinite;

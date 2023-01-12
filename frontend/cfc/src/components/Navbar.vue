@@ -5,7 +5,7 @@
     
             </div>
             <div v-on:click="dropDown" class="menu">
-    
+                <Menu />
             </div>
             <div class="cont">
                 <div class="options">
@@ -36,6 +36,8 @@
 </template>
 
 <script>
+import Menu from 'vue-material-design-icons/Menu.vue';
+
 export default {
     name: 'Navbar',
     data() {
@@ -47,6 +49,9 @@ export default {
         dropDown() {
             this.drop = !this.drop
         }
+    },
+    components: {
+        Menu
     }
 }
 </script>
@@ -55,26 +60,29 @@ export default {
 <style scoped>
 .main {
     width: 100%;
-    height: 150px;
+    height: 9.375rem;
     /* border: 3px solid black; */
     /* background: pink; */
-    padding: 30px;
+    padding: 1.875rem;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
     flex-wrap: nowrap;
 }
 .logo {
-    width: 250px;
-    height: 70px;
-    border: 1px solid green;
-    border-right: 5px solid blue;
+    width: 15.625rem;
+    height: 4.375rem;
+    /* border: 1px solid green; */
+    border-right: 3px solid blue;
     background: whitesmoke;
+}
+.menu {
+    display: none;
 }
 
 .cont {
     width: auto;    
-    height: 70px;
+    height: 4.375rem;
     /* border: 2px solid khaki; */
     /* padding: 5px; */
     display: flex;
@@ -83,45 +91,50 @@ export default {
 }
 .options {
     width: 40rem;
-    height: 70px;
+    height: 4.375rem;
     /* border: 2px solid black; */
-    padding: 10px;
+    padding: 0.625rem;
 }
 .options ul li {
     display: inline-block;
-    margin: 0px 25px;
+    margin: 0rem 1.5625rem;
     /* text-decoration: none; */
     position: relative;
-    left: 0px;
+    left: 0rem;
     transition: .2s;
-    font-size: 17px;
+    font-size: 1.0625rem;
 }
 .options ul li:hover {
     /* text-decoration: underline; */
-    left: 3px;
+    left: 0.1875rem;
     color: aquamarine;
     cursor: pointer;
 }
 .login {
-    width: 160px;
-    height: 60px;
-    margin-top: 10px;
-    margin-left: 80px;
+    width: 10rem;
+    height: 3.75rem;
+    margin-top: 0.625rem;
+    margin-left: 5rem;
 }
 .login button {
-    width: 150px;
-    height: 55px;
+    width: 9.375rem;
+    height: 3.4375rem;
+    background: white;
+    color: white;
     border: 1px solid black;
-    font-size: 20px;
-    border-radius: 35px;
-    transition: .6s;
+    font-size: 1.25rem;
+    border-radius: 1.6875rem;
+    transition: .5s;
 }
 .login button:hover {
-    background: tomato;
-    color: white;
+    background: aquamarine;
 }
 .button-link {
     text-decoration: none;
+    color: black;
+}
+.button-link:hover {
+    color: white;
 }
 
 
@@ -129,35 +142,35 @@ export default {
 
 @media screen and (max-width: 850px) {
     .main {
-        height: 130px;
-        padding: 25px;
+        height: 8.125rem;
+        padding: 1.5625rem;
     }
     .logo {
-        width: 170px;
-        height: 60px;
+        width: 10.625rem;
+        height: 3.75rem;
     }
     .cont {
-        height: 60px;
+        height: 3.75rem;
     }
 
     .options {
         width: auto;
-        padding: 5px;
-        height: 60px;
+        padding: 0.3125rem;
+        height: 3.75rem;
     }
     .options ul li {
-        margin: 0px 5px;
+        margin: 0rem 0.3125rem;
     }
     .login {
-        width: 100px;
-        height: 40px;
-        margin-left: 10px;
-        margin-top: 7px;
+        width: 6.25rem;
+        height: 2.5rem;
+        margin-left: 0.625rem;
+        margin-top: 0.4375rem;
     }
     .login button {
-        width: 90px;
-        height: 40px;
-        border-radius: 20px;
+        width: 5.625rem;
+        height: 2.5rem;
+        border-radius: 1.25rem;
     }
 
 
@@ -187,9 +200,13 @@ export default {
     }
 
     .menu {
+        display: inline;
         border: 2px solid red;
         width: 60px;
         height: 60px;
+        font-weight: bolder;
+        color: aquamarine;
+        font-size: 40px;
     }
     .cont {
         width: 100%;
