@@ -632,6 +632,69 @@ import Work from '../components/Work.vue'
             width: 450px;
             height: 500px;
         }
+        .thousands {
+            padding: 2rem;
+        }
+        .media {
+            width: 80%;
+        }
+
+
+
+
+
+
+
+
+
+
+
+        .motivate {
+            flex-direction: column;
+        }
+        .mot1 {
+            width: 90%;
+            margin: 0px auto;
+            padding-bottom: 50px;
+        }
+
+
+
+
+
+        .mot2 {
+            width: 90%;
+            margin: 0px auto;
+            padding-top: 50px;
+        }
+
+
+
+
+
+        .last {
+            padding: 2rem;
+        }
+
+        .study {
+            width: 85%;
+            margin: 5rem auto 7rem;
+        }
+
+
+        .but {
+            width: 70%;
+        }
+
+
+
+
+
+
+
+
+
+
     }
 
 
@@ -654,7 +717,7 @@ import Work from '../components/Work.vue'
 
 
 
-    @media screen and (max-width: 450px) {
+    @media screen and (max-width: 500px) {
         section{
             width: 100%;
             border: 1px dashed red;

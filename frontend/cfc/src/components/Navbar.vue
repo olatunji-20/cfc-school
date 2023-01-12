@@ -21,15 +21,16 @@
                 </div>
             </div>  
         </div>
-
-        <div v-show="drop" class="drop-down">
-            <ul> 
-                <li>Study Room</li>
-                <li>Discord Server</li>
-                <li>Study Statistics</li>
-                <li>Login</li>
-            </ul>
-        </div>
+        <transition name="dropdown">
+            <div v-show="drop" class="drop-down">
+                <ul> 
+                    <li>Study Room</li>
+                    <li>Discord Server</li>
+                    <li>Study Statistics</li>
+                    <li>Login</li>
+                </ul>
+            </div>
+        </transition>
 
     </section>
 </template>
@@ -209,15 +210,48 @@ export default {
     }
 
 
+    /* .dropdown-enter-from {
+        opacity: 0;
+        height: 10px;
+    }
+    .dropdown-enter-to {
+        opacity: 1;
+        height: 100px;
+    }
+    .dropdown-enter-active {
+        transition: all 4s ease;
+    } */
+    
+    
 
-
+@keyframes dropd {
+    0% {
+        height: 0px;
+    }
+    100% {
+        height: 220px;
+    }
+}
     .drop-down {
-        width: 300px;
-        height: 250px;
+        width: 260px;
+        height: 220px;
         border: 3px solid blue;
         background: powderblue;
         position: absolute;
         text-align: left;
+        overflow: hidden;
+        animation-name: dropd;
+        animation-duration: .5s;
+        animation-timing-function: ease;
+    }
+    .dropdown-leave-from {
+        height: 220px;
+    }
+    .dropdown-leave-to {
+        height: 0px;
+    }
+    .dropdown-leave-active {
+        transition: height .4s ease;
     }
 
     .drop-down ul li {

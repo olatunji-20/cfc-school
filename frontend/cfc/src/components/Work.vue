@@ -120,9 +120,16 @@ section p {
 }
 
 
+@media screen and (max-width: 850px) {
+    .main {
+        width: 95%;
+    }
+}
 
 
-@media screen  and (max-width: 450px) {
+
+
+@media screen  and (max-width: 500px) {
     section {
         padding: 10px;
     }
