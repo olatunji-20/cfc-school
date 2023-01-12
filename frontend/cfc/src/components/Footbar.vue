@@ -1,5 +1,5 @@
 <template>
-    <section class="main">
+    <section class="maine">
         <div class="one">
             <h1>Study Together</h1>
             <p>Help you study more often than before.</p>
@@ -49,11 +49,11 @@ export default {
 
 
 <style scoped>
-.main {
+.maine {
     width: 90%;
     height: auto;
-    border-top: 2px solid red;
-    background: powderblue;
+    border-top: 1px solid aquamarine;
+    /* background: powderblue; */
     margin: 0px auto;
     display: flex;
     flex-direction: row;
@@ -61,7 +61,7 @@ export default {
     flex-wrap: wrap;
 }
 .one {
-    border: 2px solid green;
+    /* border: 2px solid green; */
     width: 400px;
     height: 300px;
     text-align: left;
@@ -90,7 +90,7 @@ export default {
     border: 1px solid firebrick;
 }
 .two, .three, .four {
-    border: 2px solid blue;
+    /* border: 2px solid blue; */
     width: 220px;
     height: 300px;
     text-align: left;
@@ -116,7 +116,9 @@ export default {
 .five {
     width: 100%;
     height: 80px;
-    border: 2px solid black;
+    border-top: 1px solid aquamarine;
+    border-bottom: 1px solid black;
+    margin-bottom: 10px;
     padding: 3px;
     font-size: 20px;
 }

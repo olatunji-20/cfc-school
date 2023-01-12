@@ -3,7 +3,7 @@
         <Navbar />
         <div class="container">
             <div class="left">
-                <h2>A Better Way <br/> To Keep Productive</h2>
+                <h2>A Better Way <br/> To <span style="color:aquamarine;">Keep Productive</span></h2>
                 <p>Join the largest global student community online and say goodbye to lack of motivation. We are here to help you keep focus when studying.</p>
                 <div class="joind">
                     <!-- <transition name="joinn"> -->
@@ -26,7 +26,9 @@
             </div>
             <div class="right">
                 <div class="blur"></div>
-                <div class="student-image"></div>
+                <div class="student-image">
+                    <img class="student-image-lady" src="../assets/lady.jpeg" />
+                </div>
                 <div class="time"></div>
             </div>
         </div>
@@ -63,7 +65,9 @@
                 <button class="about">Learn About It </button>
             </div>
             <div class="mot2">
-                <div class="comp"></div>
+                <div class="comp">
+                    <img class="boy-comp" src="../assets/boy.jpeg" />
+                </div>
                 <div class="top"></div>
             </div>
         </section>
@@ -100,10 +104,10 @@
                     </transition>
                 </div>
             </div>
-            <h1>Join Thousands of Students Around <br /> <span style="color: blue"> The World and Start Studying Together</span></h1>
+            <h1>Join Thousands of Students Around <br /> <span style="color: aquamarine"> The World and Start Studying Together</span></h1>
             <div class="but">
-                <button class="server">Join a Study Room</button>
-                <button class="server">Discord Server</button>
+                <button class="server1">Join a Study Room</button>
+                <button class="server2">Discord Server</button>
             </div>
         </section>
         <Footbar />
@@ -162,7 +166,7 @@ import Work from '../components/Work.vue'
 
 <style scoped>
     section {
-        border: 1px dashed red;
+        /* border: 1px dashed red; */
         width: 100%;
         height: auto;
     }
@@ -174,8 +178,8 @@ import Work from '../components/Work.vue'
     .container {
         width: 100%;
         height: auto;
-        background-color: cornsilk;
-        border: 2px solid green;
+        /* background-color: cornsilk; */
+        /* border: 2px solid green; */
         display: flex;
         flex-direction: row;
         justify-content: space-around;
@@ -183,7 +187,7 @@ import Work from '../components/Work.vue'
     .left {
         width: 50%;
         height: 100%;
-        border: 3px solid brown;
+        /* border: 3px solid brown; */
         text-align: left;
         padding: 40px 55px 0px;
     }
@@ -196,7 +200,7 @@ import Work from '../components/Work.vue'
     .joind {
         width: 85%;
         height: 95px;
-        border: 2px solid peru;
+        /* border: 2px solid peru; */
         margin-top: 60px;
         display: flex;
         flex-direction: row;
@@ -216,7 +220,7 @@ import Work from '../components/Work.vue'
     .join1 {
         width: 200px;
         height: 70px;
-        border: 2px solid chartreuse;
+        border: 1px solid aquamarine;
         border-radius: 2.5rem;
         position: relative;
         padding: 7px;
@@ -242,7 +246,7 @@ import Work from '../components/Work.vue'
     .join2 {
         width: 200px;
         height: 70px;
-        border: 2px solid chartreuse;
+        border: 1px solid aquamarine;
         border-radius: 2.5rem;
         position: relative;
         padding: 7px;
@@ -267,7 +271,7 @@ import Work from '../components/Work.vue'
     .focussed {
         width: 100%;
         height: auto;
-        border: 2px solid saddlebrown;
+        /* border: 2px solid saddlebrown; */
         padding: 1px;
         margin-top: 50px;
     }
@@ -277,7 +281,7 @@ import Work from '../components/Work.vue'
     .kas-wrap {
         width: 100%;
         height: 5.3125rem;
-        border: 2px solid green;
+        /* border: 2px solid green; */
         display: flex;
         flex-direction: row;
     }
@@ -285,7 +289,7 @@ import Work from '../components/Work.vue'
         width: 5rem;
         height: 5rem;
         /* display: inline-block; */
-        border: 2px solid hotpink;
+        /* border: 2px solid hotpink; */
         padding: 1px;
         border-radius: 50%;
     }
@@ -297,7 +301,7 @@ import Work from '../components/Work.vue'
     .kas2 {
         width: 21.875rem;
         height: 5rem;
-        border: 2px solid hotpink;
+        /* border: 2px solid hotpink; */
         padding: 0.3125rem;
         line-height: 0.3125rem;
         margin-left: 1.875rem;
@@ -306,42 +310,53 @@ import Work from '../components/Work.vue'
     .right {
         width: 41%;
         height: 630px;
-        border: 4px solid lawngreen;
+        /* border: 4px solid lawngreen; */
         padding-top: 3.125rem;
     }
     .blur {
         width: 6.25rem;
         height: 6.25rem;
         border-radius: 50%;
-        border: 2px solid pink;
+        border: 5px solid pink;
         float: right;
         position: relative;
         right: 1.5rem;
+        z-index: 9;
+        background: grey;
         
     }
     .student-image {
         width: 360px;
         height: 420px;
-        border: 1px solid blue;
+        /* border: 2px solid blue; */
         margin: 3.125rem auto;
-        border-radius: 1.25rem;
+        border-radius: 1rem;
+    }
+    .student-image-lady {
+        width: 100%;
+        height: 100%;
+        border-radius: 1rem;
+        position: relative;
+        bottom: 50px;
+        object-fit: cover;
     }
     .time {
         width: 15.625rem;
         height: 6.25rem;
-        border: 1px solid darkblue;
+        border: 5px solid darkblue;
         float: right;
         position: relative;
         bottom: 6.25rem;
         right: 1.7rem;
         border-radius: 0.9375rem;
+        background: red;
     }
     .thousands {
         width: 100%;
         height: auto;
-        border: 5px solid greenyellow;
-        background: whitesmoke;
-        margin-top: 4.75rem;
+        /* border: 5px solid greenyellow; */
+        /* background: whitesmoke; */
+        margin-top: 4rem;
         padding: 4.375rem;
         font-size: 18px;
         line-height: 0.8125rem;
@@ -350,7 +365,7 @@ import Work from '../components/Work.vue'
         width: 70%;
         height: 6.25rem;
         margin: 5.55rem auto 3rem;
-        border: 2px solid red;
+        /* border: 2px solid red; */
         padding: 1px;
         overflow: hidden;
         /* display: flex;
@@ -388,7 +403,7 @@ import Work from '../components/Work.vue'
         }
     }
     .scroller {
-        border: 2px solid green;
+        /* border: 2px solid green; */
         height: auto;
         width: 1650px;
         position: relative;
@@ -422,8 +437,8 @@ import Work from '../components/Work.vue'
     .motivate {
         width: 100%;
         height: auto;
-        border: 4px solid blue;
-        background: wheat;
+        /* border: 4px solid blue; */
+        /* background: wheat; */
         display: flex;
         flex-direction: row;
         justify-content: space-evenly;
@@ -432,7 +447,7 @@ import Work from '../components/Work.vue'
     }
 
     .mot1 {
-        border: 2px solid green;
+        /* border: 2px solid green; */
         width: 45%;
         height: auto;
         padding: 30px 30px;
@@ -456,6 +471,7 @@ import Work from '../components/Work.vue'
         width: 40px;
         height: 40px;
         border: 1px solid hotpink;
+        border-radius: 50%;
         display: inline-block;
     }
     .keep1 h5, .keep2 h5 {
@@ -489,32 +505,39 @@ import Work from '../components/Work.vue'
         cursor: pointer;
     }
     .mot2 {
-        border: 2px solid blue;
+        /* border: 2px solid blue; */
         width: 45%;
         height: auto;
     }
     .comp {
         width: 450px;
         height: 350px;
-        border: 2px solid red;
+        /* border: 2px solid red; */
         margin: 1.25rem auto 0px;
-        border-radius: 20px;
+        border-radius: 1rem;
+    }
+    .boy-comp {
+        width: 100%;
+        height: 100%;
+        border-radius: 1rem;
+        object-fit: cover;
     }
     .top {
         width: 300px;
         height: 9.375rem;
-        border: 1px solid green;
+        border: 5px solid green;
         float: right;
         position: relative;
         bottom: 75px;
         border-radius: 20px;
+        background: red;
     }
     .last {
-        border: 4px solid green;
+        /* border: 4px solid green; */
         width: 100%;
         height: auto;
         margin-bottom: 7.5rem;
-        background: whitesmoke;
+        /* background: whitesmoke; */
         padding: 3.5rem;
     }
     .last h1 {
@@ -524,10 +547,10 @@ import Work from '../components/Work.vue'
         font-size: 1.025rem;
     }
     .study {
-        border: 1px solid blue;
+        /* border: 1px solid blue; */
         width: 60%;
         height: auto;
-        margin: 5rem auto 10.625rem;
+        margin: 5rem auto 8.625rem;
         padding: 1.25rem;
         display: flex;
         flex-direction: column;
@@ -536,6 +559,7 @@ import Work from '../components/Work.vue'
     }
     .join {
         border: 1px solid black;
+        border-radius: 3px;
         width: 90%;
         height: auto;
         margin: 1rem auto;
@@ -545,6 +569,10 @@ import Work from '../components/Work.vue'
         justify-content: space-between;
         flex-wrap: wrap;
         text-align: left;
+        transition: .4s;
+    }
+    .join:hover {
+        border: 1px solid red;
     }
     .join .topic {
         font-weight: bolder;
@@ -591,20 +619,37 @@ import Work from '../components/Work.vue'
 
     
     .but {
-        border: 1px solid red;
-        width: 35%;
+        /* border: 1px solid red; */
+        width: 45%;
         height: 70px;
         margin: 0px auto;
         display: flex;
         flex-direction: row;
         justify-content: space-between;
     }
-    .server {
+    .server1 {
         width: 230px;
         height: 70px;
-        border: 1px solid firebrick;
+        border: 1px solid aquamarine;
         font-size: 20px;
+        position: relative;
         border-radius: 35px;
+        animation-name: float2;
+        animation-duration: 1.2s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+    }
+    .server2 {
+        width: 230px;
+        height: 70px;
+        border: 1px solid aquamarine;
+        font-size: 20px;
+        position: relative;
+        border-radius: 35px;
+        animation-name: float;
+        animation-duration: 1.2s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
     }
 
 
@@ -813,7 +858,7 @@ import Work from '../components/Work.vue'
         }
         .about {
             width: 150px;
-            height: 60px;
+            height: 50px;
         }
         .mot2 {
             width: 100%;
@@ -841,9 +886,9 @@ import Work from '../components/Work.vue'
             font-size: 16px;
         }
         .study {
-            width: 95%;
+            width: 98%;
             padding: 0px;
-            margin-bottom: 140px;
+            margin-bottom: 100px;
         }
         .join {
             margin: 10px auto;

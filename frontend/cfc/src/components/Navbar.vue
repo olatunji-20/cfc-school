@@ -56,8 +56,8 @@ export default {
 .main {
     width: 100%;
     height: 150px;
-    border: 3px solid black;
-    background: pink;
+    /* border: 3px solid black; */
+    /* background: pink; */
     padding: 30px;
     display: flex;
     flex-direction: row;
@@ -67,13 +67,15 @@ export default {
 .logo {
     width: 250px;
     height: 70px;
-    border: 2px solid green;
+    border: 1px solid green;
+    border-right: 5px solid blue;
+    background: whitesmoke;
 }
 
 .cont {
     width: auto;    
     height: 70px;
-    border: 2px solid khaki;
+    /* border: 2px solid khaki; */
     /* padding: 5px; */
     display: flex;
     flex-direction: row;
@@ -82,7 +84,7 @@ export default {
 .options {
     width: 40rem;
     height: 70px;
-    border: 2px solid black;
+    /* border: 2px solid black; */
     padding: 10px;
 }
 .options ul li {
@@ -91,24 +93,25 @@ export default {
     /* text-decoration: none; */
     position: relative;
     left: 0px;
-    transition: .3s;
+    transition: .2s;
     font-size: 17px;
 }
 .options ul li:hover {
     /* text-decoration: underline; */
-    left: 4px;
-    color: greenyellow;
+    left: 3px;
+    color: aquamarine;
     cursor: pointer;
 }
 .login {
     width: 160px;
     height: 60px;
+    margin-top: 10px;
     margin-left: 80px;
 }
 .login button {
     width: 150px;
-    height: 60px;
-    border: 1px solid red;
+    height: 55px;
+    border: 1px solid black;
     font-size: 20px;
     border-radius: 35px;
     transition: .6s;
@@ -233,7 +236,7 @@ export default {
     }
 }
     .drop-down {
-        width: 260px;
+        width: 230px;
         height: 220px;
         border: 3px solid blue;
         background: powderblue;

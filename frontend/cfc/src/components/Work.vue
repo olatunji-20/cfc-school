@@ -42,10 +42,10 @@ export default {
 
 <style scoped>
 section {
-    border: 2px solid blue;
+    /* border: 2px solid blue; */
     width: 100%;
     height: auto;
-    padding: 50px;
+    padding: 20px 50px;
 }
 section h1 {
     font-size: 50px;
@@ -56,7 +56,7 @@ section p {
     line-height: 21px;
 }
 .main {
-    border: 5px solid teal;
+    /* border: 5px solid teal; */
     width: 90%;
     height: auto;
     margin: 50px auto;
@@ -67,19 +67,20 @@ section p {
     justify-content: space-around;
 }
 .focus {
-    border: 2px solid black;
+    /* border: 1px solid black; */
     border-radius: 5px;
-    width: 280px;
+    width: 260px;
     height: 420px;
-    background: cornsilk;
+    background: floralwhite;
     padding: 10px;
     position: relative;
     top: 1px;
 }
 .focus:hover {
-    top: 15px;
+    top: 10px;
     transition: all .3s ease;
-    /* transition: 0.4s; */
+    border: 0px;
+    box-shadow: 0.06rem 0.06rem 0.3rem 0.06rem #999999;
 }
 .focus p {
     font-size: 17px;
