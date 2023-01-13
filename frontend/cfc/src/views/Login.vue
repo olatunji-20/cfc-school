@@ -1,7 +1,7 @@
 <template>
     <section>
         <Navbar />
-        <h1>LOGINd HERE</h1>
+        <!-- <h1>LOGINd HERE</h1> -->
         <loginform />
         <Footbar />
 

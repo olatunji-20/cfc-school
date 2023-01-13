@@ -51,10 +51,12 @@ export default {
 
 <style scoped>
 .main {
-  border: 3px solid blue;
-  width: 100%;
+  border: 1px solid aquamarine;
+  width: 70%;
+  margin: 0px auto;
+  border-radius: 10px;
   height: auto;
-  background: powderblue;
+  background: #DDFFF4;
   padding: 20px;
 }
 h1 {
@@ -75,6 +77,28 @@ button {
   border-radius: 5px;
   width: 180px;
   height: 40px;
-  background: grey  ;
+  background: aquamarine;
+  color: whitesmoke;
+  transition: .3s;
 }
+button:hover {
+  background: #42826D;
+  cursor: pointer;  
+}
+
+
+@media screen and (max-width: 850px) {
+    .main {
+        width: 70%;
+    }
+}
+
+
+@media screen and (max-width: 500px) {
+    .main {
+        width: 85%;
+    }
+}
+
+
 </style>

@@ -57,7 +57,7 @@ import { mapGetters, mapActions } from 'vuex';
 
 <style scoped>
 section {
-    border: 1px solid red;
+    /* border: 1px solid red; */
     /* width: 90%; */
     height: auto;
     text-align: center;

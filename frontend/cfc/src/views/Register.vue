@@ -1,7 +1,7 @@
 <template>
     <section>
         <Navbar />
-        <div>
+        <div class="main">
             <form @submit.prevent="test" enctype="multipart/form-data">
                 <input type="text" placeholder="name" v-model="name" />
                 <input type="text" placeholder="class" v-model="form" />
@@ -72,30 +72,31 @@ export default {
 
 
 <style scoped>
-div {
-    border: 4px solid darkblue;
-    background-color: aqua;
-    width: 600px;
+.main {
+    border: 1px solid aquamarine;
+    border-radius: 10px;
+    background-color: #DDFFF4;
+    width: 40%;
     height: auto;
-    margin: 100px auto;
+    margin: 80px auto;
     padding: 30px 20px;
 }
 
 input {
     width: 85%;
-    height: 45px;
+    height: 35px;
     text-indent: 20px;
-    margin-top: 35px;
+    margin-top: 25px;
     border: 0px;
     border-radius: 8px;
 }
 input:focus {
-    border: 5px solid red;
+    border: 5px solid aquamarine;
 }
 
 button {
-    margin: 90px auto 30px;
-    background-color: tomato;
+    margin: 60px auto 30px;
+    background-color: aquamarine;
     border: 0px;
     padding: 10px;
     display: block;
@@ -103,5 +104,24 @@ button {
     height: 50px;
     border-radius: 25px;
     color: white;
+    transition: 0.3s;
+}
+button:hover {
+    background: #42826D;
+    cursor: pointer;
+}
+
+
+@media screen and (max-width: 850px) {
+    .main {
+        width: 70%;
+    }
+}
+
+
+@media screen and (max-width: 500px) {
+    .main {
+        width: 85%;
+    }
 }
 </style>

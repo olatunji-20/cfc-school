@@ -225,6 +225,7 @@ import CheckBold from 'vue-material-design-icons/CheckBold.vue'
         width: 12.5rem;
         height: 4.375rem;
         border: 0.0625rem solid aquamarine;
+        background: #f9f9f9;
         border-radius: 2.5rem;
         position: relative;
         padding: 0.4375rem;
@@ -258,6 +259,7 @@ import CheckBold from 'vue-material-design-icons/CheckBold.vue'
         width: 12.5rem;
         height: 4.375rem;
         border: 0.0625rem solid aquamarine;
+        background: #f9f9f9;
         border-radius: 2.5rem;
         position: relative;
         padding: 0.4375rem;
@@ -484,7 +486,7 @@ import CheckBold from 'vue-material-design-icons/CheckBold.vue'
         line-height: 0.7rem;
     }
     .keep1 {
-        border: 1px solid red;
+        /* border: 1px solid red; */
         height: 2.8125rem;
         width: 18.75rem;
         margin-top: 3rem;
@@ -508,7 +510,7 @@ import CheckBold from 'vue-material-design-icons/CheckBold.vue'
         left: 0.9375rem;
     }
     .keep2 {
-        border: 1px solid red;
+        /* border: 1px solid red; */
         height: 2.8125rem;
         width: 18.75rem;
         margin-top: 1.25rem;
@@ -522,7 +524,7 @@ import CheckBold from 'vue-material-design-icons/CheckBold.vue'
         position: relative;
         font-size: 1.125rem;
         top: 1.25rem;
-        background: white;
+        background: #f9f9f9;
         /* margin-top: 1.875rem; */
     }
     .about:hover {
@@ -605,11 +607,11 @@ import CheckBold from 'vue-material-design-icons/CheckBold.vue'
     }
     .join .topic {
         font-weight: bolder;
-        border: 1px solid teal;
+        /* border: 1px solid teal; */
         width: 90%;
     }
     .join .icon {
-        border: 1px solid green;
+        /* border: 1px solid green; */
         width: auto;
         cursor: pointer;
         font-size: 1.25rem;
@@ -624,7 +626,8 @@ import CheckBold from 'vue-material-design-icons/CheckBold.vue'
         }
     }
     .details {
-        border: 2px solid red;
+        border: 2px solid aquamarine;
+        border-radius: 5px;
         width: 100%;
         height: 6.25rem;
         display: block;

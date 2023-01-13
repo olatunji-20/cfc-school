@@ -98,9 +98,14 @@ export default {
     width: 3.125rem;
     height: 3.25rem;
     border-radius: 50%;
-    border: 1px solid firebrick;
+    border: 1px solid #999999;
     color: aquamarine;
     padding: 15px 12px;
+    transition: .3s;
+}
+.social:hover {
+    border: 1px solid aquamarine;
+    cursor: pointer;
 }
 .two, .three, .four {
     /* border: 2px solid blue; */

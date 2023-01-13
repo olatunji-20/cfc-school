@@ -33,7 +33,7 @@ export default {
 .mainn {
     /* width: 90%; */
       /* height: auto; */
-      padding: 100px 20px;
+      padding: 60px 20px;
 }
 
 h1 {
@@ -43,8 +43,8 @@ h1 {
 .form {
     width: 90%;
     height: auto;
-    border: 6px solid green;
-    margin: 10px auto;
+    /* border: 6px solid green; */
+    margin: 0px auto 30px;
     padding: 20px;
 }
 

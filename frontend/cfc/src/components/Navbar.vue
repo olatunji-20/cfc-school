@@ -119,9 +119,9 @@ export default {
 .login button {
     width: 9.375rem;
     height: 3.4375rem;
-    background: white;
+    background: #f9f9f9;
     color: white;
-    border: 1px solid black;
+    border: 1px solid aquamarine;
     font-size: 1.25rem;
     border-radius: 1.6875rem;
     transition: .5s;
@@ -132,6 +132,7 @@ export default {
 .button-link {
     text-decoration: none;
     color: black;
+    transition: .3s;
 }
 .button-link:hover {
     color: white;
@@ -254,9 +255,9 @@ export default {
 }
     .drop-down {
         width: 230px;
-        height: 220px;
-        border: 3px solid blue;
-        background: powderblue;
+        height: 250px;
+        border: 1px solid aquamarine;
+        background: #DDFFF4;
         position: absolute;
         text-align: left;
         overflow: hidden;
