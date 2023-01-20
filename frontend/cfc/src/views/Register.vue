@@ -1,11 +1,11 @@
 <template>
     <section>
-        <Navbar />
         <transition name="message">
             <div v-show="showMessage" class="mess">
                 <p> {{ message }} </p>
             </div>
         </transition>
+        <Navbar />
         <div class="main">
             <form @submit.prevent="test" enctype="multipart/form-data">
                 <input type="text" placeholder="name" v-model="name" />
@@ -52,6 +52,22 @@ export default {
             this.selectedImage = pic;
         },
         async test() {
+            // console.log(this.name + " " + this.form + " " + this.email + " " + this.phone + " " + this.department + " " + this.selectedImage + " " + this.dob);
+            // if( this.name | this.form | this.email | this.phone | this.department | this.dob == "") {
+            //     this.showMessage = true;
+            //     this.message = "Please, fill out all required spaces.";
+            //     setTimeout(() => {
+            //         this.showMessage = false
+            //     }, 2000)
+            // } else {
+            //     this.showMessage = true;
+            //     this.message = "you good.";
+            //     setTimeout(() => {
+            //         this.showMessage = false
+            //     }, 2000)
+            // }
+
+
             const formData = new FormData();
             formData.append('name', this.name);
             formData.append('form', this.form);
@@ -68,7 +84,7 @@ export default {
                 this.showMessage = true;
                 setTimeout(() => {
                     this.showMessage = false
-                }, 3000)
+                }, 5000)
                 // this.$router.go("/sign-up");
                 
             } catch (error) {
@@ -77,7 +93,7 @@ export default {
                 this.showMessage = true;
                 setTimeout(() => {
                     this.showMessage = false
-                }, 3000)
+                }, 5000)
             }
 
 
@@ -103,25 +119,25 @@ export default {
 
 input {
     width: 85%;
-    height: 35px;
+    height: 30px;
     text-indent: 20px;
-    margin-top: 25px;
+    margin-top: 20px;
     border: 0px;
-    border-radius: 8px;
+    border-radius: 6px;
 }
 input:focus {
     border: 5px solid aquamarine;
 }
 
 button {
-    margin: 60px auto 30px;
+    margin: 45px auto 30px;
     background-color: aquamarine;
     border: 0px;
     padding: 10px;
     display: block;
     width: 180px;
-    height: 50px;
-    border-radius: 25px;
+    height: 40px;
+    border-radius: 20px;
     color: white;
     transition: 0.3s;
 }
@@ -132,15 +148,16 @@ button:hover {
 
 .mess {
     width: 600px;
-    height: 60px;
-    padding: 10px;
+    height: auto;
+    padding: 7px 50px;
     border-radius: 4px;
     background: tomato;
     position: absolute;
     left: 26%;
-    /* top: 50px; */
+    transform: translateY(150px);
     /* margin: 0px auto; */
     z-index: 9;
+    color: white;
 }
 
 .message-enter-from {
@@ -149,14 +166,14 @@ button:hover {
 }
 .message-enter-to {
     opacity: 1;
-    transform: translateY(50px);
+    transform: translateY(150px);
 }
 .message-enter-active {
     transition: all .5s ease;
 }
 .message-leave-from {
     opacity: 1;
-    transform: translateY(50px);
+    transform: translateY(150px);
 }
 .message-leave-to {
     opacity: 0;
