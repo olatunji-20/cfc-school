@@ -13,16 +13,16 @@
     </div>
     <div class="about">
       <!-- <h4>id: {{ student.id }}</h4> -->
-      <h4>Name: {{ student.name }}</h4>
-      <h4>E-mail: {{ student.email }}</h4>
-      <h4>Department: {{ student.department }}</h4>
-      <h4>Class: {{ student.form }}</h4>
+      <h4>Name: </h4><p>{{ student.name }}</p><br/>
+      <h4>E-mail: </h4><p>{{ student.email }}</p><br />
+      <h4>Department: </h4><p>{{ student.department }}</p> <br />
+      <h4>Class: </h4><p>{{ student.form }}</p><br />
     </div>
     <!-- <div class="del">
       <Delete :id="student.id" />
     </div> -->
     <!-- <h1><router-link :to="'/full/' + student.id">view</router-link></h1> -->
-    <p v-on:click="showclickEmit(student.id)" class="more">view more</p>
+    <p v-on:click="showclickEmit(student.id)" class="more">view</p>
   </section>
 </template>
 
@@ -54,35 +54,49 @@ export default {
   box-sizing: border-box;
 }
 .student {
-  border: 1px solid black;
+  border: 1px solid aquamarine;
   width: 90%;
   height: 180px;
   margin: 50px auto;
   padding: 5px;
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   justify-content: space-evenly;
+  transition: .3s;
+  /* box-shadow: 0.06rem 0.06rem 0.3rem 0.06rem aquamarine; */
+}
+.student:hover {  
+  box-shadow: 0.06rem 0.06rem 0.3rem 0.06rem aquamarine;
 }
 .picture {
   width: 200px;
   height: 100%;
-  border: 2px solid black;
+  /* border: 1px solid black; */
+  border-radius: 3px;
 }
 
 .student-image {
   width: 100%;
   height: 100%;
+  object-fit: cover;
+  border-radius: 3px;
 }
 
 .about {
-  border: 2px solid brown;
+  border: 1px solid aquamarine;
+  border-radius: 3px;
   width: 320px;
   height: 100%;
   text-align: left;
-  padding: 0px 20px;
+  padding: 25px 20px;
 }
 .about h4 {
-  line-height: 14px;
+  line-height: 30px;
+  display: inline;
+}
+.about p {
+  display: inline;
+  line-height: 30px;
 }
 /* .del {
   border: 1px solid red;
@@ -96,12 +110,16 @@ export default {
   width: auto;
   height: 40px;
   padding: 10px;
-  background: red;
+  background: #42826D;
+  border-radius: 3px;
+  transition: .3s;
+  color: white;
   position: relative;
   top: 100px;
 }
 .more:hover {
-  text-decoration: underline;
+  /* text-decoration: underline; */
+  background: grey;
   cursor: pointer;
 }
 

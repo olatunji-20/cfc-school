@@ -107,7 +107,7 @@ export default {
 .options ul li:hover {
     /* text-decoration: underline; */
     left: 0.1875rem;
-    color: aquamarine;
+    color: #42826D;
     cursor: pointer;
 }
 .login {

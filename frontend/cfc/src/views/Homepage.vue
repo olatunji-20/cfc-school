@@ -81,28 +81,28 @@
                     <p class="topic">How can I join a study call?</p>
                     <p v-text="detailA ? first : second " v-on:click="showDetailA" class="icon"></p>
                     <transition name="detail">
-                        <div v-show="detailA" class="details"><p>hfhfhfhf fhfhhf fffhf ffhfh hfhfhfhf fhfhhf fffhf ffhfhhfhfhfhf fhfhhf fffhf ffhfh</p></div>
+                        <div v-show="detailA" class="details"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam suscipit inventore nisi rerum quam numquam qui. Id aliquid m reiciendis!</p></div>
                     </transition>
                 </div>
                 <div class="join">
                     <p class="topic">Can you unmute me so I can speak to other people?</p>
                     <p v-text="detailB ? first : second " v-on:click="showDetailB" class="icon"></p>
                     <transition name="detail">
-                        <div v-show="detailB" class="details"><p>hfhfhfhf fhfhhf fffhf ffhfh</p></div>
+                        <div v-show="detailB" class="details"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam suscipit inventore nisi rerum quam numquam qui. Id aliquid m reiciendis!</p></div>
                     </transition>
                 </div>
                 <div class="join">
                     <p class="topic">Where can I see all commands for the server?</p>
                     <p v-text="detailC ? first : second " v-on:click="showDetailC" class="icon"></p>
                     <transition name="detail">
-                        <div v-show="detailC" class="details"><p>hfhfhfhf fhfhhf fffhf ffhfh</p></div>
+                        <div v-show="detailC" class="details"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam suscipit inventore nisi rerum quam numquam qui. Id aliquid m reiciendis!</p></div>
                     </transition>
                 </div>
                 <div class="join">
                     <p class="topic">Can I join 25m - 50m session call even when it's on break?</p>
                     <p v-text="detailD ? first : second " v-on:click="showDetailD" class="icon"></p>
                     <transition name="detail">
-                        <div v-show="detailD" class="details"><p>hfhfhfhf fhfhhf fffhf ffhfh</p></div>
+                        <div v-show="detailD" class="details"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam suscipit inventore nisi rerum quam numquam qui. Id aliquid m reiciendis!</p></div>
                     </transition>
                 </div>
             </div>

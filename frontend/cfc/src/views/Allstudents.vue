@@ -65,7 +65,7 @@ section {
     /* padding: 5px; */
 }
 section h1 {
-    margin-top: 120px;
+    margin-top: 70px;
     font-size: 35px;
 }
 .pop-enter-from {

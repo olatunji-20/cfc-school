@@ -1,6 +1,11 @@
 <template>
     <section>
         <Navbar />
+        <transition name="message">
+            <div v-show="showMessage" class="mess">
+                <p> {{ message }} </p>
+            </div>
+        </transition>
         <div class="main">
             <form @submit.prevent="test" enctype="multipart/form-data">
                 <input type="text" placeholder="name" v-model="name" />
@@ -32,7 +37,9 @@ export default {
             phone: "",
             department: "",
             selectedImage: "",
-            dob: ""
+            dob: "",
+            message: "",
+            showMessage: false
         };
     },
     components: {
@@ -57,10 +64,20 @@ export default {
             try {
                 await axios.post("http://localhost:3000/api/v1/students", formData);
                 console.log("sent");
-                this.$router.go("/sign-up")
+                this.message = "congratulations, student has been registered successfully.";
+                this.showMessage = true;
+                setTimeout(() => {
+                    this.showMessage = false
+                }, 3000)
+                // this.$router.go("/sign-up");
                 
             } catch (error) {
                 console.log(error);
+                this.message = "sorry, student cannot be registered at this moment."
+                this.showMessage = true;
+                setTimeout(() => {
+                    this.showMessage = false
+                }, 3000)
             }
 
 
@@ -78,7 +95,9 @@ export default {
     background-color: #DDFFF4;
     width: 40%;
     height: auto;
-    margin: 80px auto;
+    position: relative;
+    top: 0px;
+    margin: 20px auto 80px;
     padding: 30px 20px;
 }
 
@@ -110,6 +129,43 @@ button:hover {
     background: #42826D;
     cursor: pointer;
 }
+
+.mess {
+    width: 600px;
+    height: 60px;
+    padding: 10px;
+    border-radius: 4px;
+    background: tomato;
+    position: absolute;
+    left: 26%;
+    /* top: 50px; */
+    /* margin: 0px auto; */
+    z-index: 9;
+}
+
+.message-enter-from {
+    opacity: 0;
+    transform: translateY(0px);
+}
+.message-enter-to {
+    opacity: 1;
+    transform: translateY(50px);
+}
+.message-enter-active {
+    transition: all .5s ease;
+}
+.message-leave-from {
+    opacity: 1;
+    transform: translateY(50px);
+}
+.message-leave-to {
+    opacity: 0;
+    transform: translateY(0px);
+}
+.message-leave-active {
+    transition: all .5s ease;
+}
+
 
 
 @media screen and (max-width: 850px) {

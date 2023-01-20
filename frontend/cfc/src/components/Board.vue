@@ -48,9 +48,9 @@ import { mapGetters, mapActions } from 'vuex';
     box-sizing: border-box;
 }
 .main {
-    border: 2px solid green;
+    border: 2px solid #f9f9f9;
     height: auto;
-    width: 85%;
+    width: 65%;
     margin: 80px auto 150px;
 }
 

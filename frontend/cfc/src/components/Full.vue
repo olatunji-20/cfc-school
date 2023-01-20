@@ -51,43 +51,43 @@ export default {
   color: hotpink;
 } */
 .main {
-  border: 5px solid orangered;
-  border-radius: 40px;
+  border: 2px solid green;
   padding: 10px;
   margin: 0px;
   position: fixed;
   top:  0px;
   width: 100vw;
   height: 100vh;
-  background: transparent;
   z-index: 9;
 }
 .submain {
-  border: 3px solid hotpink;
+  border: 2px solid #42826d;
   margin: 60px auto;
-  width: 80%;
+  width: 70%;
   height: 500px;
   background: whitesmoke;
   overflow: auto;
 }
 .close {
-  width: 50px;
-  height: 50px;
+  width: 40px;
+  height: 40px;
   border: 3px solid red;
   background: aquamarine;
   position: fixed;
-  left: 84%;
+  left: 80%;
   cursor: pointer;
 }
 .student-image {
-  width: 200px;
-  height: 200px;
-  border: 3px solid green;
-  margin: 60px auto;
+  width: 150px;
+  height: 150px;
+  border: 2px solid aquamarine;
+  border-radius: 5px;
+  margin: 50px auto 30px;
 }
 .student {
   width: 100%;
   height: 100%;
+  object-fit: cover;
 }
 .submain h3 {
   display: inline-block;
