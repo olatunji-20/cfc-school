@@ -31,7 +31,6 @@ export default {
   name: "Updateform",
   data() {
     return {
-        message: "",
         updateInfo: {
             id: "",
             changed: "",
@@ -43,9 +42,9 @@ export default {
     async update(updateInfo) {
       try {
         await axios.put(`http://localhost:3000/api/v1/students/${updateInfo.id}`, updateInfo)
-        this.message = "student update successful" 
+        alert("student update successful") 
         } catch(error) {
-          this.message = "unsuccessful student update"
+          alert("unsuccessful student update")
           console.log("NOT UPDATED")
         }
     }

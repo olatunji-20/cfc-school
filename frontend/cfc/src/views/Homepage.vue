@@ -39,14 +39,14 @@
             <p>Study Together is the best platform for studying.</p>
             <div class="media">
                 <div class="scroller">
-                    <div class="med"><img class="logooo" src="../assets/google.jpeg" /></div>
-                    <div class="med"><img class="logooo" src="../assets/Discord_(software)-Logo.wine.png" /></div>
+                    <div class="med"><img class="logooo" src="../assets/google.png" /></div>
+                    <div class="med"><img class="logooo" src="../assets/codecademy.png" /></div>
+                    <div class="med"><img class="logooo" src="../assets/discord.jpeg" /></div>
+                    <div class="med"><img class="logooo" src="../assets/disney.png" /></div>
                     <div class="med"><img class="logooo" src="../assets/download.png" /></div>
-                    <div class="med"><img class="logooo" src="../assets/images.png" /></div>
                     <div class="med"><img class="logooo" src="../assets/upwork.png" /></div>
-                    <div class="med"><img class="logooo" src="../assets/download.png" /></div>
+                    <div class="med"><img class="logooo" src="../assets/docker.png" /></div>
                     <div class="med"><img class="logooo" src="../assets/log4.png" /></div>
-                    <div class="med"><img class="logooo" src="../assets/Discord_(software)-Logo.wine.png" /></div>
                 </div>
             </div>
         </div>
@@ -368,7 +368,7 @@ import CheckBold from 'vue-material-design-icons/CheckBold.vue'
         bottom: 6.25rem;
         right: 1.7rem;
         border-radius: 0.9375rem;
-        background: red;
+        background: tomato;
     }
     .time-page {
         width: 100%;
@@ -443,7 +443,7 @@ import CheckBold from 'vue-material-design-icons/CheckBold.vue'
     .med {
         width: 10.625rem;
         height: 5rem;
-        border: 0.0625rem solid black;
+        /* border: 0.0625rem solid black; */
     }
 
     .logooo {
@@ -566,7 +566,7 @@ import CheckBold from 'vue-material-design-icons/CheckBold.vue'
         position: relative;
         bottom: 4.6875rem;
         border-radius: 1.25rem;
-        background: red;
+        background: tomato;
     }
     .last {
         /* border: 4px solid green; */

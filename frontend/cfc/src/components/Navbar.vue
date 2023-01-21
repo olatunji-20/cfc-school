@@ -2,7 +2,7 @@
     <section>
         <div class="main">
             <div class="logo">
-    
+                <img class="sherrr" src="../assets/lala.png" />
             </div>
             <div v-on:click="dropDown" class="menu">
                 <Menu />
@@ -72,9 +72,16 @@ export default {
 .logo {
     width: 15.625rem;
     height: 4.375rem;
+    padding-top: 15px;
     /* border: 1px solid green; */
-    border-right: 3px solid blue;
-    background: whitesmoke;
+    border-right: 3px solid aquamarine;
+    border-bottom: 2px solid aquamarine;
+    /* background: whitesmoke; */
+}
+.sherrr{
+    width: 100%;
+    height: 70%;
+    object-fit: cover;
 }
 .menu {
     display: none;

@@ -92,7 +92,7 @@ section p {
     box-shadow: 0.06rem 0.06rem 0.3rem 0.06rem #999999;
 }
 .focus p {
-    font-size: 1.0625rem;
+    font-size: 1.0rem;
 }
 .link {
     text-decoration: none;
