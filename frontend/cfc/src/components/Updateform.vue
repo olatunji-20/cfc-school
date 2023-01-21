@@ -1,23 +1,26 @@
 <template>
-  <div class="main">
-    <h1>UPDATE FORM</h1>
-    <form @submit.prevent="update(updateInfo)" enctype="multipart/form-data">
-      <label>Student ID.:</label>
-      <input v-model="updateInfo.id" type="number" />
-      <br />
-      <label>what would you like to change?</label>
-      <select v-model="updateInfo.changed">
-        <option>name</option>
-        <!-- <option>b</option>
-        <option>c</option>
-        <option>d</option> -->
-      </select>
-      <br />
-      <label>The new value:</label>
-      <input type="text" placeholder="new value" v-model="updateInfo.value" />
-      <br />
-        <button>SUBMIT</button>
-    </form>
+  <div>
+    <div class="main">
+      <h1>UPDATE FORM</h1>
+      <h2>{{ message }}</h2>
+      <form @submit.prevent="update(updateInfo)" enctype="multipart/form-data">
+        <label>Student ID.:</label>
+        <input v-model="updateInfo.id" type="number" />
+        <br />
+        <label>what would you like to change?</label>
+        <select v-model="updateInfo.changed">
+          <option>name</option>
+          <!-- <option>b</option>
+          <option>c</option>
+          <option>d</option> -->
+        </select>
+        <br />
+        <label>The new value:</label>
+        <input type="text" placeholder="new value" v-model="updateInfo.value" />
+        <br />
+          <button>SUBMIT</button>
+      </form>
+    </div>
   </div>
 </template>
 
@@ -28,21 +31,22 @@ export default {
   name: "Updateform",
   data() {
     return {
+        message: "",
         updateInfo: {
             id: "",
             changed: "",
-            value: "",
+            value: ""
         }
     }
   },
   methods: {
     async update(updateInfo) {
-      console.log("updated", updateInfo.id)
       try {
-          await axios.put(`http://localhost:3000/api/v1/students/${updateInfo.id}`, updateInfo)
-            console.log("updated")
-        } catch (error) {
-            console.log("NOT UPDATED")
+        await axios.put(`http://localhost:3000/api/v1/students/${updateInfo.id}`, updateInfo)
+        this.message = "student update successful" 
+        } catch(error) {
+          this.message = "unsuccessful student update"
+          console.log("NOT UPDATED")
         }
     }
   }

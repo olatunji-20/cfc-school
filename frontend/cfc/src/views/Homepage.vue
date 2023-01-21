@@ -39,14 +39,14 @@
             <p>Study Together is the best platform for studying.</p>
             <div class="media">
                 <div class="scroller">
-                    <div class="med"><h1>A</h1></div>
-                    <div class="med"><h1>B</h1></div>
-                    <div class="med"><h1>C</h1></div>
-                    <div class="med"><h1>D</h1></div>
-                    <div class="med"><h1>E</h1></div>
-                    <div class="med"><h1>F</h1></div>
-                    <div class="med"><h1>G</h1></div>
-                    <div class="med"><h1>H</h1></div>
+                    <div class="med"><img class="logooo" src="../assets/google.jpeg" /></div>
+                    <div class="med"><img class="logooo" src="../assets/Discord_(software)-Logo.wine.png" /></div>
+                    <div class="med"><img class="logooo" src="../assets/download.png" /></div>
+                    <div class="med"><img class="logooo" src="../assets/images.png" /></div>
+                    <div class="med"><img class="logooo" src="../assets/upwork.png" /></div>
+                    <div class="med"><img class="logooo" src="../assets/download.png" /></div>
+                    <div class="med"><img class="logooo" src="../assets/log4.png" /></div>
+                    <div class="med"><img class="logooo" src="../assets/Discord_(software)-Logo.wine.png" /></div>
                 </div>
             </div>
         </div>
@@ -446,6 +446,11 @@ import CheckBold from 'vue-material-design-icons/CheckBold.vue'
         border: 0.0625rem solid black;
     }
 
+    .logooo {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
 
 
 

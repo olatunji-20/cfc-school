@@ -149,7 +149,7 @@ button:hover {
 .mess {
     width: 600px;
     height: auto;
-    padding: 7px 50px;
+    padding: 0px 20px;
     border-radius: 4px;
     background: tomato;
     position: absolute;

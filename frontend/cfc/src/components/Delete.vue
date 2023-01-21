@@ -1,10 +1,10 @@
 <template>
     <div>
-        <transition name="message">
+        <!-- <transition name="message">
             <div v-show="showDel" class="mess">
                 <p> {{ message }} </p>
             </div>
-        </transition>
+        </transition> -->
         <div class="rem">
             <p v-on:click="deleteStudent({id})">delete student</p>
         </div>
@@ -38,7 +38,7 @@ export default {
                 setTimeout(() => {
                     this.showDel = false
                 }, 5000)
-                // this.$router.go("/allstudents")
+                this.$router.go("/allstudents")
             } catch(error) {
                 console.log("student could not be deleted")
             }
@@ -57,7 +57,7 @@ export default {
     border: 3px solid red;
     cursor: pointer;
 }
-.mess {
+/* .mess {
     width: 600px;
     height: auto;
     padding: 7px 50px;
@@ -66,7 +66,7 @@ export default {
     position: absolute;
     left: 26%;
     transform: translateY(150px);
-    /* margin: 0px auto; */
+    margin: 0px auto;
     z-index: 9;
     color: white;
 }
@@ -91,6 +91,6 @@ export default {
 }
 .message-leave-active {
     transition: all .5s ease;
-}
+} */
 
 </style>
