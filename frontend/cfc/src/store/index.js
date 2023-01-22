@@ -1,13 +1,7 @@
 import { createStore } from 'vuex'
-import student from './student' //ttttthhhhhhhhhhiiiiiiiiissssssssssssss
+import student from './student'
 
 export default createStore({
-  /*state: {
-  },
-  mutations: {
-  },
-  actions: {
-  },*/
   modules: {
     student,
   }

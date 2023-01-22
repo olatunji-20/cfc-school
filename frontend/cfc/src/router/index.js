@@ -34,18 +34,11 @@ const routes = [
 ]
 
 
-
-// const router = createRouter({
-//   history: createWebHistory(),
-//   routes
-// })
-
-
 const router = createRouter({
   history: createWebHistory(process.env.BASE_URL),
   routes,
   scrollBehavior(stand, homepage, savedPosition) {
-    if(savedPosition) {
+    if (savedPosition) {
       return savedPosition
     }
     return {

@@ -16,15 +16,13 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.use(upload());
 
 
-
-
 app.get("/", (req, res) => {
     res.send("home route");
 });
 
 
-
 app.use("/api/v1/students", studentRoutes)
+
 
 app.listen(3000, () => {
     console.log("server running on port 3000!")

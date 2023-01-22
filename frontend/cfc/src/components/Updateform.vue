@@ -10,45 +10,45 @@
         <label>what would you like to change?</label>
         <select v-model="updateInfo.changed">
           <option>name</option>
-          <!-- <option>b</option>
-          <option>c</option>
-          <option>d</option> -->
         </select>
         <br />
         <label>The new value:</label>
         <input type="text" placeholder="new value" v-model="updateInfo.value" />
         <br />
-          <button>SUBMIT</button>
+        <button>SUBMIT</button>
       </form>
     </div>
   </div>
 </template>
 
 <script>
-import axios from 'axios';
+import axios from "axios";
 
 export default {
   name: "Updateform",
   data() {
     return {
-        updateInfo: {
-            id: "",
-            changed: "",
-            value: ""
-        }
-    }
+      updateInfo: {
+        id: "",
+        changed: "",
+        value: "",
+      },
+    };
   },
   methods: {
     async update(updateInfo) {
       try {
-        await axios.put(`http://localhost:3000/api/v1/students/${updateInfo.id}`, updateInfo)
-        alert("student update successful") 
-        } catch(error) {
-          alert("unsuccessful student update")
-          console.log("NOT UPDATED")
-        }
-    }
-  }
+        await axios.put(
+          `http://localhost:3000/api/v1/students/${updateInfo.id}`,
+          updateInfo
+        );
+        alert("student update successful");
+      } catch (error) {
+        alert("unsuccessful student update");
+        console.log("NOT UPDATED");
+      }
+    },
+  },
 };
 </script>
 
@@ -59,7 +59,7 @@ export default {
   margin: 0px auto;
   border-radius: 10px;
   height: auto;
-  background: #DDFFF4;
+  background: #ddfff4;
   padding: 20px;
 }
 h1 {
@@ -69,7 +69,7 @@ input {
   margin: 20px auto 10px 10px;
   border: 0px;
   border-radius: 5px;
-  text-indent: 10px;  
+  text-indent: 10px;
 }
 select {
   margin-left: 10px;
@@ -82,26 +82,22 @@ button {
   height: 40px;
   background: aquamarine;
   color: whitesmoke;
-  transition: .3s;
+  transition: 0.3s;
 }
 button:hover {
-  background: #42826D;
-  cursor: pointer;  
+  background: #42826d;
+  cursor: pointer;
 }
-
 
 @media screen and (max-width: 850px) {
-    .main {
-        width: 70%;
-    }
+  .main {
+    width: 70%;
+  }
 }
-
 
 @media screen and (max-width: 500px) {
-    .main {
-        width: 85%;
-    }
+  .main {
+    width: 85%;
+  }
 }
-
-
 </style>

@@ -12,16 +12,19 @@
       />
     </div>
     <div class="about">
-      <!-- <h4>id: {{ student.id }}</h4> -->
-      <h4>Name: </h4><p>{{ student.name }}</p><br/>
-      <h4>E-mail: </h4><p>{{ student.email }}</p><br />
-      <h4>Department: </h4><p>{{ student.department }}</p> <br />
-      <h4>Class: </h4><p>{{ student.form }}</p><br />
+      <h4>Name:</h4>
+      <p>{{ student.name }}</p>
+      <br />
+      <h4>E-mail:</h4>
+      <p>{{ student.email }}</p>
+      <br />
+      <h4>Department:</h4>
+      <p>{{ student.department }}</p>
+      <br />
+      <h4>Class:</h4>
+      <p>{{ student.form }}</p>
+      <br />
     </div>
-    <!-- <div class="del">
-      <Delete :id="student.id" />
-    </div> -->
-    <!-- <h1><router-link :to="'/full/' + student.id">view</router-link></h1> -->
     <p v-on:click="showclickEmit(student.id)" class="more">view</p>
   </section>
 </template>
@@ -39,13 +42,13 @@ export default {
   },
   methods: {
     showclickEmit(id) {
-      this.$emit("show-click", id)
-    }
+      this.$emit("show-click", id);
+    },
   },
   components: {
-    Delete
+    Delete,
   },
-  emits: ["show-click"]
+  emits: ["show-click"],
 };
 </script>
 
@@ -62,16 +65,14 @@ export default {
   display: flex;
   flex-wrap: nowrap;
   justify-content: space-evenly;
-  transition: .3s;
-  /* box-shadow: 0.06rem 0.06rem 0.3rem 0.06rem aquamarine; */
+  transition: 0.3s;
 }
-.student:hover {  
+.student:hover {
   box-shadow: 0.06rem 0.06rem 0.3rem 0.06rem aquamarine;
 }
 .picture {
   width: 200px;
   height: 100%;
-  /* border: 1px solid black; */
   border-radius: 3px;
 }
 
@@ -98,32 +99,22 @@ export default {
   display: inline;
   line-height: 30px;
 }
-/* .del {
-  border: 1px solid red;
-  height: 50px;
-  width: 50px;
-  position: relative;
-  top: 35%;
-} */
 
 .more {
   width: auto;
   height: 40px;
   padding: 10px;
-  background: #42826D;
+  background: #42826d;
   border-radius: 3px;
-  transition: .3s;
+  transition: 0.3s;
   color: white;
   position: relative;
   top: 100px;
 }
 .more:hover {
-  /* text-decoration: underline; */
   background: grey;
   cursor: pointer;
 }
-
-
 
 @media screen and (max-width: 500px) {
   .student {
@@ -141,22 +132,8 @@ export default {
   .about h4 {
     line-height: 8px;
   }
-  /* .more {
-    display: none;
-  } */
-
-
-
-
-
-
   .more {
     top: 0px;
   }
-
-
-
-
-
 }
 </style>

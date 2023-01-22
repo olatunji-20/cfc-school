@@ -1,17 +1,36 @@
 <template>
   <section class="main">
-    <!-- <h3>YOU ARE HIGHLY WELCOME</h3> -->
     <div class="submain">
       <div v-on:click="close" class="close"><p>close</p></div>
       <div class="student-image">
-        <img :src="'http://localhost:3000/src/school/student-images/' + popStudent.email + popStudent.image" alt="" class="student">
+        <img
+          :src="
+            'http://localhost:3000/src/school/student-images/' +
+            popStudent.email +
+            popStudent.image
+          "
+          alt=""
+          class="student"
+        />
       </div>
-      <h3>student name: </h3> <p> {{ popStudent.name }}</p><br />
-      <h3>student email: </h3> <p> {{ popStudent.email }}</p><br />
-      <h3>student class: </h3> <p> {{ popStudent.name }}</p><br />
-      <h3>student department: </h3> <p> {{ popStudent.department }}</p><br />
-      <h3>student phone no: </h3> <p> {{ popStudent.phone }}</p><br />
-      <h3>student date-of-birth: </h3> <p> {{ popStudent.dob }}</p><br />
+      <h3>student name:</h3>
+      <p>{{ popStudent.name }}</p>
+      <br />
+      <h3>student email:</h3>
+      <p>{{ popStudent.email }}</p>
+      <br />
+      <h3>student class:</h3>
+      <p>{{ popStudent.name }}</p>
+      <br />
+      <h3>student department:</h3>
+      <p>{{ popStudent.department }}</p>
+      <br />
+      <h3>student phone no:</h3>
+      <p>{{ popStudent.phone }}</p>
+      <br />
+      <h3>student date-of-birth:</h3>
+      <p>{{ popStudent.dob }}</p>
+      <br />
       <div class="del">
         <Delete :id="popStudent.id" />
       </div>
@@ -20,24 +39,24 @@
 </template>
 
 <script>
-import Delete from '../components/Delete.vue'
+import Delete from "../components/Delete.vue";
 export default {
   name: "Full",
   data() {
-    return {}
+    return {};
   },
   components: {
-    Delete
+    Delete,
   },
   props: {
-    popStudent: Object
+    popStudent: Object,
   },
   methods: {
     close() {
-      this.$emit("close-pop")
-    }
+      this.$emit("close-pop");
+    },
   },
-  emits: ["close-pop"]
+  emits: ["close-pop"],
 };
 </script>
 
@@ -46,16 +65,12 @@ export default {
   box-sizing: border-box;
 }
 
-/* h3 {
-  font-size: 20px;
-  color: hotpink;
-} */
 .main {
   border: 2px solid green;
   padding: 10px;
   margin: 0px;
   position: fixed;
-  top:  0px;
+  top: 0px;
   width: 100vw;
   height: 100vh;
   z-index: 9;
@@ -95,8 +110,4 @@ export default {
 .submain p {
   display: inline-block;
 }
-
-
-
-
 </style>

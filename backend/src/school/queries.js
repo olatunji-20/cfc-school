@@ -7,7 +7,6 @@ const removeStudent = "DELETE FROM students WHERE id = $1";
 const updateStudent = "UPDATE students SET name = $2 WHERE id = $1";
 
 
-
 module.exports = {
     getStudents,
     checkForStudent,
