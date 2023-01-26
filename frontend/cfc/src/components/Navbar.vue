@@ -183,7 +183,7 @@ export default {
 
   .menu {
     display: inline;
-    border: 2px solid red;
+    /* border: 2px solid red; */
     width: 60px;
     height: 60px;
     font-weight: bolder;
