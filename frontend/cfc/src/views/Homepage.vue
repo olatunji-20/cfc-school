@@ -485,7 +485,7 @@ section {
 }
 .med {
   width: 10.625rem;
-  height: 5rem;
+  height: 4.5rem;
 }
 
 .logooo {
