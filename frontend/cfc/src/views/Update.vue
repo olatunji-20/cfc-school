@@ -32,6 +32,7 @@ export default {
 </script>
 
 <style scoped>
+/* 
 .mainn {
   padding: 60px 20px;
 }
@@ -45,5 +46,5 @@ h1 {
   height: auto;
   margin: 0px auto 30px;
   padding: 20px;
-}
+} */
 </style>
