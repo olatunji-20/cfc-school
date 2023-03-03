@@ -360,12 +360,15 @@ section {
   height: 5.3125rem;
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
+  border: 1px solid red;
 }
 .kas1 {
-  width: 5rem;
-  height: 5rem;
+  width: 80px;
+  height: 80px;
   padding: 0.0625rem;
   border-radius: 50%;
+  border: 1px solid green;
 }
 .kas-image {
   width: 100%;
@@ -378,6 +381,7 @@ section {
   padding: 0.3125rem;
   line-height: 0.3125rem;
   margin-left: 1.875rem;
+  border: 1px solid blue;
 }
 .right {
   width: 41%;
@@ -800,7 +804,8 @@ section {
   .join2 {
     width: 200px;
     height: 60px;
-    padding: 2px;
+    padding: 1px;
+    font-size: 13px;
   }
   .focussed {
     width: 100%;
@@ -810,6 +815,23 @@ section {
     font-size: 14px;
   }
 
+  .kas-wrap {
+    width: 100%;
+    border: 1px solid yellowgreen;
+    justify-content: flex-start;
+  }
+  .kas1 {
+    width: 80px;
+    height: 80px;
+  }
+  .kas2 {
+    width: auto;
+    margin-left: 15px;
+  }
+  .kas2 p {
+    font-size: 10px;
+    line-height: 8px;
+  }
   .right {
     display: none;
   }
