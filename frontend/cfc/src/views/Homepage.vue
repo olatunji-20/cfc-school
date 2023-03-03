@@ -361,14 +361,14 @@ section {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  border: 1px solid red;
+  /* border: 1px solid red; */
 }
 .kas1 {
   width: 80px;
   height: 80px;
   padding: 0.0625rem;
   border-radius: 50%;
-  border: 1px solid green;
+  /* border: 1px solid green; */
 }
 .kas-image {
   width: 100%;
@@ -381,7 +381,7 @@ section {
   padding: 0.3125rem;
   line-height: 0.3125rem;
   margin-left: 1.875rem;
-  border: 1px solid blue;
+  /* border: 1px solid blue; */
 }
 .right {
   width: 41%;
@@ -817,7 +817,7 @@ section {
 
   .kas-wrap {
     width: 100%;
-    border: 1px solid yellowgreen;
+    /* border: 1px solid yellowgreen; */
     justify-content: flex-start;
   }
   .kas1 {
