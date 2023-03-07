@@ -682,7 +682,7 @@ section {
   justify-content: space-between;
 }
 .server1 {
-  width: 17.5rem;
+  width: 14.5rem;
   height: 4.375rem;
   border: 1px solid aquamarine;
   font-size: 1.25rem;
@@ -701,7 +701,7 @@ section {
   border: 1px solid #999999;
 }
 .server2 {
-  width: 17.5rem;
+  width: 14.5rem;
   height: 4.375rem;
   border: 1px solid aquamarine;
   font-size: 1.25rem;
@@ -906,13 +906,11 @@ section {
     padding: 5px 10px;
   }
   .but {
-    width: 80%;
+    width: 100%;
     height: 60px;
   }
-  .server {
-    width: 150px;
-    height: 50px;
-    font-size: 16px;
+  .server1, .server2 {
+    width: 15rem;
   }
 }
 </style>
