@@ -264,6 +264,7 @@ section {
   height: 100%;
   text-align: left;
   padding: 2.5rem 3.4375rem 0rem;
+  border: 1px solid red;
 }
 .left h2 {
   font-size: 3rem;
@@ -387,6 +388,7 @@ section {
   width: 41%;
   height: 39.375rem;
   padding-top: 3.125rem;
+  border: 1px solid blue;
 }
 .blur {
   width: 6.25rem;
@@ -787,13 +789,13 @@ section {
 
   .left {
     width: 100%;
-    padding: 20px 30px;
+    padding: 0.5rem 1rem 0rem;
   }
   .left h2 {
-    font-size: 45px;
+    font-size: 2.4rem;
   }
   .left p {
-    font-size: 18px;
+    font-size: 1rem;
   }
   .joind {
     width: 100%;
@@ -805,6 +807,8 @@ section {
     width: 200px;
     height: 60px;
     padding: 1px;
+  }
+  .join1 p, .join2 p {
     font-size: 13px;
   }
   .focussed {

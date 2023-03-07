@@ -178,7 +178,7 @@ export default {
     justify-content: space-between;
   }
   .logo {
-    width: 300px;
+    width: 220px;
   }
 
   .menu {
