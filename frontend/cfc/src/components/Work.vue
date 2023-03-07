@@ -151,7 +151,7 @@ section p {
     padding: 10px;
   }
   section h1 {
-    font-size: 40px;
+    font-size: 33px;
     line-height: 20px;
   }
   section p {

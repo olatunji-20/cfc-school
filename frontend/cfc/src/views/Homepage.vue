@@ -264,7 +264,6 @@ section {
   height: 100%;
   text-align: left;
   padding: 2.5rem 3.4375rem 0rem;
-  border: 1px solid red;
 }
 .left h2 {
   font-size: 3rem;
@@ -388,7 +387,6 @@ section {
   width: 41%;
   height: 39.375rem;
   padding-top: 3.125rem;
-  border: 1px solid blue;
 }
 .blur {
   width: 6.25rem;
@@ -684,7 +682,7 @@ section {
   justify-content: space-between;
 }
 .server1 {
-  width: 14.375rem;
+  width: 17.5rem;
   height: 4.375rem;
   border: 1px solid aquamarine;
   font-size: 1.25rem;
@@ -703,7 +701,7 @@ section {
   border: 1px solid #999999;
 }
 .server2 {
-  width: 14.375rem;
+  width: 17.5rem;
   height: 4.375rem;
   border: 1px solid aquamarine;
   font-size: 1.25rem;
@@ -789,7 +787,7 @@ section {
 
   .left {
     width: 100%;
-    padding: 0.5rem 1rem 0rem;
+    padding: 0.2rem 1rem 0rem;
   }
   .left h2 {
     font-size: 2.4rem;
@@ -809,7 +807,7 @@ section {
     padding: 1px;
   }
   .join1 p, .join2 p {
-    font-size: 13px;
+    font-size: 14px;
   }
   .focussed {
     width: 100%;
@@ -866,7 +864,7 @@ section {
     padding: 10px;
   }
   .mot1 h2 {
-    font-size: 40px;
+    font-size: 33px;
   }
   .keep1,
   .keep2 {
@@ -893,7 +891,7 @@ section {
     padding: 10px;
   }
   .last h1 {
-    font-size: 35px;
+    font-size: 30px;
   }
   .last p {
     font-size: 16px;
