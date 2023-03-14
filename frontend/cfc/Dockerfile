@@ -15,3 +15,5 @@ RUN npm install
 COPY . .
 
 CMD ["npm", "run", "serve"]
+
+# will be working on user file permission tomorrow
