@@ -1,12 +1,14 @@
 FROM node:lts-alpine
 
-EXPOSE 2500
+RUN addgroup app && adduser -S -G app app
 
-# USER node
+RUN mkdir /app && chown app:app /app
 
-RUN mkdir -p /home/app
+USER app
 
-WORKDIR /home/app
+# RUN mkdir -p /home/app
+
+WORKDIR /home/app/app
 
 COPY ./package*.json .
 
@@ -14,6 +16,6 @@ RUN npm install
 
 COPY . .
 
-CMD ["npm", "run", "serve"]
+EXPOSE 8080
 
-# will be working on user file permission tomorrow
+CMD ["npm", "run", "serve"]
