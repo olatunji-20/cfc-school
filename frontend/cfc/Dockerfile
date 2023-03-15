@@ -8,9 +8,9 @@ USER app
 
 # RUN mkdir -p /home/app
 
-WORKDIR /home/app/app
+WORKDIR /app
 
-COPY ./package*.json .
+COPY ./package*.json ./
 
 RUN npm install
 
