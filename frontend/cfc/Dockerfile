@@ -1,20 +1,16 @@
 FROM node:lts-alpine
 
-RUN addgroup app && adduser -S -G app app
-
-RUN mkdir /app && chown app:app /app
-
-USER app
-
-# RUN mkdir -p /home/app
+RUN mkdir /app && chown node:node /app
 
 WORKDIR /app
 
-COPY ./package.json ./
+USER node
+
+COPY --chown=node:node ./package*.json ./
 
 RUN npm install
 
-COPY . .
+COPY --chown=node:node . .
 
 EXPOSE 8080
 
