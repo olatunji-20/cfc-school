@@ -7,8 +7,8 @@ services:
     environment:
       POSTGRES_DB: cfc
       POSTGRES_PASSWORD: ola
-    # volumes:
-    #   - pgdata:/var/lib/postgresql/data
+    volumes:
+      - pgdata:/var/lib/postgresql/data
     # networks:-
     ports:
       - 5432:5432
@@ -28,7 +28,8 @@ services:
       DB_USER: postgres
       DB_DATABASE: postgres
       DB_PASSWORD: ola
-    # volumes:- 
+    volumes:
+      - backend:/home/node/app
     # networks:
     ports:
       - 3000:3000
@@ -40,10 +41,12 @@ services:
     image:
     container_name:
     volumes:
-      -*********
-    networks:
+      - frontend:/home/node/app
+    # networks:
     ports:
       - 8080:8080
   
 volumes:
   pgdata:
+  backend:
+  frontend:
