@@ -3,18 +3,15 @@ services:
   db:
     image: postgres:12
     # restart: always
-    container_name: my-postgres-container
+    container_name: postgres-for-cfc
     environment:
       POSTGRES_DB: cfc
       POSTGRES_PASSWORD: ola
-
-    volumes:
-      - pgdata:/var/lib/postgresql/data
-
+    # volumes:
+    #   - pgdata:/var/lib/postgresql/data
+    # networks:-
     ports:
       - 5432:5432
-
-    # networks:- 
 
   backend:
     build:
@@ -24,20 +21,17 @@ services:
     depends_on:
       - db
     # restart: always
-    container_name: my-compose_backend
-    ports:
-      - 3000:3000
-
+    container_name: cfc-backend
     environment:
       DB_HOST: localhost
       DB_PORT: 5432
       DB_USER: postgres
       DB_DATABASE: postgres
       DB_PASSWORD: ola
-
-
     # volumes:- 
     # networks:
+    ports:
+      - 3000:3000
 
   frontend:
     build:
@@ -45,9 +39,11 @@ services:
       dockerfile: Dockerfile
     image:
     container_name:
-    ports:
     volumes:
       -*********
+    networks:
+    ports:
+      - 8080:8080
   
 volumes:
   pgdata:
