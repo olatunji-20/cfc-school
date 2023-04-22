@@ -68,6 +68,7 @@ export default {
 
       try {
         await axios.post("http://localhost:3000/api/v1/students", formData);
+        console.log(formData);
         console.log("sent");
         this.message =
           "congratulations, student has been registered successfully.";

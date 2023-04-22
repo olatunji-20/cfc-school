@@ -37,6 +37,7 @@ const getStudentById = (req, res) => {
 
 
 const createNewStudent = (req, res) => {
+    console.log(req.body)
 
     const submittedFile = req.files.picture;
 
