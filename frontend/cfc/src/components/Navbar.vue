@@ -68,8 +68,8 @@ export default {
   flex-wrap: nowrap;
 }
 .logo {
-  width: 15.625rem;
-  height: 4.375rem;
+  width: 250px;
+  height: 70px;
   padding-top: 15px;
   border-right: 3px solid aquamarine;
   border-bottom: 2px solid aquamarine;
@@ -142,8 +142,8 @@ export default {
     padding: 1.5625rem;
   }
   .logo {
-    width: 10.625rem;
-    height: 3.75rem;
+    width: 220px;
+    height: 60px;
   }
   .cont {
     height: 3.75rem;
